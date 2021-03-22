@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.ephem',
   syntax='proto3',
   serialized_options=_b('Z!cnlab.net/csst/proto/common/ephem'),
-  serialized_pb=_b('\n\x18\x63ommon/ephem/ephem.proto\x12\tdfs.ephem\x1a\x12\x63ommon/error.proto\":\n\x05\x45phem\x12\n\n\x02id\x18\x01 \x01(\x03\x12\n\n\x02ra\x18\x02 \x01(\x01\x12\x0b\n\x03\x64\x65\x63\x18\x03 \x01(\x01\x12\x0c\n\x04\x66lux\x18\x04 \x01(\x01\"L\n\x12SearchEphemRequest\x12\n\n\x02ra\x18\x01 \x01(\x01\x12\x0b\n\x03\x64\x65\x63\x18\x02 \x01(\x01\x12\x0e\n\x06radius\x18\x03 \x01(\x01\x12\r\n\x05limit\x18\x04 \x01(\x03\"y\n\x13SearchEphemResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x1f\n\x05\x65phem\x18\x04 \x03(\x0b\x32\x10.dfs.ephem.Ephem2Y\n\x07\x45phemOp\x12N\n\x0bSearchEphem\x12\x1d.dfs.ephem.SearchEphemRequest\x1a\x1e.dfs.ephem.SearchEphemResponse\"\x00\x42#Z!cnlab.net/csst/proto/common/ephemb\x06proto3')
+  serialized_pb=_b('\n\x18\x63ommon/ephem/ephem.proto\x12\tdfs.ephem\x1a\x12\x63ommon/error.proto\":\n\x05\x45phem\x12\n\n\x02id\x18\x01 \x01(\x03\x12\n\n\x02ra\x18\x02 \x01(\x01\x12\x0b\n\x03\x64\x65\x63\x18\x03 \x01(\x01\x12\x0c\n\x04\x66lux\x18\x04 \x01(\x01\"Y\n\x12SearchEphemRequest\x12\n\n\x02ra\x18\x01 \x01(\x01\x12\x0b\n\x03\x64\x65\x63\x18\x02 \x01(\x01\x12\x0e\n\x06radius\x18\x03 \x01(\x01\x12\x0b\n\x03mag\x18\x04 \x01(\x01\x12\r\n\x05limit\x18\x05 \x01(\x03\"y\n\x13SearchEphemResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x1f\n\x05\x65phem\x18\x04 \x03(\x0b\x32\x10.dfs.ephem.Ephem2Y\n\x07\x45phemOp\x12N\n\x0bSearchEphem\x12\x1d.dfs.ephem.SearchEphemRequest\x1a\x1e.dfs.ephem.SearchEphemResponse\"\x00\x42#Z!cnlab.net/csst/proto/common/ephemb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -109,8 +109,15 @@ _SEARCHEPHEMREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='dfs.ephem.SearchEphemRequest.limit', index=3,
-      number=4, type=3, cpp_type=2, label=1,
+      name='mag', full_name='dfs.ephem.SearchEphemRequest.mag', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='dfs.ephem.SearchEphemRequest.limit', index=4,
+      number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -128,7 +135,7 @@ _SEARCHEPHEMREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=119,
-  serialized_end=195,
+  serialized_end=208,
 )
 
 
@@ -179,8 +186,8 @@ _SEARCHEPHEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=197,
-  serialized_end=318,
+  serialized_start=210,
+  serialized_end=331,
 )
 
 _SEARCHEPHEMRESPONSE.fields_by_name['error'].message_type = common_dot_error__pb2._ERROR
@@ -220,8 +227,8 @@ _EPHEMOP = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=320,
-  serialized_end=409,
+  serialized_start=333,
+  serialized_end=422,
   methods=[
   _descriptor.MethodDescriptor(
     name='SearchEphem',
