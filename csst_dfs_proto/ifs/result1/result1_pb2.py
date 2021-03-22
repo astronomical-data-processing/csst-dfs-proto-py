@@ -13,7 +13,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from common import error_pb2 as common_dot_error__pb2
+from ...common import error_pb2 as common_dot_error__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ifs.result1',
   syntax='proto3',
   serialized_options=_b('Z cnlab.net/csst/proto/ifs/result1'),
-  serialized_pb=_b('\n\x19ifs/result1/result1.proto\x12\x0bifs.result1\x1a\x12\x63ommon/error.proto\"c\n\x07Result1\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x11\n\tfile_path\x18\x03 \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x04 \x01(\x03\x12\x11\n\tproc_type\x18\x05 \x01(\t\"\xba\x01\n\x0e\x46indResult1Req\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x11\n\tproc_type\x18\x02 \x01(\t\x12J\n\x10other_conditions\x18\x03 \x03(\x0b\x32\x30.ifs.result1.FindResult1Req.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"{\n\x0f\x46indResult1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12%\n\x07result1\x18\x04 \x03(\x0b\x32\x14.ifs.result1.Result1\" \n\rGetResult1Req\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\"7\n\x0eGetResult1Resp\x12%\n\x07result1\x18\x01 \x01(\x0b\x32\x14.ifs.result1.Result1\"H\n\x0eReadResult1Req\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x11\n\tfile_path\x18\x02 \x01(\t\x12\x12\n\nchunk_size\x18\x03 \x01(\r\"\x1f\n\x0fReadResult1Resp\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"^\n\x0fWriteResult1Req\x12\x11\n\tproc_type\x18\x01 \x01(\t\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08\x66itsData\x18\x03 \x01(\x0c\x12\x13\n\x0bresult0_ids\x18\x04 \x03(\x03\"h\n\x10WriteResult1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12%\n\x07result1\x18\x03 \x01(\x0b\x32\x14.ifs.result1.Result12\xa4\x02\n\nResult1Srv\x12\x43\n\x04\x66ind\x12\x1b.ifs.result1.FindResult1Req\x1a\x1c.ifs.result1.FindResult1Resp\"\x00\x12@\n\x03get\x12\x1a.ifs.result1.GetResult1Req\x1a\x1b.ifs.result1.GetResult1Resp\"\x00\x12\x45\n\x04read\x12\x1b.ifs.result1.ReadResult1Req\x1a\x1c.ifs.result1.ReadResult1Resp\"\x00\x30\x01\x12H\n\x05write\x12\x1c.ifs.result1.WriteResult1Req\x1a\x1d.ifs.result1.WriteResult1Resp\"\x00(\x01\x42\"Z cnlab.net/csst/proto/ifs/result1b\x06proto3')
+  serialized_pb=_b('\n\x19ifs/result1/result1.proto\x12\x0bifs.result1\x1a\x12\x63ommon/error.proto\"x\n\x07Result1\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x11\n\tfile_path\x18\x03 \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x04 \x01(\x03\x12\x11\n\tproc_type\x18\x05 \x01(\t\x12\x13\n\x0bresult0_ids\x18\x06 \x03(\x03\"\xba\x01\n\x0e\x46indResult1Req\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x11\n\tproc_type\x18\x02 \x01(\t\x12J\n\x10other_conditions\x18\x03 \x03(\x0b\x32\x30.ifs.result1.FindResult1Req.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"{\n\x0f\x46indResult1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12%\n\x07result1\x18\x04 \x03(\x0b\x32\x14.ifs.result1.Result1\" \n\rGetResult1Req\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\"7\n\x0eGetResult1Resp\x12%\n\x07result1\x18\x01 \x01(\x0b\x32\x14.ifs.result1.Result1\"H\n\x0eReadResult1Req\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x11\n\tfile_path\x18\x02 \x01(\t\x12\x12\n\nchunk_size\x18\x03 \x01(\r\"\x1f\n\x0fReadResult1Resp\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"^\n\x0fWriteResult1Req\x12\x11\n\tproc_type\x18\x01 \x01(\t\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08\x66itsData\x18\x03 \x01(\x0c\x12\x13\n\x0bresult0_ids\x18\x04 \x03(\x03\"h\n\x10WriteResult1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12%\n\x07result1\x18\x03 \x01(\x0b\x32\x14.ifs.result1.Result12\xa4\x02\n\nResult1Srv\x12\x43\n\x04\x46ind\x12\x1b.ifs.result1.FindResult1Req\x1a\x1c.ifs.result1.FindResult1Resp\"\x00\x12@\n\x03Get\x12\x1a.ifs.result1.GetResult1Req\x1a\x1b.ifs.result1.GetResult1Resp\"\x00\x12\x45\n\x04Read\x12\x1b.ifs.result1.ReadResult1Req\x1a\x1c.ifs.result1.ReadResult1Resp\"\x00\x30\x01\x12H\n\x05Write\x12\x1c.ifs.result1.WriteResult1Req\x1a\x1d.ifs.result1.WriteResult1Resp\"\x00(\x01\x42\"Z cnlab.net/csst/proto/ifs/result1b\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -70,6 +70,13 @@ _RESULT1 = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='result0_ids', full_name='ifs.result1.Result1.result0_ids', index=5,
+      number=6, type=3, cpp_type=2, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -83,7 +90,7 @@ _RESULT1 = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=62,
-  serialized_end=161,
+  serialized_end=182,
 )
 
 
@@ -120,8 +127,8 @@ _FINDRESULT1REQ_OTHERCONDITIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=296,
-  serialized_end=350,
+  serialized_start=317,
+  serialized_end=371,
 )
 
 _FINDRESULT1REQ = _descriptor.Descriptor(
@@ -164,8 +171,8 @@ _FINDRESULT1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=164,
-  serialized_end=350,
+  serialized_start=185,
+  serialized_end=371,
 )
 
 
@@ -216,8 +223,8 @@ _FINDRESULT1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=475,
+  serialized_start=373,
+  serialized_end=496,
 )
 
 
@@ -247,8 +254,8 @@ _GETRESULT1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=477,
-  serialized_end=509,
+  serialized_start=498,
+  serialized_end=530,
 )
 
 
@@ -278,8 +285,8 @@ _GETRESULT1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=511,
-  serialized_end=566,
+  serialized_start=532,
+  serialized_end=587,
 )
 
 
@@ -323,8 +330,8 @@ _READRESULT1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=568,
-  serialized_end=640,
+  serialized_start=589,
+  serialized_end=661,
 )
 
 
@@ -354,8 +361,8 @@ _READRESULT1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=642,
-  serialized_end=673,
+  serialized_start=663,
+  serialized_end=694,
 )
 
 
@@ -406,8 +413,8 @@ _WRITERESULT1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=675,
-  serialized_end=769,
+  serialized_start=696,
+  serialized_end=790,
 )
 
 
@@ -451,8 +458,8 @@ _WRITERESULT1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=771,
-  serialized_end=875,
+  serialized_start=792,
+  serialized_end=896,
 )
 
 _FINDRESULT1REQ_OTHERCONDITIONSENTRY.containing_type = _FINDRESULT1REQ
@@ -554,12 +561,12 @@ _RESULT1SRV = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=878,
-  serialized_end=1170,
+  serialized_start=899,
+  serialized_end=1191,
   methods=[
   _descriptor.MethodDescriptor(
-    name='find',
-    full_name='ifs.result1.Result1Srv.find',
+    name='Find',
+    full_name='ifs.result1.Result1Srv.Find',
     index=0,
     containing_service=None,
     input_type=_FINDRESULT1REQ,
@@ -567,8 +574,8 @@ _RESULT1SRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='get',
-    full_name='ifs.result1.Result1Srv.get',
+    name='Get',
+    full_name='ifs.result1.Result1Srv.Get',
     index=1,
     containing_service=None,
     input_type=_GETRESULT1REQ,
@@ -576,8 +583,8 @@ _RESULT1SRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='read',
-    full_name='ifs.result1.Result1Srv.read',
+    name='Read',
+    full_name='ifs.result1.Result1Srv.Read',
     index=2,
     containing_service=None,
     input_type=_READRESULT1REQ,
@@ -585,8 +592,8 @@ _RESULT1SRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='write',
-    full_name='ifs.result1.Result1Srv.write',
+    name='Write',
+    full_name='ifs.result1.Result1Srv.Write',
     index=3,
     containing_service=None,
     input_type=_WRITERESULT1REQ,

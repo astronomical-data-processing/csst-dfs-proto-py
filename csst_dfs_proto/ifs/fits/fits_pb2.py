@@ -13,7 +13,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from common import error_pb2 as common_dot_error__pb2
+from ...common import error_pb2 as common_dot_error__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ifs.fits',
   syntax='proto3',
   serialized_options=_b('Z\035cnlab.net/csst/proto/ifs/fits'),
-  serialized_pb=_b('\n\x13ifs/fits/fits.proto\x12\x08ifs.fits\x1a\x12\x63ommon/error.proto\"\xd1\x01\n\x07RawFits\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08obs_time\x18\x03 \x01(\r\x12\x10\n\x08\x65xp_time\x18\x04 \x01(\x03\x12\x11\n\tfile_path\x18\x05 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x06 \x01(\r\x12\x12\n\nqc0_status\x18\x07 \x01(\r\x12\x10\n\x08qc0_time\x18\x08 \x01(\x03\x12\x12\n\nprc_status\x18\t \x01(\r\x12\x10\n\x08prc_time\x18\n \x01(\x03\x12\x13\n\x0b\x63reate_time\x18\x0b \x01(\x03\"\x9d\x02\n\x0e\x46indRawFitsReq\x12\x10\n\x08obs_time\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x05 \x01(\r\x12\x12\n\nqc0_status\x18\x06 \x01(\r\x12\x12\n\nprc_status\x18\x07 \x01(\r\x12G\n\x10other_conditions\x18\x08 \x03(\x0b\x32-.ifs.fits.FindRawFitsReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"x\n\x0f\x46indRawFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\"\n\x07rawFits\x18\x04 \x03(\x0b\x32\x11.ifs.fits.RawFits\" \n\rGetRawFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\"4\n\x0eGetRawFitsResp\x12\"\n\x07rawFits\x18\x01 \x01(\x0b\x32\x11.ifs.fits.RawFits\"H\n\x0eReadRawFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x11\n\tfile_path\x18\x02 \x01(\t\x12\x12\n\nchunk_size\x18\x03 \x01(\r\"\x1f\n\x0fReadRawFitsResp\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"6\n\x0fWriteRawFitsReq\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x10\n\x08\x66itsData\x18\x02 \x01(\x0c\"e\n\x10WriteRawFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\"\n\x07rawFits\x18\x03 \x01(\x0b\x32\x11.ifs.fits.RawFits\"5\n\x12UpdateQc0StatusReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"6\n\x13UpdateProcStatusReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xb4\x03\n\x07\x46itsSrv\x12=\n\x04\x66ind\x12\x18.ifs.fits.FindRawFitsReq\x1a\x19.ifs.fits.FindRawFitsResp\"\x00\x12:\n\x03get\x12\x17.ifs.fits.GetRawFitsReq\x1a\x18.ifs.fits.GetRawFitsResp\"\x00\x12?\n\x04read\x12\x18.ifs.fits.ReadRawFitsReq\x1a\x19.ifs.fits.ReadRawFitsResp\"\x00\x30\x01\x12\x42\n\x05write\x12\x19.ifs.fits.WriteRawFitsReq\x1a\x1a.ifs.fits.WriteRawFitsResp\"\x00(\x01\x12R\n\x11update_qc0_status\x12\x1c.ifs.fits.UpdateQc0StatusReq\x1a\x1d.ifs.fits.UpdateQc0StatusResp\"\x00\x12U\n\x12update_proc_status\x12\x1d.ifs.fits.UpdateProcStatusReq\x1a\x1e.ifs.fits.UpdateProcStatusResp\"\x00\x42\x1fZ\x1d\x63nlab.net/csst/proto/ifs/fitsb\x06proto3')
+  serialized_pb=_b('\n\x13ifs/fits/fits.proto\x12\x08ifs.fits\x1a\x12\x63ommon/error.proto\"\xd1\x01\n\x07RawFits\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08obs_time\x18\x03 \x01(\r\x12\x10\n\x08\x65xp_time\x18\x04 \x01(\x03\x12\x11\n\tfile_path\x18\x05 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x06 \x01(\r\x12\x12\n\nqc0_status\x18\x07 \x01(\r\x12\x10\n\x08qc0_time\x18\x08 \x01(\x03\x12\x12\n\nprc_status\x18\t \x01(\r\x12\x10\n\x08prc_time\x18\n \x01(\x03\x12\x13\n\x0b\x63reate_time\x18\x0b \x01(\x03\"\x9d\x02\n\x0e\x46indRawFitsReq\x12\x10\n\x08obs_time\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x05 \x01(\r\x12\x12\n\nqc0_status\x18\x06 \x01(\r\x12\x12\n\nprc_status\x18\x07 \x01(\r\x12G\n\x10other_conditions\x18\x08 \x03(\x0b\x32-.ifs.fits.FindRawFitsReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"x\n\x0f\x46indRawFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\"\n\x07rawFits\x18\x04 \x03(\x0b\x32\x11.ifs.fits.RawFits\" \n\rGetRawFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\"4\n\x0eGetRawFitsResp\x12\"\n\x07rawFits\x18\x01 \x01(\x0b\x32\x11.ifs.fits.RawFits\"H\n\x0eReadRawFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x11\n\tfile_path\x18\x02 \x01(\t\x12\x12\n\nchunk_size\x18\x03 \x01(\r\"\x1f\n\x0fReadRawFitsResp\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"6\n\x0fWriteRawFitsReq\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x10\n\x08\x66itsData\x18\x02 \x01(\x0c\"e\n\x10WriteRawFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\"\n\x07rawFits\x18\x03 \x01(\x0b\x32\x11.ifs.fits.RawFits\"5\n\x12UpdateQc0StatusReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"6\n\x13UpdateProcStatusReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xb0\x03\n\x07\x46itsSrv\x12=\n\x04\x46ind\x12\x18.ifs.fits.FindRawFitsReq\x1a\x19.ifs.fits.FindRawFitsResp\"\x00\x12:\n\x03Get\x12\x17.ifs.fits.GetRawFitsReq\x1a\x18.ifs.fits.GetRawFitsResp\"\x00\x12?\n\x04Read\x12\x18.ifs.fits.ReadRawFitsReq\x1a\x19.ifs.fits.ReadRawFitsResp\"\x00\x30\x01\x12\x42\n\x05Write\x12\x19.ifs.fits.WriteRawFitsReq\x1a\x1a.ifs.fits.WriteRawFitsResp\"\x00(\x01\x12P\n\x0fUpdateQc0Status\x12\x1c.ifs.fits.UpdateQc0StatusReq\x1a\x1d.ifs.fits.UpdateQc0StatusResp\"\x00\x12S\n\x10UpdateProcStatus\x12\x1d.ifs.fits.UpdateProcStatusReq\x1a\x1e.ifs.fits.UpdateProcStatusResp\"\x00\x42\x1fZ\x1d\x63nlab.net/csst/proto/ifs/fitsb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -804,11 +804,11 @@ _FITSSRV = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=1282,
-  serialized_end=1718,
+  serialized_end=1714,
   methods=[
   _descriptor.MethodDescriptor(
-    name='find',
-    full_name='ifs.fits.FitsSrv.find',
+    name='Find',
+    full_name='ifs.fits.FitsSrv.Find',
     index=0,
     containing_service=None,
     input_type=_FINDRAWFITSREQ,
@@ -816,8 +816,8 @@ _FITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='get',
-    full_name='ifs.fits.FitsSrv.get',
+    name='Get',
+    full_name='ifs.fits.FitsSrv.Get',
     index=1,
     containing_service=None,
     input_type=_GETRAWFITSREQ,
@@ -825,8 +825,8 @@ _FITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='read',
-    full_name='ifs.fits.FitsSrv.read',
+    name='Read',
+    full_name='ifs.fits.FitsSrv.Read',
     index=2,
     containing_service=None,
     input_type=_READRAWFITSREQ,
@@ -834,8 +834,8 @@ _FITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='write',
-    full_name='ifs.fits.FitsSrv.write',
+    name='Write',
+    full_name='ifs.fits.FitsSrv.Write',
     index=3,
     containing_service=None,
     input_type=_WRITERAWFITSREQ,
@@ -843,8 +843,8 @@ _FITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='update_qc0_status',
-    full_name='ifs.fits.FitsSrv.update_qc0_status',
+    name='UpdateQc0Status',
+    full_name='ifs.fits.FitsSrv.UpdateQc0Status',
     index=4,
     containing_service=None,
     input_type=_UPDATEQC0STATUSREQ,
@@ -852,8 +852,8 @@ _FITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='update_proc_status',
-    full_name='ifs.fits.FitsSrv.update_proc_status',
+    name='UpdateProcStatus',
+    full_name='ifs.fits.FitsSrv.UpdateProcStatus',
     index=5,
     containing_service=None,
     input_type=_UPDATEPROCSTATUSREQ,

@@ -13,7 +13,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from common import error_pb2 as common_dot_error__pb2
+from ...common import error_pb2 as common_dot_error__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ifs.reffits',
   syntax='proto3',
   serialized_options=_b('Z cnlab.net/csst/proto/ifs/reffits'),
-  serialized_pb=_b('\n\x19ifs/reffits/reffits.proto\x12\x0bifs.reffits\x1a\x12\x63ommon/error.proto\"\xa7\x01\n\x07RefFits\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08obs_time\x18\x03 \x01(\r\x12\x10\n\x08\x65xp_time\x18\x04 \x01(\x03\x12\x11\n\tfile_path\x18\x05 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x06 \x01(\r\x12\x10\n\x08ref_type\x18\x07 \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x08 \x01(\x03\x12\x0e\n\x06status\x18\t \x01(\r\"\x9a\x02\n\x0e\x46indRefFitsReq\x12\x10\n\x08obs_time\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x05 \x01(\r\x12\x0e\n\x06status\x18\x06 \x01(\r\x12\x10\n\x08ref_type\x18\x07 \x01(\t\x12J\n\x10other_conditions\x18\x08 \x03(\x0b\x32\x30.ifs.reffits.FindRefFitsReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"{\n\x0f\x46indRefFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12%\n\x07refFits\x18\x04 \x03(\x0b\x32\x14.ifs.reffits.RefFits\" \n\rGetRefFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\"7\n\x0eGetRefFitsResp\x12%\n\x07refFits\x18\x01 \x01(\x0b\x32\x14.ifs.reffits.RefFits\"H\n\x0eReadRefFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x11\n\tfile_path\x18\x02 \x01(\t\x12\x12\n\nchunk_size\x18\x03 \x01(\r\"\x1f\n\x0fReadRefFitsResp\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"6\n\x0fWriteRefFitsReq\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x10\n\x08\x66itsData\x18\x02 \x01(\x0c\"h\n\x10WriteRefFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12%\n\x07refFits\x18\x03 \x01(\x0b\x32\x14.ifs.reffits.RefFits\"2\n\x0fUpdateStatusReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"A\n\x10UpdateStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xf4\x02\n\nRefFitsSrv\x12\x43\n\x04\x66ind\x12\x1b.ifs.reffits.FindRefFitsReq\x1a\x1c.ifs.reffits.FindRefFitsResp\"\x00\x12@\n\x03get\x12\x1a.ifs.reffits.GetRefFitsReq\x1a\x1b.ifs.reffits.GetRefFitsResp\"\x00\x12\x45\n\x04read\x12\x1b.ifs.reffits.ReadRefFitsReq\x1a\x1c.ifs.reffits.ReadRefFitsResp\"\x00\x30\x01\x12H\n\x05write\x12\x1c.ifs.reffits.WriteRefFitsReq\x1a\x1d.ifs.reffits.WriteRefFitsResp\"\x00(\x01\x12N\n\rupdate_status\x12\x1c.ifs.reffits.UpdateStatusReq\x1a\x1d.ifs.reffits.UpdateStatusResp\"\x00\x42\"Z cnlab.net/csst/proto/ifs/reffitsb\x06proto3')
+  serialized_pb=_b('\n\x19ifs/reffits/reffits.proto\x12\x0bifs.reffits\x1a\x12\x63ommon/error.proto\"\xa7\x01\n\x07RefFits\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08obs_time\x18\x03 \x01(\r\x12\x10\n\x08\x65xp_time\x18\x04 \x01(\x03\x12\x11\n\tfile_path\x18\x05 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x06 \x01(\r\x12\x10\n\x08ref_type\x18\x07 \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x08 \x01(\x03\x12\x0e\n\x06status\x18\t \x01(\r\"\x9a\x02\n\x0e\x46indRefFitsReq\x12\x10\n\x08obs_time\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x0f\n\x07\x63\x63\x64_num\x18\x05 \x01(\r\x12\x0e\n\x06status\x18\x06 \x01(\r\x12\x10\n\x08ref_type\x18\x07 \x01(\t\x12J\n\x10other_conditions\x18\x08 \x03(\x0b\x32\x30.ifs.reffits.FindRefFitsReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"{\n\x0f\x46indRefFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12%\n\x07refFits\x18\x04 \x03(\x0b\x32\x14.ifs.reffits.RefFits\" \n\rGetRefFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\"7\n\x0eGetRefFitsResp\x12%\n\x07refFits\x18\x01 \x01(\x0b\x32\x14.ifs.reffits.RefFits\"H\n\x0eReadRefFitsReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x11\n\tfile_path\x18\x02 \x01(\t\x12\x12\n\nchunk_size\x18\x03 \x01(\r\"\x1f\n\x0fReadRefFitsResp\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"6\n\x0fWriteRefFitsReq\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x10\n\x08\x66itsData\x18\x02 \x01(\x0c\"h\n\x10WriteRefFitsResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12%\n\x07refFits\x18\x03 \x01(\x0b\x32\x14.ifs.reffits.RefFits\"2\n\x0fUpdateStatusReq\x12\x0f\n\x07\x66its_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"A\n\x10UpdateStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xf3\x02\n\nRefFitsSrv\x12\x43\n\x04\x46ind\x12\x1b.ifs.reffits.FindRefFitsReq\x1a\x1c.ifs.reffits.FindRefFitsResp\"\x00\x12@\n\x03Get\x12\x1a.ifs.reffits.GetRefFitsReq\x1a\x1b.ifs.reffits.GetRefFitsResp\"\x00\x12\x45\n\x04Read\x12\x1b.ifs.reffits.ReadRefFitsReq\x1a\x1c.ifs.reffits.ReadRefFitsResp\"\x00\x30\x01\x12H\n\x05Write\x12\x1c.ifs.reffits.WriteRefFitsReq\x1a\x1d.ifs.reffits.WriteRefFitsResp\"\x00(\x01\x12M\n\x0cUpdateStatus\x12\x1c.ifs.reffits.UpdateStatusReq\x1a\x1d.ifs.reffits.UpdateStatusResp\"\x00\x42\"Z cnlab.net/csst/proto/ifs/reffitsb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -697,11 +697,11 @@ _REFFITSSRV = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=1122,
-  serialized_end=1494,
+  serialized_end=1493,
   methods=[
   _descriptor.MethodDescriptor(
-    name='find',
-    full_name='ifs.reffits.RefFitsSrv.find',
+    name='Find',
+    full_name='ifs.reffits.RefFitsSrv.Find',
     index=0,
     containing_service=None,
     input_type=_FINDREFFITSREQ,
@@ -709,8 +709,8 @@ _REFFITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='get',
-    full_name='ifs.reffits.RefFitsSrv.get',
+    name='Get',
+    full_name='ifs.reffits.RefFitsSrv.Get',
     index=1,
     containing_service=None,
     input_type=_GETREFFITSREQ,
@@ -718,8 +718,8 @@ _REFFITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='read',
-    full_name='ifs.reffits.RefFitsSrv.read',
+    name='Read',
+    full_name='ifs.reffits.RefFitsSrv.Read',
     index=2,
     containing_service=None,
     input_type=_READREFFITSREQ,
@@ -727,8 +727,8 @@ _REFFITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='write',
-    full_name='ifs.reffits.RefFitsSrv.write',
+    name='Write',
+    full_name='ifs.reffits.RefFitsSrv.Write',
     index=3,
     containing_service=None,
     input_type=_WRITEREFFITSREQ,
@@ -736,8 +736,8 @@ _REFFITSSRV = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='update_status',
-    full_name='ifs.reffits.RefFitsSrv.update_status',
+    name='UpdateStatus',
+    full_name='ifs.reffits.RefFitsSrv.UpdateStatus',
     index=4,
     containing_service=None,
     input_type=_UPDATESTATUSREQ,
