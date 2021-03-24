@@ -4,7 +4,7 @@ import grpc
 from . import ephem_pb2 as common_dot_ephem_dot_ephem__pb2
 
 
-class EphemOpStub(object):
+class EphemSearchSrvStub(object):
   # missing associated documentation comment in .proto file
   pass
 
@@ -14,18 +14,18 @@ class EphemOpStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.SearchEphem = channel.unary_unary(
-        '/dfs.ephem.EphemOp/SearchEphem',
-        request_serializer=common_dot_ephem_dot_ephem__pb2.SearchEphemRequest.SerializeToString,
-        response_deserializer=common_dot_ephem_dot_ephem__pb2.SearchEphemResponse.FromString,
+    self.Gaia2Search = channel.unary_unary(
+        '/dfs.ephem.EphemSearchSrv/Gaia2Search',
+        request_serializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchRequest.SerializeToString,
+        response_deserializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchResponse.FromString,
         )
 
 
-class EphemOpServicer(object):
+class EphemSearchSrvServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def SearchEphem(self, request, context):
+  def Gaia2Search(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -33,14 +33,14 @@ class EphemOpServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_EphemOpServicer_to_server(servicer, server):
+def add_EphemSearchSrvServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'SearchEphem': grpc.unary_unary_rpc_method_handler(
-          servicer.SearchEphem,
-          request_deserializer=common_dot_ephem_dot_ephem__pb2.SearchEphemRequest.FromString,
-          response_serializer=common_dot_ephem_dot_ephem__pb2.SearchEphemResponse.SerializeToString,
+      'Gaia2Search': grpc.unary_unary_rpc_method_handler(
+          servicer.Gaia2Search,
+          request_deserializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchRequest.FromString,
+          response_serializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'dfs.ephem.EphemOp', rpc_method_handlers)
+      'dfs.ephem.EphemSearchSrv', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

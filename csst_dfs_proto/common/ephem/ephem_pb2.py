@@ -13,7 +13,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from .. import error_pb2 as common_dot_error__pb2
+from ...common import error_pb2 as common_dot_error__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,44 +21,674 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.ephem',
   syntax='proto3',
   serialized_options=_b('Z!cnlab.net/csst/proto/common/ephem'),
-  serialized_pb=_b('\n\x18\x63ommon/ephem/ephem.proto\x12\tdfs.ephem\x1a\x12\x63ommon/error.proto\":\n\x05\x45phem\x12\n\n\x02id\x18\x01 \x01(\x03\x12\n\n\x02ra\x18\x02 \x01(\x01\x12\x0b\n\x03\x64\x65\x63\x18\x03 \x01(\x01\x12\x0c\n\x04\x66lux\x18\x04 \x01(\x01\"Y\n\x12SearchEphemRequest\x12\n\n\x02ra\x18\x01 \x01(\x01\x12\x0b\n\x03\x64\x65\x63\x18\x02 \x01(\x01\x12\x0e\n\x06radius\x18\x03 \x01(\x01\x12\x0b\n\x03mag\x18\x04 \x01(\x01\x12\r\n\x05limit\x18\x05 \x01(\x03\"y\n\x13SearchEphemResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x1f\n\x05\x65phem\x18\x04 \x03(\x0b\x32\x10.dfs.ephem.Ephem2Y\n\x07\x45phemOp\x12N\n\x0bSearchEphem\x12\x1d.dfs.ephem.SearchEphemRequest\x1a\x1e.dfs.ephem.SearchEphemResponse\"\x00\x42#Z!cnlab.net/csst/proto/common/ephemb\x06proto3')
+  serialized_pb=_b('\n\x18\x63ommon/ephem/ephem.proto\x12\tdfs.ephem\x1a\x12\x63ommon/error.proto\"\xe3\x11\n\x0bGaia2Record\x12\x12\n\nSolutionId\x18\x01 \x01(\x03\x12\x13\n\x0b\x44\x65signation\x18\x02 \x01(\t\x12\x10\n\x08SourceId\x18\x03 \x01(\x03\x12\x13\n\x0bRandomIndex\x18\x04 \x01(\x03\x12\x10\n\x08RefEpoch\x18\x05 \x01(\x01\x12\n\n\x02Ra\x18\x06 \x01(\x01\x12\x0f\n\x07RaError\x18\x07 \x01(\x01\x12\x0b\n\x03\x44\x65\x63\x18\x08 \x01(\x01\x12\x10\n\x08\x44\x65\x63\x45rror\x18\t \x01(\x01\x12\x10\n\x08Parallax\x18\n \x01(\x01\x12\x15\n\rParallaxError\x18\x0b \x01(\x01\x12\x19\n\x11ParallaxOverError\x18\x0c \x01(\x01\x12\x0c\n\x04Pmra\x18\r \x01(\x01\x12\x11\n\tPmraError\x18\x0e \x01(\x01\x12\r\n\x05Pmdec\x18\x0f \x01(\x01\x12\x12\n\nPmdecError\x18\x10 \x01(\x01\x12\x11\n\tRaDecCorr\x18\x11 \x01(\x01\x12\x16\n\x0eRaParallaxCorr\x18\x12 \x01(\x01\x12\x12\n\nRaPmraCorr\x18\x13 \x01(\x01\x12\x13\n\x0bRaPmdecCorr\x18\x14 \x01(\x01\x12\x17\n\x0f\x44\x65\x63ParallaxCorr\x18\x15 \x01(\x01\x12\x13\n\x0b\x44\x65\x63PmraCorr\x18\x16 \x01(\x01\x12\x14\n\x0c\x44\x65\x63PmdecCorr\x18\x17 \x01(\x01\x12\x18\n\x10ParallaxPmraCorr\x18\x18 \x01(\x01\x12\x19\n\x11ParallaxPmdecCorr\x18\x19 \x01(\x01\x12\x15\n\rPmraPmdecCorr\x18\x1a \x01(\x01\x12\x19\n\x11\x41strometricNObsAl\x18\x1b \x01(\x03\x12\x19\n\x11\x41strometricNObsAc\x18\x1c \x01(\x03\x12\x1d\n\x15\x41strometricNGoodObsAl\x18\x1d \x01(\x03\x12\x1c\n\x14\x41strometricNBadObsAl\x18\x1e \x01(\x03\x12\x18\n\x10\x41strometricGofAl\x18\x1f \x01(\x01\x12\x19\n\x11\x41strometricChi2Al\x18  \x01(\x01\x12\x1e\n\x16\x41strometricExcessNoise\x18! \x01(\x01\x12!\n\x19\x41strometricExcessNoiseSig\x18\" \x01(\x01\x12\x1f\n\x17\x41strometricParamsSolved\x18# \x01(\x03\x12\x1e\n\x16\x41strometricPrimaryFlag\x18$ \x01(\r\x12\x1b\n\x13\x41strometricWeightAl\x18% \x01(\x01\x12\x1f\n\x17\x41strometricPseudoColour\x18& \x01(\x01\x12$\n\x1c\x41strometricPseudoColourError\x18\' \x01(\x01\x12\x19\n\x11MeanVarpiFactorAl\x18( \x01(\x01\x12&\n\x1e\x41strometricMatchedObservations\x18) \x01(\x03\x12\x1d\n\x15VisibilityPeriodsUsed\x18* \x01(\x03\x12\x1d\n\x15\x41strometricSigma5DMax\x18+ \x01(\x01\x12\x1e\n\x16\x46rameRotatorObjectType\x18, \x01(\x03\x12\x1b\n\x13MatchedObservations\x18- \x01(\x03\x12\x18\n\x10\x44uplicatedSource\x18. \x01(\r\x12\x11\n\tPhotGNObs\x18/ \x01(\x03\x12\x15\n\rPhotGMeanFlux\x18\x30 \x01(\x01\x12\x1a\n\x12PhotGMeanFluxError\x18\x31 \x01(\x01\x12\x1e\n\x16PhotGMeanFluxOverError\x18\x32 \x01(\x01\x12\x14\n\x0cPhotGMeanMag\x18\x33 \x01(\x01\x12\x12\n\nPhotBpNObs\x18\x34 \x01(\x03\x12\x16\n\x0ePhotBpMeanFlux\x18\x35 \x01(\x01\x12\x1b\n\x13PhotBpMeanFluxError\x18\x36 \x01(\x01\x12\x1f\n\x17PhotBpMeanFluxOverError\x18\x37 \x01(\x01\x12\x15\n\rPhotBpMeanMag\x18\x38 \x01(\x01\x12\x12\n\nPhotRpNObs\x18\x39 \x01(\x03\x12\x16\n\x0ePhotRpMeanFlux\x18: \x01(\x01\x12\x1b\n\x13PhotRpMeanFluxError\x18; \x01(\x01\x12\x1f\n\x17PhotRpMeanFluxOverError\x18< \x01(\x01\x12\x15\n\rPhotRpMeanMag\x18= \x01(\x01\x12\x1c\n\x14PhotBpRpExcessFactor\x18> \x01(\x01\x12\x14\n\x0cPhotProcMode\x18? \x01(\x03\x12\x0c\n\x04\x42pRp\x18@ \x01(\x01\x12\x0b\n\x03\x42pG\x18\x41 \x01(\x01\x12\x0b\n\x03GRp\x18\x42 \x01(\x01\x12\x16\n\x0eRadialVelocity\x18\x43 \x01(\x01\x12\x1b\n\x13RadialVelocityError\x18\x44 \x01(\x01\x12\x14\n\x0cRvNbTransits\x18\x45 \x01(\x03\x12\x16\n\x0eRvTemplateTeff\x18\x46 \x01(\x01\x12\x16\n\x0eRvTemplateLogg\x18G \x01(\x01\x12\x15\n\rRvTemplateFeH\x18H \x01(\x01\x12\x18\n\x10PhotVariableFlag\x18I \x01(\t\x12\t\n\x01L\x18J \x01(\x01\x12\t\n\x01\x42\x18K \x01(\x01\x12\x0e\n\x06\x45\x63lLon\x18L \x01(\x01\x12\x0e\n\x06\x45\x63lLat\x18M \x01(\x01\x12\x12\n\nPriamFlags\x18N \x01(\x01\x12\x0f\n\x07TeffVal\x18O \x01(\x01\x12\x1b\n\x13TeffPercentileLower\x18P \x01(\x01\x12\x1b\n\x13TeffPercentileUpper\x18Q \x01(\x01\x12\r\n\x05\x41GVal\x18R \x01(\x01\x12\x19\n\x11\x41GPercentileLower\x18S \x01(\x01\x12\x19\n\x11\x41GPercentileUpper\x18T \x01(\x01\x12\x13\n\x0b\x45\x42pMinRpVal\x18U \x01(\x01\x12\x1f\n\x17\x45\x42pMinRpPercentileLower\x18V \x01(\x01\x12\x1f\n\x17\x45\x42pMinRpPercentileUpper\x18W \x01(\x01\x12\x12\n\nFlameFlags\x18X \x01(\x01\x12\x11\n\tRadiusVal\x18Y \x01(\x01\x12\x1d\n\x15RadiusPercentileLower\x18Z \x01(\x01\x12\x1d\n\x15RadiusPercentileUpper\x18[ \x01(\x01\x12\x0e\n\x06LumVal\x18\\ \x01(\x01\x12\x1a\n\x12LumPercentileLower\x18] \x01(\x01\x12\x1a\n\x12LumPercentileUpper\x18^ \x01(\x01\"Y\n\x12Gaia2SearchRequest\x12\n\n\x02ra\x18\x01 \x01(\x01\x12\x0b\n\x03\x64\x65\x63\x18\x02 \x01(\x01\x12\x0e\n\x06radius\x18\x03 \x01(\x01\x12\x0b\n\x03mag\x18\x04 \x01(\x01\x12\r\n\x05limit\x18\x05 \x01(\x03\"\x81\x01\n\x13Gaia2SearchResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\'\n\x07records\x18\x04 \x03(\x0b\x32\x16.dfs.ephem.Gaia2Record2`\n\x0e\x45phemSearchSrv\x12N\n\x0bGaia2Search\x12\x1d.dfs.ephem.Gaia2SearchRequest\x1a\x1e.dfs.ephem.Gaia2SearchResponse\"\x00\x42#Z!cnlab.net/csst/proto/common/ephemb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
 
 
 
-_EPHEM = _descriptor.Descriptor(
-  name='Ephem',
-  full_name='dfs.ephem.Ephem',
+_GAIA2RECORD = _descriptor.Descriptor(
+  name='Gaia2Record',
+  full_name='dfs.ephem.Gaia2Record',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='dfs.ephem.Ephem.id', index=0,
+      name='SolutionId', full_name='dfs.ephem.Gaia2Record.SolutionId', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ra', full_name='dfs.ephem.Ephem.ra', index=1,
-      number=2, type=1, cpp_type=5, label=1,
+      name='Designation', full_name='dfs.ephem.Gaia2Record.Designation', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='SourceId', full_name='dfs.ephem.Gaia2Record.SourceId', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RandomIndex', full_name='dfs.ephem.Gaia2Record.RandomIndex', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RefEpoch', full_name='dfs.ephem.Gaia2Record.RefEpoch', index=4,
+      number=5, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dec', full_name='dfs.ephem.Ephem.dec', index=2,
-      number=3, type=1, cpp_type=5, label=1,
+      name='Ra', full_name='dfs.ephem.Gaia2Record.Ra', index=5,
+      number=6, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='flux', full_name='dfs.ephem.Ephem.flux', index=3,
-      number=4, type=1, cpp_type=5, label=1,
+      name='RaError', full_name='dfs.ephem.Gaia2Record.RaError', index=6,
+      number=7, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Dec', full_name='dfs.ephem.Gaia2Record.Dec', index=7,
+      number=8, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DecError', full_name='dfs.ephem.Gaia2Record.DecError', index=8,
+      number=9, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Parallax', full_name='dfs.ephem.Gaia2Record.Parallax', index=9,
+      number=10, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ParallaxError', full_name='dfs.ephem.Gaia2Record.ParallaxError', index=10,
+      number=11, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ParallaxOverError', full_name='dfs.ephem.Gaia2Record.ParallaxOverError', index=11,
+      number=12, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Pmra', full_name='dfs.ephem.Gaia2Record.Pmra', index=12,
+      number=13, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PmraError', full_name='dfs.ephem.Gaia2Record.PmraError', index=13,
+      number=14, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Pmdec', full_name='dfs.ephem.Gaia2Record.Pmdec', index=14,
+      number=15, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PmdecError', full_name='dfs.ephem.Gaia2Record.PmdecError', index=15,
+      number=16, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RaDecCorr', full_name='dfs.ephem.Gaia2Record.RaDecCorr', index=16,
+      number=17, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RaParallaxCorr', full_name='dfs.ephem.Gaia2Record.RaParallaxCorr', index=17,
+      number=18, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RaPmraCorr', full_name='dfs.ephem.Gaia2Record.RaPmraCorr', index=18,
+      number=19, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RaPmdecCorr', full_name='dfs.ephem.Gaia2Record.RaPmdecCorr', index=19,
+      number=20, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DecParallaxCorr', full_name='dfs.ephem.Gaia2Record.DecParallaxCorr', index=20,
+      number=21, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DecPmraCorr', full_name='dfs.ephem.Gaia2Record.DecPmraCorr', index=21,
+      number=22, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DecPmdecCorr', full_name='dfs.ephem.Gaia2Record.DecPmdecCorr', index=22,
+      number=23, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ParallaxPmraCorr', full_name='dfs.ephem.Gaia2Record.ParallaxPmraCorr', index=23,
+      number=24, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ParallaxPmdecCorr', full_name='dfs.ephem.Gaia2Record.ParallaxPmdecCorr', index=24,
+      number=25, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PmraPmdecCorr', full_name='dfs.ephem.Gaia2Record.PmraPmdecCorr', index=25,
+      number=26, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricNObsAl', full_name='dfs.ephem.Gaia2Record.AstrometricNObsAl', index=26,
+      number=27, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricNObsAc', full_name='dfs.ephem.Gaia2Record.AstrometricNObsAc', index=27,
+      number=28, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricNGoodObsAl', full_name='dfs.ephem.Gaia2Record.AstrometricNGoodObsAl', index=28,
+      number=29, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricNBadObsAl', full_name='dfs.ephem.Gaia2Record.AstrometricNBadObsAl', index=29,
+      number=30, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricGofAl', full_name='dfs.ephem.Gaia2Record.AstrometricGofAl', index=30,
+      number=31, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricChi2Al', full_name='dfs.ephem.Gaia2Record.AstrometricChi2Al', index=31,
+      number=32, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricExcessNoise', full_name='dfs.ephem.Gaia2Record.AstrometricExcessNoise', index=32,
+      number=33, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricExcessNoiseSig', full_name='dfs.ephem.Gaia2Record.AstrometricExcessNoiseSig', index=33,
+      number=34, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricParamsSolved', full_name='dfs.ephem.Gaia2Record.AstrometricParamsSolved', index=34,
+      number=35, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricPrimaryFlag', full_name='dfs.ephem.Gaia2Record.AstrometricPrimaryFlag', index=35,
+      number=36, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricWeightAl', full_name='dfs.ephem.Gaia2Record.AstrometricWeightAl', index=36,
+      number=37, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricPseudoColour', full_name='dfs.ephem.Gaia2Record.AstrometricPseudoColour', index=37,
+      number=38, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricPseudoColourError', full_name='dfs.ephem.Gaia2Record.AstrometricPseudoColourError', index=38,
+      number=39, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MeanVarpiFactorAl', full_name='dfs.ephem.Gaia2Record.MeanVarpiFactorAl', index=39,
+      number=40, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricMatchedObservations', full_name='dfs.ephem.Gaia2Record.AstrometricMatchedObservations', index=40,
+      number=41, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='VisibilityPeriodsUsed', full_name='dfs.ephem.Gaia2Record.VisibilityPeriodsUsed', index=41,
+      number=42, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AstrometricSigma5DMax', full_name='dfs.ephem.Gaia2Record.AstrometricSigma5DMax', index=42,
+      number=43, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FrameRotatorObjectType', full_name='dfs.ephem.Gaia2Record.FrameRotatorObjectType', index=43,
+      number=44, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MatchedObservations', full_name='dfs.ephem.Gaia2Record.MatchedObservations', index=44,
+      number=45, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DuplicatedSource', full_name='dfs.ephem.Gaia2Record.DuplicatedSource', index=45,
+      number=46, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotGNObs', full_name='dfs.ephem.Gaia2Record.PhotGNObs', index=46,
+      number=47, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotGMeanFlux', full_name='dfs.ephem.Gaia2Record.PhotGMeanFlux', index=47,
+      number=48, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotGMeanFluxError', full_name='dfs.ephem.Gaia2Record.PhotGMeanFluxError', index=48,
+      number=49, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotGMeanFluxOverError', full_name='dfs.ephem.Gaia2Record.PhotGMeanFluxOverError', index=49,
+      number=50, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotGMeanMag', full_name='dfs.ephem.Gaia2Record.PhotGMeanMag', index=50,
+      number=51, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotBpNObs', full_name='dfs.ephem.Gaia2Record.PhotBpNObs', index=51,
+      number=52, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotBpMeanFlux', full_name='dfs.ephem.Gaia2Record.PhotBpMeanFlux', index=52,
+      number=53, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotBpMeanFluxError', full_name='dfs.ephem.Gaia2Record.PhotBpMeanFluxError', index=53,
+      number=54, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotBpMeanFluxOverError', full_name='dfs.ephem.Gaia2Record.PhotBpMeanFluxOverError', index=54,
+      number=55, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotBpMeanMag', full_name='dfs.ephem.Gaia2Record.PhotBpMeanMag', index=55,
+      number=56, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotRpNObs', full_name='dfs.ephem.Gaia2Record.PhotRpNObs', index=56,
+      number=57, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotRpMeanFlux', full_name='dfs.ephem.Gaia2Record.PhotRpMeanFlux', index=57,
+      number=58, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotRpMeanFluxError', full_name='dfs.ephem.Gaia2Record.PhotRpMeanFluxError', index=58,
+      number=59, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotRpMeanFluxOverError', full_name='dfs.ephem.Gaia2Record.PhotRpMeanFluxOverError', index=59,
+      number=60, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotRpMeanMag', full_name='dfs.ephem.Gaia2Record.PhotRpMeanMag', index=60,
+      number=61, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotBpRpExcessFactor', full_name='dfs.ephem.Gaia2Record.PhotBpRpExcessFactor', index=61,
+      number=62, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotProcMode', full_name='dfs.ephem.Gaia2Record.PhotProcMode', index=62,
+      number=63, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='BpRp', full_name='dfs.ephem.Gaia2Record.BpRp', index=63,
+      number=64, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='BpG', full_name='dfs.ephem.Gaia2Record.BpG', index=64,
+      number=65, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='GRp', full_name='dfs.ephem.Gaia2Record.GRp', index=65,
+      number=66, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RadialVelocity', full_name='dfs.ephem.Gaia2Record.RadialVelocity', index=66,
+      number=67, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RadialVelocityError', full_name='dfs.ephem.Gaia2Record.RadialVelocityError', index=67,
+      number=68, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RvNbTransits', full_name='dfs.ephem.Gaia2Record.RvNbTransits', index=68,
+      number=69, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RvTemplateTeff', full_name='dfs.ephem.Gaia2Record.RvTemplateTeff', index=69,
+      number=70, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RvTemplateLogg', full_name='dfs.ephem.Gaia2Record.RvTemplateLogg', index=70,
+      number=71, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RvTemplateFeH', full_name='dfs.ephem.Gaia2Record.RvTemplateFeH', index=71,
+      number=72, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PhotVariableFlag', full_name='dfs.ephem.Gaia2Record.PhotVariableFlag', index=72,
+      number=73, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='L', full_name='dfs.ephem.Gaia2Record.L', index=73,
+      number=74, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='B', full_name='dfs.ephem.Gaia2Record.B', index=74,
+      number=75, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='EclLon', full_name='dfs.ephem.Gaia2Record.EclLon', index=75,
+      number=76, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='EclLat', full_name='dfs.ephem.Gaia2Record.EclLat', index=76,
+      number=77, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PriamFlags', full_name='dfs.ephem.Gaia2Record.PriamFlags', index=77,
+      number=78, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='TeffVal', full_name='dfs.ephem.Gaia2Record.TeffVal', index=78,
+      number=79, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='TeffPercentileLower', full_name='dfs.ephem.Gaia2Record.TeffPercentileLower', index=79,
+      number=80, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='TeffPercentileUpper', full_name='dfs.ephem.Gaia2Record.TeffPercentileUpper', index=80,
+      number=81, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AGVal', full_name='dfs.ephem.Gaia2Record.AGVal', index=81,
+      number=82, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AGPercentileLower', full_name='dfs.ephem.Gaia2Record.AGPercentileLower', index=82,
+      number=83, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AGPercentileUpper', full_name='dfs.ephem.Gaia2Record.AGPercentileUpper', index=83,
+      number=84, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='EBpMinRpVal', full_name='dfs.ephem.Gaia2Record.EBpMinRpVal', index=84,
+      number=85, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='EBpMinRpPercentileLower', full_name='dfs.ephem.Gaia2Record.EBpMinRpPercentileLower', index=85,
+      number=86, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='EBpMinRpPercentileUpper', full_name='dfs.ephem.Gaia2Record.EBpMinRpPercentileUpper', index=86,
+      number=87, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FlameFlags', full_name='dfs.ephem.Gaia2Record.FlameFlags', index=87,
+      number=88, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RadiusVal', full_name='dfs.ephem.Gaia2Record.RadiusVal', index=88,
+      number=89, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RadiusPercentileLower', full_name='dfs.ephem.Gaia2Record.RadiusPercentileLower', index=89,
+      number=90, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RadiusPercentileUpper', full_name='dfs.ephem.Gaia2Record.RadiusPercentileUpper', index=90,
+      number=91, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='LumVal', full_name='dfs.ephem.Gaia2Record.LumVal', index=91,
+      number=92, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='LumPercentileLower', full_name='dfs.ephem.Gaia2Record.LumPercentileLower', index=92,
+      number=93, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='LumPercentileUpper', full_name='dfs.ephem.Gaia2Record.LumPercentileUpper', index=93,
+      number=94, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -75,48 +705,48 @@ _EPHEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59,
-  serialized_end=117,
+  serialized_start=60,
+  serialized_end=2335,
 )
 
 
-_SEARCHEPHEMREQUEST = _descriptor.Descriptor(
-  name='SearchEphemRequest',
-  full_name='dfs.ephem.SearchEphemRequest',
+_GAIA2SEARCHREQUEST = _descriptor.Descriptor(
+  name='Gaia2SearchRequest',
+  full_name='dfs.ephem.Gaia2SearchRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ra', full_name='dfs.ephem.SearchEphemRequest.ra', index=0,
+      name='ra', full_name='dfs.ephem.Gaia2SearchRequest.ra', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dec', full_name='dfs.ephem.SearchEphemRequest.dec', index=1,
+      name='dec', full_name='dfs.ephem.Gaia2SearchRequest.dec', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='radius', full_name='dfs.ephem.SearchEphemRequest.radius', index=2,
+      name='radius', full_name='dfs.ephem.Gaia2SearchRequest.radius', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='mag', full_name='dfs.ephem.SearchEphemRequest.mag', index=3,
+      name='mag', full_name='dfs.ephem.Gaia2SearchRequest.mag', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='dfs.ephem.SearchEphemRequest.limit', index=4,
+      name='limit', full_name='dfs.ephem.Gaia2SearchRequest.limit', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -134,41 +764,41 @@ _SEARCHEPHEMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=119,
-  serialized_end=208,
+  serialized_start=2337,
+  serialized_end=2426,
 )
 
 
-_SEARCHEPHEMRESPONSE = _descriptor.Descriptor(
-  name='SearchEphemResponse',
-  full_name='dfs.ephem.SearchEphemResponse',
+_GAIA2SEARCHRESPONSE = _descriptor.Descriptor(
+  name='Gaia2SearchResponse',
+  full_name='dfs.ephem.Gaia2SearchResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='dfs.ephem.SearchEphemResponse.success', index=0,
+      name='success', full_name='dfs.ephem.Gaia2SearchResponse.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='totalCount', full_name='dfs.ephem.SearchEphemResponse.totalCount', index=1,
+      name='totalCount', full_name='dfs.ephem.Gaia2SearchResponse.totalCount', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='error', full_name='dfs.ephem.SearchEphemResponse.error', index=2,
+      name='error', full_name='dfs.ephem.Gaia2SearchResponse.error', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ephem', full_name='dfs.ephem.SearchEphemResponse.ephem', index=3,
+      name='records', full_name='dfs.ephem.Gaia2SearchResponse.records', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -186,62 +816,62 @@ _SEARCHEPHEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=210,
-  serialized_end=331,
+  serialized_start=2429,
+  serialized_end=2558,
 )
 
-_SEARCHEPHEMRESPONSE.fields_by_name['error'].message_type = common_dot_error__pb2._ERROR
-_SEARCHEPHEMRESPONSE.fields_by_name['ephem'].message_type = _EPHEM
-DESCRIPTOR.message_types_by_name['Ephem'] = _EPHEM
-DESCRIPTOR.message_types_by_name['SearchEphemRequest'] = _SEARCHEPHEMREQUEST
-DESCRIPTOR.message_types_by_name['SearchEphemResponse'] = _SEARCHEPHEMRESPONSE
+_GAIA2SEARCHRESPONSE.fields_by_name['error'].message_type = common_dot_error__pb2._ERROR
+_GAIA2SEARCHRESPONSE.fields_by_name['records'].message_type = _GAIA2RECORD
+DESCRIPTOR.message_types_by_name['Gaia2Record'] = _GAIA2RECORD
+DESCRIPTOR.message_types_by_name['Gaia2SearchRequest'] = _GAIA2SEARCHREQUEST
+DESCRIPTOR.message_types_by_name['Gaia2SearchResponse'] = _GAIA2SEARCHRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-Ephem = _reflection.GeneratedProtocolMessageType('Ephem', (_message.Message,), {
-  'DESCRIPTOR' : _EPHEM,
+Gaia2Record = _reflection.GeneratedProtocolMessageType('Gaia2Record', (_message.Message,), {
+  'DESCRIPTOR' : _GAIA2RECORD,
   '__module__' : 'common.ephem.ephem_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ephem.Ephem)
+  # @@protoc_insertion_point(class_scope:dfs.ephem.Gaia2Record)
   })
-_sym_db.RegisterMessage(Ephem)
+_sym_db.RegisterMessage(Gaia2Record)
 
-SearchEphemRequest = _reflection.GeneratedProtocolMessageType('SearchEphemRequest', (_message.Message,), {
-  'DESCRIPTOR' : _SEARCHEPHEMREQUEST,
+Gaia2SearchRequest = _reflection.GeneratedProtocolMessageType('Gaia2SearchRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GAIA2SEARCHREQUEST,
   '__module__' : 'common.ephem.ephem_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ephem.SearchEphemRequest)
+  # @@protoc_insertion_point(class_scope:dfs.ephem.Gaia2SearchRequest)
   })
-_sym_db.RegisterMessage(SearchEphemRequest)
+_sym_db.RegisterMessage(Gaia2SearchRequest)
 
-SearchEphemResponse = _reflection.GeneratedProtocolMessageType('SearchEphemResponse', (_message.Message,), {
-  'DESCRIPTOR' : _SEARCHEPHEMRESPONSE,
+Gaia2SearchResponse = _reflection.GeneratedProtocolMessageType('Gaia2SearchResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GAIA2SEARCHRESPONSE,
   '__module__' : 'common.ephem.ephem_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ephem.SearchEphemResponse)
+  # @@protoc_insertion_point(class_scope:dfs.ephem.Gaia2SearchResponse)
   })
-_sym_db.RegisterMessage(SearchEphemResponse)
+_sym_db.RegisterMessage(Gaia2SearchResponse)
 
 
 DESCRIPTOR._options = None
 
-_EPHEMOP = _descriptor.ServiceDescriptor(
-  name='EphemOp',
-  full_name='dfs.ephem.EphemOp',
+_EPHEMSEARCHSRV = _descriptor.ServiceDescriptor(
+  name='EphemSearchSrv',
+  full_name='dfs.ephem.EphemSearchSrv',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=333,
-  serialized_end=422,
+  serialized_start=2560,
+  serialized_end=2656,
   methods=[
   _descriptor.MethodDescriptor(
-    name='SearchEphem',
-    full_name='dfs.ephem.EphemOp.SearchEphem',
+    name='Gaia2Search',
+    full_name='dfs.ephem.EphemSearchSrv.Gaia2Search',
     index=0,
     containing_service=None,
-    input_type=_SEARCHEPHEMREQUEST,
-    output_type=_SEARCHEPHEMRESPONSE,
+    input_type=_GAIA2SEARCHREQUEST,
+    output_type=_GAIA2SEARCHRESPONSE,
     serialized_options=None,
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_EPHEMOP)
+_sym_db.RegisterServiceDescriptor(_EPHEMSEARCHSRV)
 
-DESCRIPTOR.services_by_name['EphemOp'] = _EPHEMOP
+DESCRIPTOR.services_by_name['EphemSearchSrv'] = _EPHEMSEARCHSRV
 
 # @@protoc_insertion_point(module_scope)
