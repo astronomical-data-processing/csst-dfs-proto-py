@@ -16,7 +16,7 @@ class EphemSearchSrvStub(object):
     """
     self.Gaia2Search = channel.unary_unary(
         '/dfs.ephem.EphemSearchSrv/Gaia2Search',
-        request_serializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchRequest.SerializeToString,
+        request_serializer=common_dot_ephem_dot_ephem__pb2.EphemSearchRequest.SerializeToString,
         response_deserializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchResponse.FromString,
         )
 
@@ -37,7 +37,7 @@ def add_EphemSearchSrvServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'Gaia2Search': grpc.unary_unary_rpc_method_handler(
           servicer.Gaia2Search,
-          request_deserializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchRequest.FromString,
+          request_deserializer=common_dot_ephem_dot_ephem__pb2.EphemSearchRequest.FromString,
           response_serializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchResponse.SerializeToString,
       ),
   }
