@@ -4,7 +4,6 @@ from os import walk, listdir
 from setuptools import find_packages
 from os.path import join
 from setuptools import setup
-import csst_proto
 
 
 def package_files(directory):
@@ -20,7 +19,7 @@ with open('README.md', 'r') as file:
     LONG_DESCRIPTION = file.read()
 
 setup(name='csst_dfs_proto',
-      version=csst_proto.__version__,
+      version='0.0.1',
       author='CSST DFS team.',
       description='CSST DFS Base Proto library.',
       long_description=LONG_DESCRIPTION,

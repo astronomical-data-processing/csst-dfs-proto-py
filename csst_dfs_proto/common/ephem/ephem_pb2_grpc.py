@@ -14,10 +14,10 @@ class EphemSearchSrvStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.Gaia2Search = channel.unary_unary(
-        '/dfs.ephem.EphemSearchSrv/Gaia2Search',
+    self.Gaia3Search = channel.unary_unary(
+        '/dfs.ephem.EphemSearchSrv/Gaia3Search',
         request_serializer=common_dot_ephem_dot_ephem__pb2.EphemSearchRequest.SerializeToString,
-        response_deserializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchResponse.FromString,
+        response_deserializer=common_dot_ephem_dot_ephem__pb2.Gaia3SearchResponse.FromString,
         )
 
 
@@ -25,7 +25,7 @@ class EphemSearchSrvServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def Gaia2Search(self, request, context):
+  def Gaia3Search(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -35,10 +35,10 @@ class EphemSearchSrvServicer(object):
 
 def add_EphemSearchSrvServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'Gaia2Search': grpc.unary_unary_rpc_method_handler(
-          servicer.Gaia2Search,
+      'Gaia3Search': grpc.unary_unary_rpc_method_handler(
+          servicer.Gaia3Search,
           request_deserializer=common_dot_ephem_dot_ephem__pb2.EphemSearchRequest.FromString,
-          response_serializer=common_dot_ephem_dot_ephem__pb2.Gaia2SearchResponse.SerializeToString,
+          response_serializer=common_dot_ephem_dot_ephem__pb2.Gaia3SearchResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
