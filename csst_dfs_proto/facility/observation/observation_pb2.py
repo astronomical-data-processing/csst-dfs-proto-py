@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='observation',
   syntax='proto3',
   serialized_options=_b('Z)cnlab.net/csst/proto/facility/observation'),
-  serialized_pb=_b('\n&facility/observation/observation.proto\x12\x0bobservation\x1a\x12\x63ommon/error.proto\"\x90\x02\n\x0bObservation\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x10\n\x08obs_time\x18\x02 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x03 \x01(\x02\x12\x11\n\tmodule_id\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x1a\n\x12\x66\x61\x63ility_status_id\x18\x06 \x01(\x03\x12\x18\n\x10module_status_id\x18\x07 \x01(\x03\x12\x12\n\nqc0_status\x18\x08 \x01(\r\x12\x10\n\x08qc0_time\x18\t \x01(\t\x12\x12\n\nprc_status\x18\n \x01(\r\x12\x10\n\x08prc_time\x18\x0b \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0c \x01(\t\x12\x15\n\rimport_status\x18\r \x01(\r\"\xa6\x02\n\x12\x46indObservationReq\x12\x11\n\tmodule_id\x18\x01 \x01(\t\x12\x10\n\x08obs_type\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x12\n\nqc0_status\x18\x05 \x01(\r\x12\x12\n\nprc_status\x18\x06 \x01(\r\x12\r\n\x05limit\x18\x07 \x01(\r\x12N\n\x10other_conditions\x18\x08 \x03(\x0b\x32\x34.observation.FindObservationReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x83\x01\n\x13\x46indObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12)\n\x07records\x18\x04 \x03(\x0b\x32\x18.observation.Observation\"#\n\x11GetObservationReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\"C\n\x12GetObservationResp\x12-\n\x0bobservation\x18\x01 \x01(\x0b\x32\x18.observation.Observation\"\xaa\x01\n\x13WriteObservationReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x16\n\x0e\x65xp_begin_time\x18\x02 \x01(\x03\x12\x14\n\x0c\x65xp_end_time\x18\x03 \x01(\x03\x12\x11\n\tmodule_id\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x1a\n\x12\x66\x61\x63ility_status_id\x18\x06 \x01(\x03\x12\x18\n\x10module_status_id\x18\x07 \x01(\x03\"t\n\x14WriteObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12-\n\x0bobservation\x18\x03 \x01(\x0b\x32\x18.observation.Observation\"4\n\x12UpdateQc0StatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"5\n\x13UpdateProcStatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xac\x03\n\x0eObservationSrv\x12K\n\x04\x46ind\x12\x1f.observation.FindObservationReq\x1a .observation.FindObservationResp\"\x00\x12H\n\x03Get\x12\x1e.observation.GetObservationReq\x1a\x1f.observation.GetObservationResp\"\x00\x12P\n\x05Write\x12 .observation.WriteObservationReq\x1a!.observation.WriteObservationResp\"\x00(\x01\x12V\n\x0fUpdateQc0Status\x12\x1f.observation.UpdateQc0StatusReq\x1a .observation.UpdateQc0StatusResp\"\x00\x12Y\n\x10UpdateProcStatus\x12 .observation.UpdateProcStatusReq\x1a!.observation.UpdateProcStatusResp\"\x00\x42+Z)cnlab.net/csst/proto/facility/observationb\x06proto3')
+  serialized_pb=_b('\n&facility/observation/observation.proto\x12\x0bobservation\x1a\x12\x63ommon/error.proto\"\x90\x02\n\x0bObservation\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x10\n\x08obs_time\x18\x02 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x03 \x01(\x02\x12\x11\n\tmodule_id\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x1a\n\x12\x66\x61\x63ility_status_id\x18\x06 \x01(\x03\x12\x18\n\x10module_status_id\x18\x07 \x01(\x03\x12\x12\n\nqc0_status\x18\x08 \x01(\r\x12\x10\n\x08qc0_time\x18\t \x01(\t\x12\x12\n\nprc_status\x18\n \x01(\r\x12\x10\n\x08prc_time\x18\x0b \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0c \x01(\t\x12\x15\n\rimport_status\x18\r \x01(\r\"\xa6\x02\n\x12\x46indObservationReq\x12\x11\n\tmodule_id\x18\x01 \x01(\t\x12\x10\n\x08obs_type\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x12\n\nqc0_status\x18\x05 \x01(\r\x12\x12\n\nprc_status\x18\x06 \x01(\r\x12\r\n\x05limit\x18\x07 \x01(\r\x12N\n\x10other_conditions\x18\x08 \x03(\x0b\x32\x34.observation.FindObservationReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x83\x01\n\x13\x46indObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12)\n\x07records\x18\x04 \x03(\x0b\x32\x18.observation.Observation\"#\n\x11GetObservationReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\"C\n\x12GetObservationResp\x12-\n\x0bobservation\x18\x01 \x01(\x0b\x32\x18.observation.Observation\"?\n\x13WriteObservationReq\x12(\n\x06record\x18\x01 \x01(\x0b\x32\x18.observation.Observation\"o\n\x14WriteObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12(\n\x06record\x18\x03 \x01(\x0b\x32\x18.observation.Observation\"4\n\x12UpdateQc0StatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"5\n\x13UpdateProcStatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xaa\x03\n\x0eObservationSrv\x12K\n\x04\x46ind\x12\x1f.observation.FindObservationReq\x1a .observation.FindObservationResp\"\x00\x12H\n\x03Get\x12\x1e.observation.GetObservationReq\x1a\x1f.observation.GetObservationResp\"\x00\x12N\n\x05Write\x12 .observation.WriteObservationReq\x1a!.observation.WriteObservationResp\"\x00\x12V\n\x0fUpdateQc0Status\x12\x1f.observation.UpdateQc0StatusReq\x1a .observation.UpdateQc0StatusResp\"\x00\x12Y\n\x10UpdateProcStatus\x12 .observation.UpdateProcStatusReq\x1a!.observation.UpdateProcStatusResp\"\x00\x42+Z)cnlab.net/csst/proto/facility/observationb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -382,51 +382,9 @@ _WRITEOBSERVATIONREQ = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='observation.WriteObservationReq.id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='exp_begin_time', full_name='observation.WriteObservationReq.exp_begin_time', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='exp_end_time', full_name='observation.WriteObservationReq.exp_end_time', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='module_id', full_name='observation.WriteObservationReq.module_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='obs_type', full_name='observation.WriteObservationReq.obs_type', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='facility_status_id', full_name='observation.WriteObservationReq.facility_status_id', index=5,
-      number=6, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='module_status_id', full_name='observation.WriteObservationReq.module_status_id', index=6,
-      number=7, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='record', full_name='observation.WriteObservationReq.record', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -442,8 +400,8 @@ _WRITEOBSERVATIONREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=888,
-  serialized_end=1058,
+  serialized_start=887,
+  serialized_end=950,
 )
 
 
@@ -469,7 +427,7 @@ _WRITEOBSERVATIONRESP = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='observation', full_name='observation.WriteObservationResp.observation', index=2,
+      name='record', full_name='observation.WriteObservationResp.record', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -487,8 +445,8 @@ _WRITEOBSERVATIONRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1060,
-  serialized_end=1176,
+  serialized_start=952,
+  serialized_end=1063,
 )
 
 
@@ -525,8 +483,8 @@ _UPDATEQC0STATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1178,
-  serialized_end=1230,
+  serialized_start=1065,
+  serialized_end=1117,
 )
 
 
@@ -563,8 +521,8 @@ _UPDATEQC0STATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1232,
-  serialized_end=1300,
+  serialized_start=1119,
+  serialized_end=1187,
 )
 
 
@@ -601,8 +559,8 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1302,
-  serialized_end=1355,
+  serialized_start=1189,
+  serialized_end=1242,
 )
 
 
@@ -639,8 +597,8 @@ _UPDATEPROCSTATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1357,
-  serialized_end=1426,
+  serialized_start=1244,
+  serialized_end=1313,
 )
 
 _FINDOBSERVATIONREQ_OTHERCONDITIONSENTRY.containing_type = _FINDOBSERVATIONREQ
@@ -648,8 +606,9 @@ _FINDOBSERVATIONREQ.fields_by_name['other_conditions'].message_type = _FINDOBSER
 _FINDOBSERVATIONRESP.fields_by_name['error'].message_type = common_dot_error__pb2._ERROR
 _FINDOBSERVATIONRESP.fields_by_name['records'].message_type = _OBSERVATION
 _GETOBSERVATIONRESP.fields_by_name['observation'].message_type = _OBSERVATION
+_WRITEOBSERVATIONREQ.fields_by_name['record'].message_type = _OBSERVATION
 _WRITEOBSERVATIONRESP.fields_by_name['error'].message_type = common_dot_error__pb2._ERROR
-_WRITEOBSERVATIONRESP.fields_by_name['observation'].message_type = _OBSERVATION
+_WRITEOBSERVATIONRESP.fields_by_name['record'].message_type = _OBSERVATION
 _UPDATEQC0STATUSRESP.fields_by_name['error'].message_type = common_dot_error__pb2._ERROR
 _UPDATEPROCSTATUSRESP.fields_by_name['error'].message_type = common_dot_error__pb2._ERROR
 DESCRIPTOR.message_types_by_name['Observation'] = _OBSERVATION
@@ -760,8 +719,8 @@ _OBSERVATIONSRV = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1429,
-  serialized_end=1857,
+  serialized_start=1316,
+  serialized_end=1742,
   methods=[
   _descriptor.MethodDescriptor(
     name='Find',
