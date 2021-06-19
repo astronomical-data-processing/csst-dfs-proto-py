@@ -15,27 +15,27 @@ class Level1SrvStub(object):
       channel: A grpc.Channel.
     """
     self.Find = channel.unary_unary(
-        '/ifs.level1.Level1Srv/Find',
+        '/dfs.ifs.level1.Level1Srv/Find',
         request_serializer=ifs_dot_level1_dot_level1__pb2.FindLevel1Req.SerializeToString,
         response_deserializer=ifs_dot_level1_dot_level1__pb2.FindLevel1Resp.FromString,
         )
     self.Get = channel.unary_unary(
-        '/ifs.level1.Level1Srv/Get',
+        '/dfs.ifs.level1.Level1Srv/Get',
         request_serializer=ifs_dot_level1_dot_level1__pb2.GetLevel1Req.SerializeToString,
         response_deserializer=ifs_dot_level1_dot_level1__pb2.GetLevel1Resp.FromString,
         )
     self.Write = channel.unary_unary(
-        '/ifs.level1.Level1Srv/Write',
+        '/dfs.ifs.level1.Level1Srv/Write',
         request_serializer=ifs_dot_level1_dot_level1__pb2.WriteLevel1Req.SerializeToString,
         response_deserializer=ifs_dot_level1_dot_level1__pb2.WriteLevel1Resp.FromString,
         )
     self.UpdateQc1Status = channel.unary_unary(
-        '/ifs.level1.Level1Srv/UpdateQc1Status',
+        '/dfs.ifs.level1.Level1Srv/UpdateQc1Status',
         request_serializer=ifs_dot_level1_dot_level1__pb2.UpdateQc1StatusReq.SerializeToString,
         response_deserializer=ifs_dot_level1_dot_level1__pb2.UpdateQc1StatusResp.FromString,
         )
     self.UpdateProcStatus = channel.unary_unary(
-        '/ifs.level1.Level1Srv/UpdateProcStatus',
+        '/dfs.ifs.level1.Level1Srv/UpdateProcStatus',
         request_serializer=ifs_dot_level1_dot_level1__pb2.UpdateProcStatusReq.SerializeToString,
         response_deserializer=ifs_dot_level1_dot_level1__pb2.UpdateProcStatusResp.FromString,
         )
@@ -110,5 +110,5 @@ def add_Level1SrvServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'ifs.level1.Level1Srv', rpc_method_handlers)
+      'dfs.ifs.level1.Level1Srv', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

@@ -15,42 +15,42 @@ class DetectorSrvStub(object):
       channel: A grpc.Channel.
     """
     self.Find = channel.unary_unary(
-        '/facility.detector.DetectorSrv/Find',
+        '/dfs.facility.detector.DetectorSrv/Find',
         request_serializer=facility_dot_detector_dot_detector__pb2.FindDetectorReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.FindDetectorResp.FromString,
         )
     self.Get = channel.unary_unary(
-        '/facility.detector.DetectorSrv/Get',
+        '/dfs.facility.detector.DetectorSrv/Get',
         request_serializer=facility_dot_detector_dot_detector__pb2.GetDetectorReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.GetDetectorResp.FromString,
         )
     self.Write = channel.unary_unary(
-        '/facility.detector.DetectorSrv/Write',
+        '/dfs.facility.detector.DetectorSrv/Write',
         request_serializer=facility_dot_detector_dot_detector__pb2.WriteDetectorReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.WriteDetectorResp.FromString,
         )
     self.Update = channel.unary_unary(
-        '/facility.detector.DetectorSrv/Update',
+        '/dfs.facility.detector.DetectorSrv/Update',
         request_serializer=facility_dot_detector_dot_detector__pb2.UpdateDetectorReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.UpdateDetectorResp.FromString,
         )
     self.Delete = channel.unary_unary(
-        '/facility.detector.DetectorSrv/Delete',
+        '/dfs.facility.detector.DetectorSrv/Delete',
         request_serializer=facility_dot_detector_dot_detector__pb2.DeleteDetectorReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.DeleteDetectorResp.FromString,
         )
     self.FindStatus = channel.unary_unary(
-        '/facility.detector.DetectorSrv/FindStatus',
+        '/dfs.facility.detector.DetectorSrv/FindStatus',
         request_serializer=facility_dot_detector_dot_detector__pb2.FindStatusReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.FindStatusResp.FromString,
         )
     self.GetStatus = channel.unary_unary(
-        '/facility.detector.DetectorSrv/GetStatus',
+        '/dfs.facility.detector.DetectorSrv/GetStatus',
         request_serializer=facility_dot_detector_dot_detector__pb2.GetStatusReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.GetStatusResp.FromString,
         )
     self.WriteStatus = channel.unary_unary(
-        '/facility.detector.DetectorSrv/WriteStatus',
+        '/dfs.facility.detector.DetectorSrv/WriteStatus',
         request_serializer=facility_dot_detector_dot_detector__pb2.WriteStatusReq.SerializeToString,
         response_deserializer=facility_dot_detector_dot_detector__pb2.WriteStatusResp.FromString,
         )
@@ -161,5 +161,5 @@ def add_DetectorSrvServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'facility.detector.DetectorSrv', rpc_method_handlers)
+      'dfs.facility.detector.DetectorSrv', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

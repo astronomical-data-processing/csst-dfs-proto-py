@@ -15,27 +15,27 @@ class ObservationSrvStub(object):
       channel: A grpc.Channel.
     """
     self.Find = channel.unary_unary(
-        '/observation.ObservationSrv/Find',
+        '/dfs.facility.observation.ObservationSrv/Find',
         request_serializer=facility_dot_observation_dot_observation__pb2.FindObservationReq.SerializeToString,
         response_deserializer=facility_dot_observation_dot_observation__pb2.FindObservationResp.FromString,
         )
     self.Get = channel.unary_unary(
-        '/observation.ObservationSrv/Get',
+        '/dfs.facility.observation.ObservationSrv/Get',
         request_serializer=facility_dot_observation_dot_observation__pb2.GetObservationReq.SerializeToString,
         response_deserializer=facility_dot_observation_dot_observation__pb2.GetObservationResp.FromString,
         )
     self.Write = channel.unary_unary(
-        '/observation.ObservationSrv/Write',
+        '/dfs.facility.observation.ObservationSrv/Write',
         request_serializer=facility_dot_observation_dot_observation__pb2.WriteObservationReq.SerializeToString,
         response_deserializer=facility_dot_observation_dot_observation__pb2.WriteObservationResp.FromString,
         )
     self.UpdateQc0Status = channel.unary_unary(
-        '/observation.ObservationSrv/UpdateQc0Status',
+        '/dfs.facility.observation.ObservationSrv/UpdateQc0Status',
         request_serializer=facility_dot_observation_dot_observation__pb2.UpdateQc0StatusReq.SerializeToString,
         response_deserializer=facility_dot_observation_dot_observation__pb2.UpdateQc0StatusResp.FromString,
         )
     self.UpdateProcStatus = channel.unary_unary(
-        '/observation.ObservationSrv/UpdateProcStatus',
+        '/dfs.facility.observation.ObservationSrv/UpdateProcStatus',
         request_serializer=facility_dot_observation_dot_observation__pb2.UpdateProcStatusReq.SerializeToString,
         response_deserializer=facility_dot_observation_dot_observation__pb2.UpdateProcStatusResp.FromString,
         )
@@ -110,5 +110,5 @@ def add_ObservationSrvServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'observation.ObservationSrv', rpc_method_handlers)
+      'dfs.facility.observation.ObservationSrv', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

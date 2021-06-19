@@ -15,27 +15,27 @@ class Level0SrvStub(object):
       channel: A grpc.Channel.
     """
     self.Find = channel.unary_unary(
-        '/level0.Level0Srv/Find',
+        '/dfs.facility.level0.Level0Srv/Find',
         request_serializer=facility_dot_level0_dot_level0__pb2.FindLevel0DataReq.SerializeToString,
         response_deserializer=facility_dot_level0_dot_level0__pb2.FindLevel0DataResp.FromString,
         )
     self.Get = channel.unary_unary(
-        '/level0.Level0Srv/Get',
+        '/dfs.facility.level0.Level0Srv/Get',
         request_serializer=facility_dot_level0_dot_level0__pb2.GetLevel0DataReq.SerializeToString,
         response_deserializer=facility_dot_level0_dot_level0__pb2.GetLevel0DataResp.FromString,
         )
     self.Write = channel.unary_unary(
-        '/level0.Level0Srv/Write',
+        '/dfs.facility.level0.Level0Srv/Write',
         request_serializer=facility_dot_level0_dot_level0__pb2.WriteLevel0DataReq.SerializeToString,
         response_deserializer=facility_dot_level0_dot_level0__pb2.WriteLevel0DataResp.FromString,
         )
     self.UpdateQc0Status = channel.unary_unary(
-        '/level0.Level0Srv/UpdateQc0Status',
+        '/dfs.facility.level0.Level0Srv/UpdateQc0Status',
         request_serializer=facility_dot_level0_dot_level0__pb2.UpdateQc0StatusReq.SerializeToString,
         response_deserializer=facility_dot_level0_dot_level0__pb2.UpdateQc0StatusResp.FromString,
         )
     self.UpdateProcStatus = channel.unary_unary(
-        '/level0.Level0Srv/UpdateProcStatus',
+        '/dfs.facility.level0.Level0Srv/UpdateProcStatus',
         request_serializer=facility_dot_level0_dot_level0__pb2.UpdateProcStatusReq.SerializeToString,
         response_deserializer=facility_dot_level0_dot_level0__pb2.UpdateProcStatusResp.FromString,
         )
@@ -110,5 +110,5 @@ def add_Level0SrvServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'level0.Level0Srv', rpc_method_handlers)
+      'dfs.facility.level0.Level0Srv', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
