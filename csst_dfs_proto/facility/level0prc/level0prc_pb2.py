@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.facility.level0prc',
   syntax='proto3',
   serialized_options=_b('Z\'cnlab.net/csst/proto/facility/level0prc'),
-  serialized_pb=_b('\n\"facility/level0prc/level0prc.proto\x12\x16\x64\x66s.facility.level0prc\x1a\x12\x63ommon/error.proto\"\xa5\x01\n\x0fLevel0PrcRecord\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\x03\x12\x13\n\x0bpipeline_id\x18\x03 \x01(\t\x12\x12\n\nprc_module\x18\x04 \x01(\t\x12\x11\n\tparams_id\x18\x05 \x01(\t\x12\x12\n\nprc_status\x18\x06 \x01(\r\x12\x10\n\x08prc_time\x18\x07 \x01(\t\x12\x11\n\tfile_path\x18\x08 \x01(\t\"\xf3\x01\n\x10\x46indLevel0PrcReq\x12\x11\n\tlevel0_id\x18\x01 \x01(\x03\x12\x13\n\x0bpipeline_id\x18\x02 \x01(\t\x12\x12\n\nprc_module\x18\x03 \x01(\t\x12\x12\n\nprc_status\x18\x04 \x01(\r\x12W\n\x10other_conditions\x18\x05 \x03(\x0b\x32=.dfs.facility.level0prc.FindLevel0PrcReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x90\x01\n\x11\x46indLevel0PrcResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x38\n\x07records\x18\x04 \x03(\x0b\x32\'.dfs.facility.level0prc.Level0PrcRecord\"L\n\x11WriteLevel0PrcReq\x12\x37\n\x06record\x18\x01 \x01(\x0b\x32\'.dfs.facility.level0prc.Level0PrcRecord\"|\n\x12WriteLevel0PrcResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\x37\n\x06record\x18\x03 \x01(\x0b\x32\'.dfs.facility.level0prc.Level0PrcRecord\"1\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xc0\x02\n\x0cLevel0PrcSrv\x12]\n\x04\x46ind\x12(.dfs.facility.level0prc.FindLevel0PrcReq\x1a).dfs.facility.level0prc.FindLevel0PrcResp\"\x00\x12`\n\x05Write\x12).dfs.facility.level0prc.WriteLevel0PrcReq\x1a*.dfs.facility.level0prc.WriteLevel0PrcResp\"\x00\x12o\n\x10UpdateProcStatus\x12+.dfs.facility.level0prc.UpdateProcStatusReq\x1a,.dfs.facility.level0prc.UpdateProcStatusResp\"\x00\x42)Z\'cnlab.net/csst/proto/facility/level0prcb\x06proto3')
+  serialized_pb=_b('\n\"facility/level0prc/level0prc.proto\x12\x16\x64\x66s.facility.level0prc\x1a\x12\x63ommon/error.proto\"\xa5\x01\n\x0fLevel0PrcRecord\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\x03\x12\x13\n\x0bpipeline_id\x18\x03 \x01(\t\x12\x12\n\nprc_module\x18\x04 \x01(\t\x12\x11\n\tparams_id\x18\x05 \x01(\t\x12\x12\n\nprc_status\x18\x06 \x01(\x05\x12\x10\n\x08prc_time\x18\x07 \x01(\t\x12\x11\n\tfile_path\x18\x08 \x01(\t\"\xf3\x01\n\x10\x46indLevel0PrcReq\x12\x11\n\tlevel0_id\x18\x01 \x01(\x03\x12\x13\n\x0bpipeline_id\x18\x02 \x01(\t\x12\x12\n\nprc_module\x18\x03 \x01(\t\x12\x12\n\nprc_status\x18\x04 \x01(\x05\x12W\n\x10other_conditions\x18\x05 \x03(\x0b\x32=.dfs.facility.level0prc.FindLevel0PrcReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x90\x01\n\x11\x46indLevel0PrcResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x38\n\x07records\x18\x04 \x03(\x0b\x32\'.dfs.facility.level0prc.Level0PrcRecord\"L\n\x11WriteLevel0PrcReq\x12\x37\n\x06record\x18\x01 \x01(\x0b\x32\'.dfs.facility.level0prc.Level0PrcRecord\"|\n\x12WriteLevel0PrcResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\x37\n\x06record\x18\x03 \x01(\x0b\x32\'.dfs.facility.level0prc.Level0PrcRecord\"1\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xc0\x02\n\x0cLevel0PrcSrv\x12]\n\x04\x46ind\x12(.dfs.facility.level0prc.FindLevel0PrcReq\x1a).dfs.facility.level0prc.FindLevel0PrcResp\"\x00\x12`\n\x05Write\x12).dfs.facility.level0prc.WriteLevel0PrcReq\x1a*.dfs.facility.level0prc.WriteLevel0PrcResp\"\x00\x12o\n\x10UpdateProcStatus\x12+.dfs.facility.level0prc.UpdateProcStatusReq\x1a,.dfs.facility.level0prc.UpdateProcStatusResp\"\x00\x42)Z\'cnlab.net/csst/proto/facility/level0prcb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -72,7 +72,7 @@ _LEVEL0PRCRECORD = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='prc_status', full_name='dfs.facility.level0prc.Level0PrcRecord.prc_status', index=5,
-      number=6, type=13, cpp_type=3, label=1,
+      number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -175,7 +175,7 @@ _FINDLEVEL0PRCREQ = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='prc_status', full_name='dfs.facility.level0prc.FindLevel0PrcReq.prc_status', index=3,
-      number=4, type=13, cpp_type=3, label=1,
+      number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -348,7 +348,7 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='status', full_name='dfs.facility.level0prc.UpdateProcStatusReq.status', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

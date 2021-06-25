@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.facility.observation',
   syntax='proto3',
   serialized_options=_b('Z)cnlab.net/csst/proto/facility/observation'),
-  serialized_pb=_b('\n&facility/observation/observation.proto\x12\x18\x64\x66s.facility.observation\x1a\x12\x63ommon/error.proto\"\x90\x02\n\x0bObservation\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x10\n\x08obs_time\x18\x02 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x03 \x01(\x02\x12\x11\n\tmodule_id\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x1a\n\x12\x66\x61\x63ility_status_id\x18\x06 \x01(\x03\x12\x18\n\x10module_status_id\x18\x07 \x01(\x03\x12\x12\n\nqc0_status\x18\x08 \x01(\r\x12\x10\n\x08qc0_time\x18\t \x01(\t\x12\x12\n\nprc_status\x18\n \x01(\r\x12\x10\n\x08prc_time\x18\x0b \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0c \x01(\t\x12\x15\n\rimport_status\x18\r \x01(\r\"\xb3\x02\n\x12\x46indObservationReq\x12\x11\n\tmodule_id\x18\x01 \x01(\t\x12\x10\n\x08obs_type\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x12\n\nqc0_status\x18\x05 \x01(\r\x12\x12\n\nprc_status\x18\x06 \x01(\r\x12\r\n\x05limit\x18\x07 \x01(\r\x12[\n\x10other_conditions\x18\x08 \x03(\x0b\x32\x41.dfs.facility.observation.FindObservationReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x90\x01\n\x13\x46indObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x36\n\x07records\x18\x04 \x03(\x0b\x32%.dfs.facility.observation.Observation\"#\n\x11GetObservationReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\"P\n\x12GetObservationResp\x12:\n\x0bobservation\x18\x01 \x01(\x0b\x32%.dfs.facility.observation.Observation\"L\n\x13WriteObservationReq\x12\x35\n\x06record\x18\x01 \x01(\x0b\x32%.dfs.facility.observation.Observation\"|\n\x14WriteObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\x35\n\x06record\x18\x03 \x01(\x0b\x32%.dfs.facility.observation.Observation\"4\n\x12UpdateQc0StatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"5\n\x13UpdateProcStatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\r\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xac\x04\n\x0eObservationSrv\x12\x65\n\x04\x46ind\x12,.dfs.facility.observation.FindObservationReq\x1a-.dfs.facility.observation.FindObservationResp\"\x00\x12\x62\n\x03Get\x12+.dfs.facility.observation.GetObservationReq\x1a,.dfs.facility.observation.GetObservationResp\"\x00\x12h\n\x05Write\x12-.dfs.facility.observation.WriteObservationReq\x1a..dfs.facility.observation.WriteObservationResp\"\x00\x12p\n\x0fUpdateQc0Status\x12,.dfs.facility.observation.UpdateQc0StatusReq\x1a-.dfs.facility.observation.UpdateQc0StatusResp\"\x00\x12s\n\x10UpdateProcStatus\x12-.dfs.facility.observation.UpdateProcStatusReq\x1a..dfs.facility.observation.UpdateProcStatusResp\"\x00\x42+Z)cnlab.net/csst/proto/facility/observationb\x06proto3')
+  serialized_pb=_b('\n&facility/observation/observation.proto\x12\x18\x64\x66s.facility.observation\x1a\x12\x63ommon/error.proto\"\x90\x02\n\x0bObservation\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x10\n\x08obs_time\x18\x02 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x03 \x01(\x02\x12\x11\n\tmodule_id\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x1a\n\x12\x66\x61\x63ility_status_id\x18\x06 \x01(\x03\x12\x18\n\x10module_status_id\x18\x07 \x01(\x03\x12\x12\n\nqc0_status\x18\x08 \x01(\x05\x12\x10\n\x08qc0_time\x18\t \x01(\t\x12\x12\n\nprc_status\x18\n \x01(\x05\x12\x10\n\x08prc_time\x18\x0b \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0c \x01(\t\x12\x15\n\rimport_status\x18\r \x01(\x05\"\xb3\x02\n\x12\x46indObservationReq\x12\x11\n\tmodule_id\x18\x01 \x01(\t\x12\x10\n\x08obs_type\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x12\n\nqc0_status\x18\x05 \x01(\x05\x12\x12\n\nprc_status\x18\x06 \x01(\x05\x12\r\n\x05limit\x18\x07 \x01(\x05\x12[\n\x10other_conditions\x18\x08 \x03(\x0b\x32\x41.dfs.facility.observation.FindObservationReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x90\x01\n\x13\x46indObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x36\n\x07records\x18\x04 \x03(\x0b\x32%.dfs.facility.observation.Observation\"#\n\x11GetObservationReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\"P\n\x12GetObservationResp\x12:\n\x0bobservation\x18\x01 \x01(\x0b\x32%.dfs.facility.observation.Observation\"L\n\x13WriteObservationReq\x12\x35\n\x06record\x18\x01 \x01(\x0b\x32%.dfs.facility.observation.Observation\"|\n\x14WriteObservationResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\x35\n\x06record\x18\x03 \x01(\x0b\x32%.dfs.facility.observation.Observation\"4\n\x12UpdateQc0StatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"5\n\x13UpdateProcStatusReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xac\x04\n\x0eObservationSrv\x12\x65\n\x04\x46ind\x12,.dfs.facility.observation.FindObservationReq\x1a-.dfs.facility.observation.FindObservationResp\"\x00\x12\x62\n\x03Get\x12+.dfs.facility.observation.GetObservationReq\x1a,.dfs.facility.observation.GetObservationResp\"\x00\x12h\n\x05Write\x12-.dfs.facility.observation.WriteObservationReq\x1a..dfs.facility.observation.WriteObservationResp\"\x00\x12p\n\x0fUpdateQc0Status\x12,.dfs.facility.observation.UpdateQc0StatusReq\x1a-.dfs.facility.observation.UpdateQc0StatusResp\"\x00\x12s\n\x10UpdateProcStatus\x12-.dfs.facility.observation.UpdateProcStatusReq\x1a..dfs.facility.observation.UpdateProcStatusResp\"\x00\x42+Z)cnlab.net/csst/proto/facility/observationb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -86,7 +86,7 @@ _OBSERVATION = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='qc0_status', full_name='dfs.facility.observation.Observation.qc0_status', index=7,
-      number=8, type=13, cpp_type=3, label=1,
+      number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -100,7 +100,7 @@ _OBSERVATION = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='prc_status', full_name='dfs.facility.observation.Observation.prc_status', index=9,
-      number=10, type=13, cpp_type=3, label=1,
+      number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -121,7 +121,7 @@ _OBSERVATION = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='import_status', full_name='dfs.facility.observation.Observation.import_status', index=12,
-      number=13, type=13, cpp_type=3, label=1,
+      number=13, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -217,21 +217,21 @@ _FINDOBSERVATIONREQ = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='qc0_status', full_name='dfs.facility.observation.FindObservationReq.qc0_status', index=4,
-      number=5, type=13, cpp_type=3, label=1,
+      number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='prc_status', full_name='dfs.facility.observation.FindObservationReq.prc_status', index=5,
-      number=6, type=13, cpp_type=3, label=1,
+      number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='limit', full_name='dfs.facility.observation.FindObservationReq.limit', index=6,
-      number=7, type=13, cpp_type=3, label=1,
+      number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -466,7 +466,7 @@ _UPDATEQC0STATUSREQ = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='status', full_name='dfs.facility.observation.UpdateQc0StatusReq.status', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -542,7 +542,7 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='status', full_name='dfs.facility.observation.UpdateProcStatusReq.status', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
