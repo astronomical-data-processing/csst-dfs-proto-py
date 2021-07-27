@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.facility.calmerge',
   syntax='proto3',
   serialized_options=_b('Z&cnlab.net/csst/proto/facility/calmerge'),
-  serialized_pb=_b('\n facility/calmerge/calmerge.proto\x12\x15\x64\x66s.facility.calmerge\x1a\x12\x63ommon/error.proto\"\x81\x02\n\x0e\x43\x61lMergeRecord\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x13\n\x0b\x64\x65tector_no\x18\x02 \x01(\t\x12\x10\n\x08ref_type\x18\x03 \x01(\t\x12\x10\n\x08obs_time\x18\x04 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x05 \x01(\x02\x12\x10\n\x08\x66ilename\x18\x06 \x01(\t\x12\x11\n\tfile_path\x18\x07 \x01(\t\x12\x12\n\nqc1_status\x18\x08 \x01(\x05\x12\x10\n\x08qc1_time\x18\t \x01(\t\x12\x12\n\nprc_status\x18\n \x01(\x05\x12\x10\n\x08prc_time\x18\x0b \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0c \x01(\t\x12\x12\n\nlevel0_ids\x18\r \x03(\x03\"\xbf\x02\n\x0f\x46indCalMergeReq\x12\x13\n\x0b\x64\x65tector_no\x18\x01 \x01(\t\x12\x10\n\x08ref_type\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x12\n\nqc1_status\x18\x05 \x01(\x05\x12\x12\n\nprc_status\x18\x06 \x01(\x05\x12\x11\n\tfile_name\x18\x07 \x01(\t\x12\r\n\x05limit\x18\x08 \x01(\x05\x12U\n\x10other_conditions\x18\t \x03(\x0b\x32;.dfs.facility.calmerge.FindCalMergeReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x8d\x01\n\x10\x46indCalMergeResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x36\n\x07records\x18\x04 \x03(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\"\x1c\n\x0eGetCalMergeReq\x12\n\n\x02id\x18\x01 \x01(\x03\"H\n\x0fGetCalMergeResp\x12\x35\n\x06record\x18\x01 \x01(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\"I\n\x10WriteCalMergeReq\x12\x35\n\x06record\x18\x01 \x01(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\"y\n\x11WriteCalMergeResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\x35\n\x06record\x18\x03 \x01(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\"0\n\x12UpdateQc1StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"D\n\x13UpdateQc1StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"1\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xf9\x03\n\x0b\x43\x61lMergeSrv\x12Y\n\x04\x46ind\x12&.dfs.facility.calmerge.FindCalMergeReq\x1a\'.dfs.facility.calmerge.FindCalMergeResp\"\x00\x12V\n\x03Get\x12%.dfs.facility.calmerge.GetCalMergeReq\x1a&.dfs.facility.calmerge.GetCalMergeResp\"\x00\x12\\\n\x05Write\x12\'.dfs.facility.calmerge.WriteCalMergeReq\x1a(.dfs.facility.calmerge.WriteCalMergeResp\"\x00\x12j\n\x0fUpdateQc1Status\x12).dfs.facility.calmerge.UpdateQc1StatusReq\x1a*.dfs.facility.calmerge.UpdateQc1StatusResp\"\x00\x12m\n\x10UpdateProcStatus\x12*.dfs.facility.calmerge.UpdateProcStatusReq\x1a+.dfs.facility.calmerge.UpdateProcStatusResp\"\x00\x42(Z&cnlab.net/csst/proto/facility/calmergeb\x06proto3')
+  serialized_pb=_b('\n facility/calmerge/calmerge.proto\x12\x15\x64\x66s.facility.calmerge\x1a\x12\x63ommon/error.proto\"\x91\x02\n\x0e\x43\x61lMergeRecord\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06\x63\x61l_id\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x03 \x01(\t\x12\x10\n\x08ref_type\x18\x04 \x01(\t\x12\x10\n\x08obs_time\x18\x05 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x06 \x01(\x02\x12\x10\n\x08\x66ilename\x18\x07 \x01(\t\x12\x11\n\tfile_path\x18\x08 \x01(\t\x12\x12\n\nqc1_status\x18\t \x01(\x05\x12\x10\n\x08qc1_time\x18\n \x01(\t\x12\x12\n\nprc_status\x18\x0b \x01(\x05\x12\x10\n\x08prc_time\x18\x0c \x01(\t\x12\x13\n\x0b\x63reate_time\x18\r \x01(\t\x12\x12\n\nlevel0_ids\x18\x0e \x03(\t\"\xbf\x02\n\x0f\x46indCalMergeReq\x12\x13\n\x0b\x64\x65tector_no\x18\x01 \x01(\t\x12\x10\n\x08ref_type\x18\x02 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x03 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x04 \x01(\t\x12\x12\n\nqc1_status\x18\x05 \x01(\x05\x12\x12\n\nprc_status\x18\x06 \x01(\x05\x12\x11\n\tfile_name\x18\x07 \x01(\t\x12\r\n\x05limit\x18\x08 \x01(\x05\x12U\n\x10other_conditions\x18\t \x03(\x0b\x32;.dfs.facility.calmerge.FindCalMergeReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x8d\x01\n\x10\x46indCalMergeResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x36\n\x07records\x18\x04 \x03(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\",\n\x0eGetCalMergeReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06\x63\x61l_id\x18\x02 \x01(\t\"H\n\x0fGetCalMergeResp\x12\x35\n\x06record\x18\x01 \x01(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\"I\n\x10WriteCalMergeReq\x12\x35\n\x06record\x18\x01 \x01(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\"y\n\x11WriteCalMergeResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12\x35\n\x06record\x18\x03 \x01(\x0b\x32%.dfs.facility.calmerge.CalMergeRecord\"@\n\x12UpdateQc1StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06\x63\x61l_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"D\n\x13UpdateQc1StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"A\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06\x63\x61l_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xf9\x03\n\x0b\x43\x61lMergeSrv\x12Y\n\x04\x46ind\x12&.dfs.facility.calmerge.FindCalMergeReq\x1a\'.dfs.facility.calmerge.FindCalMergeResp\"\x00\x12V\n\x03Get\x12%.dfs.facility.calmerge.GetCalMergeReq\x1a&.dfs.facility.calmerge.GetCalMergeResp\"\x00\x12\\\n\x05Write\x12\'.dfs.facility.calmerge.WriteCalMergeReq\x1a(.dfs.facility.calmerge.WriteCalMergeResp\"\x00\x12j\n\x0fUpdateQc1Status\x12).dfs.facility.calmerge.UpdateQc1StatusReq\x1a*.dfs.facility.calmerge.UpdateQc1StatusResp\"\x00\x12m\n\x10UpdateProcStatus\x12*.dfs.facility.calmerge.UpdateProcStatusReq\x1a+.dfs.facility.calmerge.UpdateProcStatusResp\"\x00\x42(Z&cnlab.net/csst/proto/facility/calmergeb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -43,85 +43,92 @@ _CALMERGERECORD = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='detector_no', full_name='dfs.facility.calmerge.CalMergeRecord.detector_no', index=1,
+      name='cal_id', full_name='dfs.facility.calmerge.CalMergeRecord.cal_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ref_type', full_name='dfs.facility.calmerge.CalMergeRecord.ref_type', index=2,
+      name='detector_no', full_name='dfs.facility.calmerge.CalMergeRecord.detector_no', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='obs_time', full_name='dfs.facility.calmerge.CalMergeRecord.obs_time', index=3,
+      name='ref_type', full_name='dfs.facility.calmerge.CalMergeRecord.ref_type', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='exp_time', full_name='dfs.facility.calmerge.CalMergeRecord.exp_time', index=4,
-      number=5, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='filename', full_name='dfs.facility.calmerge.CalMergeRecord.filename', index=5,
-      number=6, type=9, cpp_type=9, label=1,
+      name='obs_time', full_name='dfs.facility.calmerge.CalMergeRecord.obs_time', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file_path', full_name='dfs.facility.calmerge.CalMergeRecord.file_path', index=6,
+      name='exp_time', full_name='dfs.facility.calmerge.CalMergeRecord.exp_time', index=5,
+      number=6, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='filename', full_name='dfs.facility.calmerge.CalMergeRecord.filename', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='qc1_status', full_name='dfs.facility.calmerge.CalMergeRecord.qc1_status', index=7,
-      number=8, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='qc1_time', full_name='dfs.facility.calmerge.CalMergeRecord.qc1_time', index=8,
-      number=9, type=9, cpp_type=9, label=1,
+      name='file_path', full_name='dfs.facility.calmerge.CalMergeRecord.file_path', index=7,
+      number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_status', full_name='dfs.facility.calmerge.CalMergeRecord.prc_status', index=9,
-      number=10, type=5, cpp_type=1, label=1,
+      name='qc1_status', full_name='dfs.facility.calmerge.CalMergeRecord.qc1_status', index=8,
+      number=9, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_time', full_name='dfs.facility.calmerge.CalMergeRecord.prc_time', index=10,
-      number=11, type=9, cpp_type=9, label=1,
+      name='qc1_time', full_name='dfs.facility.calmerge.CalMergeRecord.qc1_time', index=9,
+      number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='create_time', full_name='dfs.facility.calmerge.CalMergeRecord.create_time', index=11,
+      name='prc_status', full_name='dfs.facility.calmerge.CalMergeRecord.prc_status', index=10,
+      number=11, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='prc_time', full_name='dfs.facility.calmerge.CalMergeRecord.prc_time', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='level0_ids', full_name='dfs.facility.calmerge.CalMergeRecord.level0_ids', index=12,
-      number=13, type=3, cpp_type=2, label=3,
+      name='create_time', full_name='dfs.facility.calmerge.CalMergeRecord.create_time', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='level0_ids', full_name='dfs.facility.calmerge.CalMergeRecord.level0_ids', index=13,
+      number=14, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -139,7 +146,7 @@ _CALMERGERECORD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=80,
-  serialized_end=337,
+  serialized_end=353,
 )
 
 
@@ -176,8 +183,8 @@ _FINDCALMERGEREQ_OTHERCONDITIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=605,
-  serialized_end=659,
+  serialized_start=621,
+  serialized_end=675,
 )
 
 _FINDCALMERGEREQ = _descriptor.Descriptor(
@@ -262,8 +269,8 @@ _FINDCALMERGEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=340,
-  serialized_end=659,
+  serialized_start=356,
+  serialized_end=675,
 )
 
 
@@ -314,8 +321,8 @@ _FINDCALMERGERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=662,
-  serialized_end=803,
+  serialized_start=678,
+  serialized_end=819,
 )
 
 
@@ -333,6 +340,13 @@ _GETCALMERGEREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cal_id', full_name='dfs.facility.calmerge.GetCalMergeReq.cal_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -345,8 +359,8 @@ _GETCALMERGEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=805,
-  serialized_end=833,
+  serialized_start=821,
+  serialized_end=865,
 )
 
 
@@ -376,8 +390,8 @@ _GETCALMERGERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=835,
-  serialized_end=907,
+  serialized_start=867,
+  serialized_end=939,
 )
 
 
@@ -407,8 +421,8 @@ _WRITECALMERGEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=909,
-  serialized_end=982,
+  serialized_start=941,
+  serialized_end=1014,
 )
 
 
@@ -452,8 +466,8 @@ _WRITECALMERGERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=984,
-  serialized_end=1105,
+  serialized_start=1016,
+  serialized_end=1137,
 )
 
 
@@ -472,8 +486,15 @@ _UPDATEQC1STATUSREQ = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='dfs.facility.calmerge.UpdateQc1StatusReq.status', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      name='cal_id', full_name='dfs.facility.calmerge.UpdateQc1StatusReq.cal_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='dfs.facility.calmerge.UpdateQc1StatusReq.status', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -490,8 +511,8 @@ _UPDATEQC1STATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1107,
-  serialized_end=1155,
+  serialized_start=1139,
+  serialized_end=1203,
 )
 
 
@@ -528,8 +549,8 @@ _UPDATEQC1STATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1157,
-  serialized_end=1225,
+  serialized_start=1205,
+  serialized_end=1273,
 )
 
 
@@ -548,8 +569,15 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='dfs.facility.calmerge.UpdateProcStatusReq.status', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      name='cal_id', full_name='dfs.facility.calmerge.UpdateProcStatusReq.cal_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='dfs.facility.calmerge.UpdateProcStatusReq.status', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -566,8 +594,8 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1227,
-  serialized_end=1276,
+  serialized_start=1275,
+  serialized_end=1340,
 )
 
 
@@ -604,8 +632,8 @@ _UPDATEPROCSTATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1278,
-  serialized_end=1347,
+  serialized_start=1342,
+  serialized_end=1411,
 )
 
 _FINDCALMERGEREQ_OTHERCONDITIONSENTRY.containing_type = _FINDCALMERGEREQ
@@ -726,8 +754,8 @@ _CALMERGESRV = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1350,
-  serialized_end=1855,
+  serialized_start=1414,
+  serialized_end=1919,
   methods=[
   _descriptor.MethodDescriptor(
     name='Find',

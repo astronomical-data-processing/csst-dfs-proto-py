@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.ifs.level1',
   syntax='proto3',
   serialized_options=_b('Z\037cnlab.net/csst/proto/ifs/level1'),
-  serialized_pb=_b('\n\x17ifs/level1/level1.proto\x12\x0e\x64\x66s.ifs.level1\x1a\x12\x63ommon/error.proto\"\xe4\x02\n\x0cLevel1Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06raw_id\x18\x02 \x01(\x03\x12\x11\n\tdata_type\x18\x03 \x01(\t\x12\x12\n\ncor_sci_id\x18\x04 \x01(\x03\x12\x12\n\nprc_params\x18\x05 \x01(\t\x12\x0f\n\x07\x66lat_id\x18\x06 \x01(\x03\x12\x0f\n\x07\x64\x61rk_id\x18\x07 \x01(\x03\x12\x0f\n\x07\x62ias_id\x18\x08 \x01(\x03\x12\x0f\n\x07lamp_id\x18\t \x01(\x03\x12\x0e\n\x06\x61rc_id\x18\n \x01(\x03\x12\x0e\n\x06sky_id\x18\x0b \x01(\x03\x12\x10\n\x08\x66ilename\x18\x0c \x01(\t\x12\x11\n\tfile_path\x18\r \x01(\t\x12\x12\n\nqc1_status\x18\x0e \x01(\x05\x12\x10\n\x08qc1_time\x18\x0f \x01(\t\x12\x12\n\nprc_status\x18\x10 \x01(\x05\x12\x10\n\x08prc_time\x18\x11 \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x12 \x01(\t\x12\x13\n\x0bpipeline_id\x18\x13 \x01(\t\"\xb5\x02\n\rFindLevel1Req\x12\x0e\n\x06raw_id\x18\x01 \x01(\x03\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x19\n\x11\x63reate_time_start\x18\x03 \x01(\t\x12\x17\n\x0f\x63reate_time_end\x18\x04 \x01(\t\x12\x12\n\nqc1_status\x18\x05 \x01(\x05\x12\x12\n\nprc_status\x18\x06 \x01(\x05\x12\x10\n\x08\x66ilename\x18\x07 \x01(\t\x12\r\n\x05limit\x18\x08 \x01(\x05\x12L\n\x10other_conditions\x18\t \x03(\x0b\x32\x32.dfs.ifs.level1.FindLevel1Req.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x82\x01\n\x0e\x46indLevel1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\"\x1a\n\x0cGetLevel1Req\x12\n\n\x02id\x18\x01 \x01(\x03\"=\n\rGetLevel1Resp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\">\n\x0eWriteLevel1Req\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\"n\n\x0fWriteLevel1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\"0\n\x12UpdateQc1StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"D\n\x13UpdateQc1StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"1\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xa5\x03\n\tLevel1Srv\x12G\n\x04\x46ind\x12\x1d.dfs.ifs.level1.FindLevel1Req\x1a\x1e.dfs.ifs.level1.FindLevel1Resp\"\x00\x12\x44\n\x03Get\x12\x1c.dfs.ifs.level1.GetLevel1Req\x1a\x1d.dfs.ifs.level1.GetLevel1Resp\"\x00\x12J\n\x05Write\x12\x1e.dfs.ifs.level1.WriteLevel1Req\x1a\x1f.dfs.ifs.level1.WriteLevel1Resp\"\x00\x12\\\n\x0fUpdateQc1Status\x12\".dfs.ifs.level1.UpdateQc1StatusReq\x1a#.dfs.ifs.level1.UpdateQc1StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.ifs.level1.UpdateProcStatusReq\x1a$.dfs.ifs.level1.UpdateProcStatusResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/ifs/level1b\x06proto3')
+  serialized_pb=_b('\n\x17ifs/level1/level1.proto\x12\x0e\x64\x66s.ifs.level1\x1a\x12\x63ommon/error.proto\"\xe7\x02\n\x0cLevel1Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x11\n\tdata_type\x18\x03 \x01(\t\x12\x12\n\ncor_sci_id\x18\x04 \x01(\x03\x12\x12\n\nprc_params\x18\x05 \x01(\t\x12\x0f\n\x07\x66lat_id\x18\x06 \x01(\x03\x12\x0f\n\x07\x64\x61rk_id\x18\x07 \x01(\x03\x12\x0f\n\x07\x62ias_id\x18\x08 \x01(\x03\x12\x0f\n\x07lamp_id\x18\t \x01(\x03\x12\x0e\n\x06\x61rc_id\x18\n \x01(\x03\x12\x0e\n\x06sky_id\x18\x0b \x01(\x03\x12\x10\n\x08\x66ilename\x18\x0c \x01(\t\x12\x11\n\tfile_path\x18\r \x01(\t\x12\x12\n\nqc1_status\x18\x0e \x01(\x05\x12\x10\n\x08qc1_time\x18\x0f \x01(\t\x12\x12\n\nprc_status\x18\x10 \x01(\x05\x12\x10\n\x08prc_time\x18\x11 \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x12 \x01(\t\x12\x13\n\x0bpipeline_id\x18\x13 \x01(\t\"\xb8\x02\n\rFindLevel1Req\x12\x11\n\tlevel0_id\x18\x01 \x01(\t\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x19\n\x11\x63reate_time_start\x18\x03 \x01(\t\x12\x17\n\x0f\x63reate_time_end\x18\x04 \x01(\t\x12\x12\n\nqc1_status\x18\x05 \x01(\x05\x12\x12\n\nprc_status\x18\x06 \x01(\x05\x12\x10\n\x08\x66ilename\x18\x07 \x01(\t\x12\r\n\x05limit\x18\x08 \x01(\x05\x12L\n\x10other_conditions\x18\t \x03(\x0b\x32\x32.dfs.ifs.level1.FindLevel1Req.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x82\x01\n\x0e\x46indLevel1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\"\x1a\n\x0cGetLevel1Req\x12\n\n\x02id\x18\x01 \x01(\x03\"=\n\rGetLevel1Resp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\">\n\x0eWriteLevel1Req\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\"n\n\x0fWriteLevel1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.ifs.level1.Level1Record\"0\n\x12UpdateQc1StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"D\n\x13UpdateQc1StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"1\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xa5\x03\n\tLevel1Srv\x12G\n\x04\x46ind\x12\x1d.dfs.ifs.level1.FindLevel1Req\x1a\x1e.dfs.ifs.level1.FindLevel1Resp\"\x00\x12\x44\n\x03Get\x12\x1c.dfs.ifs.level1.GetLevel1Req\x1a\x1d.dfs.ifs.level1.GetLevel1Resp\"\x00\x12J\n\x05Write\x12\x1e.dfs.ifs.level1.WriteLevel1Req\x1a\x1f.dfs.ifs.level1.WriteLevel1Resp\"\x00\x12\\\n\x0fUpdateQc1Status\x12\".dfs.ifs.level1.UpdateQc1StatusReq\x1a#.dfs.ifs.level1.UpdateQc1StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.ifs.level1.UpdateProcStatusReq\x1a$.dfs.ifs.level1.UpdateProcStatusResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/ifs/level1b\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -43,9 +43,9 @@ _LEVEL1RECORD = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='raw_id', full_name='dfs.ifs.level1.Level1Record.raw_id', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='level0_id', full_name='dfs.ifs.level1.Level1Record.level0_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -181,7 +181,7 @@ _LEVEL1RECORD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=64,
-  serialized_end=420,
+  serialized_end=423,
 )
 
 
@@ -218,8 +218,8 @@ _FINDLEVEL1REQ_OTHERCONDITIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=678,
-  serialized_end=732,
+  serialized_start=684,
+  serialized_end=738,
 )
 
 _FINDLEVEL1REQ = _descriptor.Descriptor(
@@ -230,9 +230,9 @@ _FINDLEVEL1REQ = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='raw_id', full_name='dfs.ifs.level1.FindLevel1Req.raw_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='level0_id', full_name='dfs.ifs.level1.FindLevel1Req.level0_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -304,8 +304,8 @@ _FINDLEVEL1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=423,
-  serialized_end=732,
+  serialized_start=426,
+  serialized_end=738,
 )
 
 
@@ -356,8 +356,8 @@ _FINDLEVEL1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=735,
-  serialized_end=865,
+  serialized_start=741,
+  serialized_end=871,
 )
 
 
@@ -387,8 +387,8 @@ _GETLEVEL1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=867,
-  serialized_end=893,
+  serialized_start=873,
+  serialized_end=899,
 )
 
 
@@ -418,8 +418,8 @@ _GETLEVEL1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=895,
-  serialized_end=956,
+  serialized_start=901,
+  serialized_end=962,
 )
 
 
@@ -449,8 +449,8 @@ _WRITELEVEL1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=958,
-  serialized_end=1020,
+  serialized_start=964,
+  serialized_end=1026,
 )
 
 
@@ -494,8 +494,8 @@ _WRITELEVEL1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1022,
-  serialized_end=1132,
+  serialized_start=1028,
+  serialized_end=1138,
 )
 
 
@@ -532,8 +532,8 @@ _UPDATEQC1STATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1134,
-  serialized_end=1182,
+  serialized_start=1140,
+  serialized_end=1188,
 )
 
 
@@ -570,8 +570,8 @@ _UPDATEQC1STATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1184,
-  serialized_end=1252,
+  serialized_start=1190,
+  serialized_end=1258,
 )
 
 
@@ -608,8 +608,8 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1254,
-  serialized_end=1303,
+  serialized_start=1260,
+  serialized_end=1309,
 )
 
 
@@ -646,8 +646,8 @@ _UPDATEPROCSTATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1305,
-  serialized_end=1374,
+  serialized_start=1311,
+  serialized_end=1380,
 )
 
 _FINDLEVEL1REQ_OTHERCONDITIONSENTRY.containing_type = _FINDLEVEL1REQ
@@ -768,8 +768,8 @@ _LEVEL1SRV = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1377,
-  serialized_end=1798,
+  serialized_start=1383,
+  serialized_end=1804,
   methods=[
   _descriptor.MethodDescriptor(
     name='Find',

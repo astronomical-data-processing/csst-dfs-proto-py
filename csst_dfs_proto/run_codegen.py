@@ -7,5 +7,39 @@ protoc.main((
     '-I./',
     '--python_out=.',
     '--grpc_python_out=.',
-    './fits.proto',
+    './facility/observation/observation.proto',
 ))
+
+protoc.main((
+    '',
+    '-I./',
+    '--python_out=.',
+    '--grpc_python_out=.',
+    './facility/calmerge/calmerge.proto',
+))
+
+protoc.main((
+    '',
+    '-I./',
+    '--python_out=.',
+    '--grpc_python_out=.',
+    './facility/level0/level0.proto',
+))
+
+protoc.main((
+    '',
+    '-I./',
+    '--python_out=.',
+    '--grpc_python_out=.',
+    './facility/detector/detector.proto',
+))
+
+
+protoc.main((
+    '',
+    '-I./',
+    '--python_out=.',
+    '--grpc_python_out=.',
+    './facility/level0prc/level0prc.proto',
+))
+
