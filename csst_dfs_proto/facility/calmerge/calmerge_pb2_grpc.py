@@ -19,6 +19,11 @@ class CalMergeSrvStub(object):
         request_serializer=facility_dot_calmerge_dot_calmerge__pb2.FindCalMergeReq.SerializeToString,
         response_deserializer=facility_dot_calmerge_dot_calmerge__pb2.FindCalMergeResp.FromString,
         )
+    self.GetLatestByL0 = channel.unary_unary(
+        '/dfs.facility.calmerge.CalMergeSrv/GetLatestByL0',
+        request_serializer=facility_dot_calmerge_dot_calmerge__pb2.GetLatestByL0Req.SerializeToString,
+        response_deserializer=facility_dot_calmerge_dot_calmerge__pb2.GetLatestByL0Resp.FromString,
+        )
     self.Get = channel.unary_unary(
         '/dfs.facility.calmerge.CalMergeSrv/Get',
         request_serializer=facility_dot_calmerge_dot_calmerge__pb2.GetCalMergeReq.SerializeToString,
@@ -46,6 +51,13 @@ class CalMergeSrvServicer(object):
   pass
 
   def Find(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetLatestByL0(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -87,6 +99,11 @@ def add_CalMergeSrvServicer_to_server(servicer, server):
           servicer.Find,
           request_deserializer=facility_dot_calmerge_dot_calmerge__pb2.FindCalMergeReq.FromString,
           response_serializer=facility_dot_calmerge_dot_calmerge__pb2.FindCalMergeResp.SerializeToString,
+      ),
+      'GetLatestByL0': grpc.unary_unary_rpc_method_handler(
+          servicer.GetLatestByL0,
+          request_deserializer=facility_dot_calmerge_dot_calmerge__pb2.GetLatestByL0Req.FromString,
+          response_serializer=facility_dot_calmerge_dot_calmerge__pb2.GetLatestByL0Resp.SerializeToString,
       ),
       'Get': grpc.unary_unary_rpc_method_handler(
           servicer.Get,
