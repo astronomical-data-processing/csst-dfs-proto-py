@@ -24,7 +24,7 @@ class Level1SrvStub(object):
         request_serializer=msc_dot_level1_dot_level1__pb2.GetLevel1Req.SerializeToString,
         response_deserializer=msc_dot_level1_dot_level1__pb2.GetLevel1Resp.FromString,
         )
-    self.Write = channel.unary_unary(
+    self.Write = channel.stream_unary(
         '/dfs.msc.level1.Level1Srv/Write',
         request_serializer=msc_dot_level1_dot_level1__pb2.WriteLevel1Req.SerializeToString,
         response_deserializer=msc_dot_level1_dot_level1__pb2.WriteLevel1Resp.FromString,
@@ -59,7 +59,7 @@ class Level1SrvServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def Write(self, request, context):
+  def Write(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -93,7 +93,7 @@ def add_Level1SrvServicer_to_server(servicer, server):
           request_deserializer=msc_dot_level1_dot_level1__pb2.GetLevel1Req.FromString,
           response_serializer=msc_dot_level1_dot_level1__pb2.GetLevel1Resp.SerializeToString,
       ),
-      'Write': grpc.unary_unary_rpc_method_handler(
+      'Write': grpc.stream_unary_rpc_method_handler(
           servicer.Write,
           request_deserializer=msc_dot_level1_dot_level1__pb2.WriteLevel1Req.FromString,
           response_serializer=msc_dot_level1_dot_level1__pb2.WriteLevel1Resp.SerializeToString,
