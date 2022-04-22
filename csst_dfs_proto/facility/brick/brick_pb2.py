@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.facility.brick',
   syntax='proto3',
   serialized_options=_b('Z#cnlab.net/csst/proto/facility/brick'),
-  serialized_pb=_b('\n\x1a\x66\x61\x63ility/brick/brick.proto\x12\x12\x64\x66s.facility.brick\x1a\x12\x63ommon/error.proto\"G\n\x0b\x42rickRecord\x12\n\n\x02id\x18\x01 \x01(\x03\x12\n\n\x02ra\x18\x02 \x01(\x02\x12\x0b\n\x03\x64\x65\x63\x18\x03 \x01(\x02\x12\x13\n\x0b\x62oundingbox\x18\x04 \x01(\t\"^\n\x14\x42rickObsStatusRecord\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x0c\n\x04\x62\x61nd\x18\x02 \x01(\t\x12\x11\n\tcover_num\x18\x03 \x01(\x05\x12\x13\n\x0bupdate_time\x18\x04 \x01(\t\"j\n\x11\x42rickLevel1Record\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x11\n\tlevel1_id\x18\x02 \x01(\x03\x12\x0e\n\x06obs_id\x18\x03 \x01(\t\x12\x0e\n\x06module\x18\x04 \x01(\t\x12\x10\n\x08obs_time\x18\x05 \x01(\t\"\xa6\x01\n\x0c\x46indBrickReq\x12\r\n\x05limit\x18\x01 \x01(\x05\x12O\n\x10other_conditions\x18\x02 \x03(\x0b\x32\x35.dfs.facility.brick.FindBrickReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x84\x01\n\rFindBrickResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x30\n\x07records\x18\x04 \x03(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"\x19\n\x0bGetBrickReq\x12\n\n\x02id\x18\x01 \x01(\x03\"?\n\x0cGetBrickResp\x12/\n\x06record\x18\x01 \x01(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"@\n\rWriteBrickReq\x12/\n\x06record\x18\x01 \x01(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"p\n\x0eWriteBrickResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12/\n\x06record\x18\x03 \x01(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"\xbf\x01\n\x10\x46indObsStatusReq\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x0c\n\x04\x62\x61nd\x18\x02 \x01(\t\x12S\n\x10other_conditions\x18\x03 \x03(\x0b\x32\x39.dfs.facility.brick.FindObsStatusReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x91\x01\n\x11\x46indObsStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x39\n\x07records\x18\x04 \x03(\x0b\x32(.dfs.facility.brick.BrickObsStatusRecord\"D\n\rFindLevel1Req\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x11\n\tlevel1_id\x18\x02 \x01(\x03\x12\x0e\n\x06module\x18\x03 \x01(\t\"\x8b\x01\n\x0e\x46indLevel1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x36\n\x07records\x18\x04 \x03(\x0b\x32%.dfs.facility.brick.BrickLevel1Record2\xae\x03\n\x08\x42rickSrv\x12M\n\x04\x46ind\x12 .dfs.facility.brick.FindBrickReq\x1a!.dfs.facility.brick.FindBrickResp\"\x00\x12J\n\x03Get\x12\x1f.dfs.facility.brick.GetBrickReq\x1a .dfs.facility.brick.GetBrickResp\"\x00\x12P\n\x05Write\x12!.dfs.facility.brick.WriteBrickReq\x1a\".dfs.facility.brick.WriteBrickResp\"\x00\x12^\n\rFindObsStatus\x12$.dfs.facility.brick.FindObsStatusReq\x1a%.dfs.facility.brick.FindObsStatusResp\"\x00\x12U\n\nFindLevel1\x12!.dfs.facility.brick.FindLevel1Req\x1a\".dfs.facility.brick.FindLevel1Resp\"\x00\x42%Z#cnlab.net/csst/proto/facility/brickb\x06proto3')
+  serialized_pb=_b('\n\x1a\x66\x61\x63ility/brick/brick.proto\x12\x12\x64\x66s.facility.brick\x1a\x12\x63ommon/error.proto\"G\n\x0b\x42rickRecord\x12\n\n\x02id\x18\x01 \x01(\x03\x12\n\n\x02ra\x18\x02 \x01(\x02\x12\x0b\n\x03\x64\x65\x63\x18\x03 \x01(\x02\x12\x13\n\x0b\x62oundingbox\x18\x04 \x01(\t\"^\n\x14\x42rickObsStatusRecord\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x0c\n\x04\x62\x61nd\x18\x02 \x01(\t\x12\x11\n\tcover_num\x18\x03 \x01(\x05\x12\x13\n\x0bupdate_time\x18\x04 \x01(\t\"j\n\x11\x42rickLevel1Record\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x11\n\tlevel1_id\x18\x02 \x01(\x03\x12\x0e\n\x06obs_id\x18\x03 \x01(\t\x12\x0e\n\x06module\x18\x04 \x01(\t\x12\x10\n\x08obs_time\x18\x05 \x01(\t\"\xa6\x01\n\x0c\x46indBrickReq\x12\r\n\x05limit\x18\x01 \x01(\x05\x12O\n\x10other_conditions\x18\x02 \x03(\x0b\x32\x35.dfs.facility.brick.FindBrickReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x84\x01\n\rFindBrickResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x30\n\x07records\x18\x04 \x03(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"\x19\n\x0bGetBrickReq\x12\n\n\x02id\x18\x01 \x01(\x03\"?\n\x0cGetBrickResp\x12/\n\x06record\x18\x01 \x01(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"@\n\rWriteBrickReq\x12/\n\x06record\x18\x01 \x01(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"p\n\x0eWriteBrickResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12/\n\x06record\x18\x03 \x01(\x0b\x32\x1f.dfs.facility.brick.BrickRecord\"\xce\x01\n\x10\x46indObsStatusReq\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x0c\n\x04\x62\x61nd\x18\x02 \x01(\t\x12\r\n\x05limit\x18\x03 \x01(\x05\x12S\n\x10other_conditions\x18\x04 \x03(\x0b\x32\x39.dfs.facility.brick.FindObsStatusReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x91\x01\n\x11\x46indObsStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x39\n\x07records\x18\x04 \x03(\x0b\x32(.dfs.facility.brick.BrickObsStatusRecord\"S\n\rFindLevel1Req\x12\x10\n\x08\x62rick_id\x18\x01 \x01(\x03\x12\x11\n\tlevel1_id\x18\x02 \x01(\x03\x12\x0e\n\x06module\x18\x03 \x01(\t\x12\r\n\x05limit\x18\x04 \x01(\x05\"\x8b\x01\n\x0e\x46indLevel1Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x36\n\x07records\x18\x04 \x03(\x0b\x32%.dfs.facility.brick.BrickLevel1Record2\xae\x03\n\x08\x42rickSrv\x12M\n\x04\x46ind\x12 .dfs.facility.brick.FindBrickReq\x1a!.dfs.facility.brick.FindBrickResp\"\x00\x12J\n\x03Get\x12\x1f.dfs.facility.brick.GetBrickReq\x1a .dfs.facility.brick.GetBrickResp\"\x00\x12P\n\x05Write\x12!.dfs.facility.brick.WriteBrickReq\x1a\".dfs.facility.brick.WriteBrickResp\"\x00\x12^\n\rFindObsStatus\x12$.dfs.facility.brick.FindObsStatusReq\x1a%.dfs.facility.brick.FindObsStatusResp\"\x00\x12U\n\nFindLevel1\x12!.dfs.facility.brick.FindLevel1Req\x1a\".dfs.facility.brick.FindLevel1Resp\"\x00\x42%Z#cnlab.net/csst/proto/facility/brickb\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -515,8 +515,15 @@ _FINDOBSSTATUSREQ = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='other_conditions', full_name='dfs.facility.brick.FindObsStatusReq.other_conditions', index=2,
-      number=3, type=11, cpp_type=10, label=3,
+      name='limit', full_name='dfs.facility.brick.FindObsStatusReq.limit', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='other_conditions', full_name='dfs.facility.brick.FindObsStatusReq.other_conditions', index=3,
+      number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -534,7 +541,7 @@ _FINDOBSSTATUSREQ = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=924,
-  serialized_end=1115,
+  serialized_end=1130,
 )
 
 
@@ -585,8 +592,8 @@ _FINDOBSSTATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1118,
-  serialized_end=1263,
+  serialized_start=1133,
+  serialized_end=1278,
 )
 
 
@@ -618,6 +625,13 @@ _FINDLEVEL1REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='dfs.facility.brick.FindLevel1Req.limit', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -630,8 +644,8 @@ _FINDLEVEL1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1265,
-  serialized_end=1333,
+  serialized_start=1280,
+  serialized_end=1363,
 )
 
 
@@ -682,8 +696,8 @@ _FINDLEVEL1RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1336,
-  serialized_end=1475,
+  serialized_start=1366,
+  serialized_end=1505,
 )
 
 _FINDBRICKREQ_OTHERCONDITIONSENTRY.containing_type = _FINDBRICKREQ
@@ -833,8 +847,8 @@ _BRICKSRV = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1478,
-  serialized_end=1908,
+  serialized_start=1508,
+  serialized_end=1938,
   methods=[
   _descriptor.MethodDescriptor(
     name='Find',

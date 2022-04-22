@@ -3,7 +3,6 @@ import grpc
 
 from . import level2producer_pb2 as facility_dot_level2producer_dot_level2producer__pb2
 
-
 class Level2ProducerSrvStub(object):
   # missing associated documentation comment in .proto file
   pass
