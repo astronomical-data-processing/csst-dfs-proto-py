@@ -15,32 +15,32 @@ class CalMergeSrvStub(object):
       channel: A grpc.Channel.
     """
     self.Find = channel.unary_unary(
-        '/dfs.ifs.calmerge.CalMergeSrv/Find',
+        '/dfs.sls.calmerge.CalMergeSrv/Find',
         request_serializer=sls_dot_calmerge_dot_calmerge__pb2.FindCalMergeReq.SerializeToString,
         response_deserializer=sls_dot_calmerge_dot_calmerge__pb2.FindCalMergeResp.FromString,
         )
     self.GetLatestByL0 = channel.unary_unary(
-        '/dfs.ifs.calmerge.CalMergeSrv/GetLatestByL0',
+        '/dfs.sls.calmerge.CalMergeSrv/GetLatestByL0',
         request_serializer=sls_dot_calmerge_dot_calmerge__pb2.GetLatestByL0Req.SerializeToString,
         response_deserializer=sls_dot_calmerge_dot_calmerge__pb2.GetLatestByL0Resp.FromString,
         )
     self.Get = channel.unary_unary(
-        '/dfs.ifs.calmerge.CalMergeSrv/Get',
+        '/dfs.sls.calmerge.CalMergeSrv/Get',
         request_serializer=sls_dot_calmerge_dot_calmerge__pb2.GetCalMergeReq.SerializeToString,
         response_deserializer=sls_dot_calmerge_dot_calmerge__pb2.GetCalMergeResp.FromString,
         )
     self.Write = channel.unary_unary(
-        '/dfs.ifs.calmerge.CalMergeSrv/Write',
+        '/dfs.sls.calmerge.CalMergeSrv/Write',
         request_serializer=sls_dot_calmerge_dot_calmerge__pb2.WriteCalMergeReq.SerializeToString,
         response_deserializer=sls_dot_calmerge_dot_calmerge__pb2.WriteCalMergeResp.FromString,
         )
     self.UpdateQc1Status = channel.unary_unary(
-        '/dfs.ifs.calmerge.CalMergeSrv/UpdateQc1Status',
+        '/dfs.sls.calmerge.CalMergeSrv/UpdateQc1Status',
         request_serializer=sls_dot_calmerge_dot_calmerge__pb2.UpdateQc1StatusReq.SerializeToString,
         response_deserializer=sls_dot_calmerge_dot_calmerge__pb2.UpdateQc1StatusResp.FromString,
         )
     self.UpdateProcStatus = channel.unary_unary(
-        '/dfs.ifs.calmerge.CalMergeSrv/UpdateProcStatus',
+        '/dfs.sls.calmerge.CalMergeSrv/UpdateProcStatus',
         request_serializer=sls_dot_calmerge_dot_calmerge__pb2.UpdateProcStatusReq.SerializeToString,
         response_deserializer=sls_dot_calmerge_dot_calmerge__pb2.UpdateProcStatusResp.FromString,
         )
@@ -127,5 +127,5 @@ def add_CalMergeSrvServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'dfs.ifs.calmerge.CalMergeSrv', rpc_method_handlers)
+      'dfs.sls.calmerge.CalMergeSrv', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

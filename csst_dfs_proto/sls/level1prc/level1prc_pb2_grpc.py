@@ -15,17 +15,17 @@ class Level1PrcSrvStub(object):
       channel: A grpc.Channel.
     """
     self.Find = channel.unary_unary(
-        '/dfs.ifs.level1prc.Level1PrcSrv/Find',
+        '/dfs.sls.level1prc.Level1PrcSrv/Find',
         request_serializer=sls_dot_level1prc_dot_level1prc__pb2.FindLevel1PrcReq.SerializeToString,
         response_deserializer=sls_dot_level1prc_dot_level1prc__pb2.FindLevel1PrcResp.FromString,
         )
     self.Write = channel.unary_unary(
-        '/dfs.ifs.level1prc.Level1PrcSrv/Write',
+        '/dfs.sls.level1prc.Level1PrcSrv/Write',
         request_serializer=sls_dot_level1prc_dot_level1prc__pb2.WriteLevel1PrcReq.SerializeToString,
         response_deserializer=sls_dot_level1prc_dot_level1prc__pb2.WriteLevel1PrcResp.FromString,
         )
     self.UpdateProcStatus = channel.unary_unary(
-        '/dfs.ifs.level1prc.Level1PrcSrv/UpdateProcStatus',
+        '/dfs.sls.level1prc.Level1PrcSrv/UpdateProcStatus',
         request_serializer=sls_dot_level1prc_dot_level1prc__pb2.UpdateProcStatusReq.SerializeToString,
         response_deserializer=sls_dot_level1prc_dot_level1prc__pb2.UpdateProcStatusResp.FromString,
         )
@@ -76,5 +76,5 @@ def add_Level1PrcSrvServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'dfs.ifs.level1prc.Level1PrcSrv', rpc_method_handlers)
+      'dfs.sls.level1prc.Level1PrcSrv', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

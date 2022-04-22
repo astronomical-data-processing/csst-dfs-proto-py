@@ -18,10 +18,10 @@ from ...common import error_pb2 as common_dot_error__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='sls/level0/level0.proto',
-  package='dfs.ifs.level0',
+  package='dfs.sls.level0',
   syntax='proto3',
-  serialized_options=_b('Z\037cnlab.net/csst/proto/ifs/level0'),
-  serialized_pb=_b('\n\x17sls/level0/level0.proto\x12\x0e\x64\x66s.ifs.level0\x1a\x12\x63ommon/error.proto\"\xaa\x02\n\x0cLevel0Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06obs_id\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x10\n\x08obs_time\x18\x06 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x07 \x01(\x02\x12\x1a\n\x12\x64\x65tector_status_id\x18\x08 \x01(\x03\x12\x10\n\x08\x66ilename\x18\t \x01(\t\x12\x11\n\tfile_path\x18\n \x01(\t\x12\x12\n\nqc0_status\x18\x0b \x01(\x05\x12\x10\n\x08qc0_time\x18\x0c \x01(\t\x12\x12\n\nprc_status\x18\r \x01(\x05\x12\x10\n\x08prc_time\x18\x0e \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0f \x01(\t\"\xcc\x02\n\x11\x46indLevel0DataReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x02 \x01(\t\x12\x10\n\x08obs_type\x18\x03 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x04 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x05 \x01(\t\x12\x12\n\nqc0_status\x18\x06 \x01(\x05\x12\x12\n\nprc_status\x18\x07 \x01(\x05\x12\x11\n\tfile_name\x18\x08 \x01(\t\x12\r\n\x05limit\x18\t \x01(\x05\x12P\n\x10other_conditions\x18\n \x03(\x0b\x32\x36.dfs.ifs.level0.FindLevel0DataReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x86\x01\n\x12\x46indLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.ifs.level0.Level0Record\"1\n\x10GetLevel0DataReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\"A\n\x11GetLevel0DataResp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.ifs.level0.Level0Record\"B\n\x12WriteLevel0DataReq\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.ifs.level0.Level0Record\"r\n\x13WriteLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.ifs.level0.Level0Record\"C\n\x12UpdateQc0StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"D\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xbd\x03\n\tLevel0Srv\x12O\n\x04\x46ind\x12!.dfs.ifs.level0.FindLevel0DataReq\x1a\".dfs.ifs.level0.FindLevel0DataResp\"\x00\x12L\n\x03Get\x12 .dfs.ifs.level0.GetLevel0DataReq\x1a!.dfs.ifs.level0.GetLevel0DataResp\"\x00\x12R\n\x05Write\x12\".dfs.ifs.level0.WriteLevel0DataReq\x1a#.dfs.ifs.level0.WriteLevel0DataResp\"\x00\x12\\\n\x0fUpdateQc0Status\x12\".dfs.ifs.level0.UpdateQc0StatusReq\x1a#.dfs.ifs.level0.UpdateQc0StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.ifs.level0.UpdateProcStatusReq\x1a$.dfs.ifs.level0.UpdateProcStatusResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/ifs/level0b\x06proto3')
+  serialized_options=_b('Z\037cnlab.net/csst/proto/sls/level0'),
+  serialized_pb=_b('\n\x17sls/level0/level0.proto\x12\x0e\x64\x66s.sls.level0\x1a\x12\x63ommon/error.proto\"\xaa\x02\n\x0cLevel0Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06obs_id\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x10\n\x08obs_time\x18\x06 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x07 \x01(\x02\x12\x1a\n\x12\x64\x65tector_status_id\x18\x08 \x01(\x03\x12\x10\n\x08\x66ilename\x18\t \x01(\t\x12\x11\n\tfile_path\x18\n \x01(\t\x12\x12\n\nqc0_status\x18\x0b \x01(\x05\x12\x10\n\x08qc0_time\x18\x0c \x01(\t\x12\x12\n\nprc_status\x18\r \x01(\x05\x12\x10\n\x08prc_time\x18\x0e \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0f \x01(\t\"\xcc\x02\n\x11\x46indLevel0DataReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x02 \x01(\t\x12\x10\n\x08obs_type\x18\x03 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x04 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x05 \x01(\t\x12\x12\n\nqc0_status\x18\x06 \x01(\x05\x12\x12\n\nprc_status\x18\x07 \x01(\x05\x12\x11\n\tfile_name\x18\x08 \x01(\t\x12\r\n\x05limit\x18\t \x01(\x05\x12P\n\x10other_conditions\x18\n \x03(\x0b\x32\x36.dfs.sls.level0.FindLevel0DataReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x86\x01\n\x12\x46indLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.sls.level0.Level0Record\"1\n\x10GetLevel0DataReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\"A\n\x11GetLevel0DataResp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.sls.level0.Level0Record\"B\n\x12WriteLevel0DataReq\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.sls.level0.Level0Record\"r\n\x13WriteLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.sls.level0.Level0Record\"C\n\x12UpdateQc0StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"D\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xbd\x03\n\tLevel0Srv\x12O\n\x04\x46ind\x12!.dfs.sls.level0.FindLevel0DataReq\x1a\".dfs.sls.level0.FindLevel0DataResp\"\x00\x12L\n\x03Get\x12 .dfs.sls.level0.GetLevel0DataReq\x1a!.dfs.sls.level0.GetLevel0DataResp\"\x00\x12R\n\x05Write\x12\".dfs.sls.level0.WriteLevel0DataReq\x1a#.dfs.sls.level0.WriteLevel0DataResp\"\x00\x12\\\n\x0fUpdateQc0Status\x12\".dfs.sls.level0.UpdateQc0StatusReq\x1a#.dfs.sls.level0.UpdateQc0StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.sls.level0.UpdateProcStatusReq\x1a$.dfs.sls.level0.UpdateProcStatusResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/sls/level0b\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -30,111 +30,111 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _LEVEL0RECORD = _descriptor.Descriptor(
   name='Level0Record',
-  full_name='dfs.ifs.level0.Level0Record',
+  full_name='dfs.sls.level0.Level0Record',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='dfs.ifs.level0.Level0Record.id', index=0,
+      name='id', full_name='dfs.sls.level0.Level0Record.id', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='level0_id', full_name='dfs.ifs.level0.Level0Record.level0_id', index=1,
+      name='level0_id', full_name='dfs.sls.level0.Level0Record.level0_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='obs_id', full_name='dfs.ifs.level0.Level0Record.obs_id', index=2,
+      name='obs_id', full_name='dfs.sls.level0.Level0Record.obs_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='detector_no', full_name='dfs.ifs.level0.Level0Record.detector_no', index=3,
+      name='detector_no', full_name='dfs.sls.level0.Level0Record.detector_no', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='obs_type', full_name='dfs.ifs.level0.Level0Record.obs_type', index=4,
+      name='obs_type', full_name='dfs.sls.level0.Level0Record.obs_type', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='obs_time', full_name='dfs.ifs.level0.Level0Record.obs_time', index=5,
+      name='obs_time', full_name='dfs.sls.level0.Level0Record.obs_time', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='exp_time', full_name='dfs.ifs.level0.Level0Record.exp_time', index=6,
+      name='exp_time', full_name='dfs.sls.level0.Level0Record.exp_time', index=6,
       number=7, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='detector_status_id', full_name='dfs.ifs.level0.Level0Record.detector_status_id', index=7,
+      name='detector_status_id', full_name='dfs.sls.level0.Level0Record.detector_status_id', index=7,
       number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='filename', full_name='dfs.ifs.level0.Level0Record.filename', index=8,
+      name='filename', full_name='dfs.sls.level0.Level0Record.filename', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file_path', full_name='dfs.ifs.level0.Level0Record.file_path', index=9,
+      name='file_path', full_name='dfs.sls.level0.Level0Record.file_path', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='qc0_status', full_name='dfs.ifs.level0.Level0Record.qc0_status', index=10,
+      name='qc0_status', full_name='dfs.sls.level0.Level0Record.qc0_status', index=10,
       number=11, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='qc0_time', full_name='dfs.ifs.level0.Level0Record.qc0_time', index=11,
+      name='qc0_time', full_name='dfs.sls.level0.Level0Record.qc0_time', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_status', full_name='dfs.ifs.level0.Level0Record.prc_status', index=12,
+      name='prc_status', full_name='dfs.sls.level0.Level0Record.prc_status', index=12,
       number=13, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_time', full_name='dfs.ifs.level0.Level0Record.prc_time', index=13,
+      name='prc_time', full_name='dfs.sls.level0.Level0Record.prc_time', index=13,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='create_time', full_name='dfs.ifs.level0.Level0Record.create_time', index=14,
+      name='create_time', full_name='dfs.sls.level0.Level0Record.create_time', index=14,
       number=15, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -159,20 +159,20 @@ _LEVEL0RECORD = _descriptor.Descriptor(
 
 _FINDLEVEL0DATAREQ_OTHERCONDITIONSENTRY = _descriptor.Descriptor(
   name='OtherConditionsEntry',
-  full_name='dfs.ifs.level0.FindLevel0DataReq.OtherConditionsEntry',
+  full_name='dfs.sls.level0.FindLevel0DataReq.OtherConditionsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='dfs.ifs.level0.FindLevel0DataReq.OtherConditionsEntry.key', index=0,
+      name='key', full_name='dfs.sls.level0.FindLevel0DataReq.OtherConditionsEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='dfs.ifs.level0.FindLevel0DataReq.OtherConditionsEntry.value', index=1,
+      name='value', full_name='dfs.sls.level0.FindLevel0DataReq.OtherConditionsEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -196,76 +196,76 @@ _FINDLEVEL0DATAREQ_OTHERCONDITIONSENTRY = _descriptor.Descriptor(
 
 _FINDLEVEL0DATAREQ = _descriptor.Descriptor(
   name='FindLevel0DataReq',
-  full_name='dfs.ifs.level0.FindLevel0DataReq',
+  full_name='dfs.sls.level0.FindLevel0DataReq',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='obs_id', full_name='dfs.ifs.level0.FindLevel0DataReq.obs_id', index=0,
+      name='obs_id', full_name='dfs.sls.level0.FindLevel0DataReq.obs_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='detector_no', full_name='dfs.ifs.level0.FindLevel0DataReq.detector_no', index=1,
+      name='detector_no', full_name='dfs.sls.level0.FindLevel0DataReq.detector_no', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='obs_type', full_name='dfs.ifs.level0.FindLevel0DataReq.obs_type', index=2,
+      name='obs_type', full_name='dfs.sls.level0.FindLevel0DataReq.obs_type', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='exp_time_start', full_name='dfs.ifs.level0.FindLevel0DataReq.exp_time_start', index=3,
+      name='exp_time_start', full_name='dfs.sls.level0.FindLevel0DataReq.exp_time_start', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='exp_time_end', full_name='dfs.ifs.level0.FindLevel0DataReq.exp_time_end', index=4,
+      name='exp_time_end', full_name='dfs.sls.level0.FindLevel0DataReq.exp_time_end', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='qc0_status', full_name='dfs.ifs.level0.FindLevel0DataReq.qc0_status', index=5,
+      name='qc0_status', full_name='dfs.sls.level0.FindLevel0DataReq.qc0_status', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_status', full_name='dfs.ifs.level0.FindLevel0DataReq.prc_status', index=6,
+      name='prc_status', full_name='dfs.sls.level0.FindLevel0DataReq.prc_status', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file_name', full_name='dfs.ifs.level0.FindLevel0DataReq.file_name', index=7,
+      name='file_name', full_name='dfs.sls.level0.FindLevel0DataReq.file_name', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='dfs.ifs.level0.FindLevel0DataReq.limit', index=8,
+      name='limit', full_name='dfs.sls.level0.FindLevel0DataReq.limit', index=8,
       number=9, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='other_conditions', full_name='dfs.ifs.level0.FindLevel0DataReq.other_conditions', index=9,
+      name='other_conditions', full_name='dfs.sls.level0.FindLevel0DataReq.other_conditions', index=9,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -290,34 +290,34 @@ _FINDLEVEL0DATAREQ = _descriptor.Descriptor(
 
 _FINDLEVEL0DATARESP = _descriptor.Descriptor(
   name='FindLevel0DataResp',
-  full_name='dfs.ifs.level0.FindLevel0DataResp',
+  full_name='dfs.sls.level0.FindLevel0DataResp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='dfs.ifs.level0.FindLevel0DataResp.success', index=0,
+      name='success', full_name='dfs.sls.level0.FindLevel0DataResp.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='totalCount', full_name='dfs.ifs.level0.FindLevel0DataResp.totalCount', index=1,
+      name='totalCount', full_name='dfs.sls.level0.FindLevel0DataResp.totalCount', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='error', full_name='dfs.ifs.level0.FindLevel0DataResp.error', index=2,
+      name='error', full_name='dfs.sls.level0.FindLevel0DataResp.error', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='records', full_name='dfs.ifs.level0.FindLevel0DataResp.records', index=3,
+      name='records', full_name='dfs.sls.level0.FindLevel0DataResp.records', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -342,20 +342,20 @@ _FINDLEVEL0DATARESP = _descriptor.Descriptor(
 
 _GETLEVEL0DATAREQ = _descriptor.Descriptor(
   name='GetLevel0DataReq',
-  full_name='dfs.ifs.level0.GetLevel0DataReq',
+  full_name='dfs.sls.level0.GetLevel0DataReq',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='dfs.ifs.level0.GetLevel0DataReq.id', index=0,
+      name='id', full_name='dfs.sls.level0.GetLevel0DataReq.id', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='level0_id', full_name='dfs.ifs.level0.GetLevel0DataReq.level0_id', index=1,
+      name='level0_id', full_name='dfs.sls.level0.GetLevel0DataReq.level0_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -380,13 +380,13 @@ _GETLEVEL0DATAREQ = _descriptor.Descriptor(
 
 _GETLEVEL0DATARESP = _descriptor.Descriptor(
   name='GetLevel0DataResp',
-  full_name='dfs.ifs.level0.GetLevel0DataResp',
+  full_name='dfs.sls.level0.GetLevel0DataResp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='record', full_name='dfs.ifs.level0.GetLevel0DataResp.record', index=0,
+      name='record', full_name='dfs.sls.level0.GetLevel0DataResp.record', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -411,13 +411,13 @@ _GETLEVEL0DATARESP = _descriptor.Descriptor(
 
 _WRITELEVEL0DATAREQ = _descriptor.Descriptor(
   name='WriteLevel0DataReq',
-  full_name='dfs.ifs.level0.WriteLevel0DataReq',
+  full_name='dfs.sls.level0.WriteLevel0DataReq',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='record', full_name='dfs.ifs.level0.WriteLevel0DataReq.record', index=0,
+      name='record', full_name='dfs.sls.level0.WriteLevel0DataReq.record', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -442,27 +442,27 @@ _WRITELEVEL0DATAREQ = _descriptor.Descriptor(
 
 _WRITELEVEL0DATARESP = _descriptor.Descriptor(
   name='WriteLevel0DataResp',
-  full_name='dfs.ifs.level0.WriteLevel0DataResp',
+  full_name='dfs.sls.level0.WriteLevel0DataResp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='dfs.ifs.level0.WriteLevel0DataResp.success', index=0,
+      name='success', full_name='dfs.sls.level0.WriteLevel0DataResp.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='error', full_name='dfs.ifs.level0.WriteLevel0DataResp.error', index=1,
+      name='error', full_name='dfs.sls.level0.WriteLevel0DataResp.error', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='record', full_name='dfs.ifs.level0.WriteLevel0DataResp.record', index=2,
+      name='record', full_name='dfs.sls.level0.WriteLevel0DataResp.record', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -487,27 +487,27 @@ _WRITELEVEL0DATARESP = _descriptor.Descriptor(
 
 _UPDATEQC0STATUSREQ = _descriptor.Descriptor(
   name='UpdateQc0StatusReq',
-  full_name='dfs.ifs.level0.UpdateQc0StatusReq',
+  full_name='dfs.sls.level0.UpdateQc0StatusReq',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='dfs.ifs.level0.UpdateQc0StatusReq.id', index=0,
+      name='id', full_name='dfs.sls.level0.UpdateQc0StatusReq.id', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='level0_id', full_name='dfs.ifs.level0.UpdateQc0StatusReq.level0_id', index=1,
+      name='level0_id', full_name='dfs.sls.level0.UpdateQc0StatusReq.level0_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='dfs.ifs.level0.UpdateQc0StatusReq.status', index=2,
+      name='status', full_name='dfs.sls.level0.UpdateQc0StatusReq.status', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -532,20 +532,20 @@ _UPDATEQC0STATUSREQ = _descriptor.Descriptor(
 
 _UPDATEQC0STATUSRESP = _descriptor.Descriptor(
   name='UpdateQc0StatusResp',
-  full_name='dfs.ifs.level0.UpdateQc0StatusResp',
+  full_name='dfs.sls.level0.UpdateQc0StatusResp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='dfs.ifs.level0.UpdateQc0StatusResp.success', index=0,
+      name='success', full_name='dfs.sls.level0.UpdateQc0StatusResp.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='error', full_name='dfs.ifs.level0.UpdateQc0StatusResp.error', index=1,
+      name='error', full_name='dfs.sls.level0.UpdateQc0StatusResp.error', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -570,27 +570,27 @@ _UPDATEQC0STATUSRESP = _descriptor.Descriptor(
 
 _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
   name='UpdateProcStatusReq',
-  full_name='dfs.ifs.level0.UpdateProcStatusReq',
+  full_name='dfs.sls.level0.UpdateProcStatusReq',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='dfs.ifs.level0.UpdateProcStatusReq.id', index=0,
+      name='id', full_name='dfs.sls.level0.UpdateProcStatusReq.id', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='level0_id', full_name='dfs.ifs.level0.UpdateProcStatusReq.level0_id', index=1,
+      name='level0_id', full_name='dfs.sls.level0.UpdateProcStatusReq.level0_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='dfs.ifs.level0.UpdateProcStatusReq.status', index=2,
+      name='status', full_name='dfs.sls.level0.UpdateProcStatusReq.status', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -615,20 +615,20 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
 
 _UPDATEPROCSTATUSRESP = _descriptor.Descriptor(
   name='UpdateProcStatusResp',
-  full_name='dfs.ifs.level0.UpdateProcStatusResp',
+  full_name='dfs.sls.level0.UpdateProcStatusResp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='dfs.ifs.level0.UpdateProcStatusResp.success', index=0,
+      name='success', full_name='dfs.sls.level0.UpdateProcStatusResp.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='error', full_name='dfs.ifs.level0.UpdateProcStatusResp.error', index=1,
+      name='error', full_name='dfs.sls.level0.UpdateProcStatusResp.error', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -676,7 +676,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Level0Record = _reflection.GeneratedProtocolMessageType('Level0Record', (_message.Message,), {
   'DESCRIPTOR' : _LEVEL0RECORD,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.Level0Record)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.Level0Record)
   })
 _sym_db.RegisterMessage(Level0Record)
 
@@ -685,12 +685,12 @@ FindLevel0DataReq = _reflection.GeneratedProtocolMessageType('FindLevel0DataReq'
   'OtherConditionsEntry' : _reflection.GeneratedProtocolMessageType('OtherConditionsEntry', (_message.Message,), {
     'DESCRIPTOR' : _FINDLEVEL0DATAREQ_OTHERCONDITIONSENTRY,
     '__module__' : 'sls.level0.level0_pb2'
-    # @@protoc_insertion_point(class_scope:dfs.ifs.level0.FindLevel0DataReq.OtherConditionsEntry)
+    # @@protoc_insertion_point(class_scope:dfs.sls.level0.FindLevel0DataReq.OtherConditionsEntry)
     })
   ,
   'DESCRIPTOR' : _FINDLEVEL0DATAREQ,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.FindLevel0DataReq)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.FindLevel0DataReq)
   })
 _sym_db.RegisterMessage(FindLevel0DataReq)
 _sym_db.RegisterMessage(FindLevel0DataReq.OtherConditionsEntry)
@@ -698,63 +698,63 @@ _sym_db.RegisterMessage(FindLevel0DataReq.OtherConditionsEntry)
 FindLevel0DataResp = _reflection.GeneratedProtocolMessageType('FindLevel0DataResp', (_message.Message,), {
   'DESCRIPTOR' : _FINDLEVEL0DATARESP,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.FindLevel0DataResp)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.FindLevel0DataResp)
   })
 _sym_db.RegisterMessage(FindLevel0DataResp)
 
 GetLevel0DataReq = _reflection.GeneratedProtocolMessageType('GetLevel0DataReq', (_message.Message,), {
   'DESCRIPTOR' : _GETLEVEL0DATAREQ,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.GetLevel0DataReq)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.GetLevel0DataReq)
   })
 _sym_db.RegisterMessage(GetLevel0DataReq)
 
 GetLevel0DataResp = _reflection.GeneratedProtocolMessageType('GetLevel0DataResp', (_message.Message,), {
   'DESCRIPTOR' : _GETLEVEL0DATARESP,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.GetLevel0DataResp)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.GetLevel0DataResp)
   })
 _sym_db.RegisterMessage(GetLevel0DataResp)
 
 WriteLevel0DataReq = _reflection.GeneratedProtocolMessageType('WriteLevel0DataReq', (_message.Message,), {
   'DESCRIPTOR' : _WRITELEVEL0DATAREQ,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.WriteLevel0DataReq)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.WriteLevel0DataReq)
   })
 _sym_db.RegisterMessage(WriteLevel0DataReq)
 
 WriteLevel0DataResp = _reflection.GeneratedProtocolMessageType('WriteLevel0DataResp', (_message.Message,), {
   'DESCRIPTOR' : _WRITELEVEL0DATARESP,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.WriteLevel0DataResp)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.WriteLevel0DataResp)
   })
 _sym_db.RegisterMessage(WriteLevel0DataResp)
 
 UpdateQc0StatusReq = _reflection.GeneratedProtocolMessageType('UpdateQc0StatusReq', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEQC0STATUSREQ,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.UpdateQc0StatusReq)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.UpdateQc0StatusReq)
   })
 _sym_db.RegisterMessage(UpdateQc0StatusReq)
 
 UpdateQc0StatusResp = _reflection.GeneratedProtocolMessageType('UpdateQc0StatusResp', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEQC0STATUSRESP,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.UpdateQc0StatusResp)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.UpdateQc0StatusResp)
   })
 _sym_db.RegisterMessage(UpdateQc0StatusResp)
 
 UpdateProcStatusReq = _reflection.GeneratedProtocolMessageType('UpdateProcStatusReq', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEPROCSTATUSREQ,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.UpdateProcStatusReq)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.UpdateProcStatusReq)
   })
 _sym_db.RegisterMessage(UpdateProcStatusReq)
 
 UpdateProcStatusResp = _reflection.GeneratedProtocolMessageType('UpdateProcStatusResp', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEPROCSTATUSRESP,
   '__module__' : 'sls.level0.level0_pb2'
-  # @@protoc_insertion_point(class_scope:dfs.ifs.level0.UpdateProcStatusResp)
+  # @@protoc_insertion_point(class_scope:dfs.sls.level0.UpdateProcStatusResp)
   })
 _sym_db.RegisterMessage(UpdateProcStatusResp)
 
@@ -764,7 +764,7 @@ _FINDLEVEL0DATAREQ_OTHERCONDITIONSENTRY._options = None
 
 _LEVEL0SRV = _descriptor.ServiceDescriptor(
   name='Level0Srv',
-  full_name='dfs.ifs.level0.Level0Srv',
+  full_name='dfs.sls.level0.Level0Srv',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -773,7 +773,7 @@ _LEVEL0SRV = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='Find',
-    full_name='dfs.ifs.level0.Level0Srv.Find',
+    full_name='dfs.sls.level0.Level0Srv.Find',
     index=0,
     containing_service=None,
     input_type=_FINDLEVEL0DATAREQ,
@@ -782,7 +782,7 @@ _LEVEL0SRV = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Get',
-    full_name='dfs.ifs.level0.Level0Srv.Get',
+    full_name='dfs.sls.level0.Level0Srv.Get',
     index=1,
     containing_service=None,
     input_type=_GETLEVEL0DATAREQ,
@@ -791,7 +791,7 @@ _LEVEL0SRV = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Write',
-    full_name='dfs.ifs.level0.Level0Srv.Write',
+    full_name='dfs.sls.level0.Level0Srv.Write',
     index=2,
     containing_service=None,
     input_type=_WRITELEVEL0DATAREQ,
@@ -800,7 +800,7 @@ _LEVEL0SRV = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UpdateQc0Status',
-    full_name='dfs.ifs.level0.Level0Srv.UpdateQc0Status',
+    full_name='dfs.sls.level0.Level0Srv.UpdateQc0Status',
     index=3,
     containing_service=None,
     input_type=_UPDATEQC0STATUSREQ,
@@ -809,7 +809,7 @@ _LEVEL0SRV = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UpdateProcStatus',
-    full_name='dfs.ifs.level0.Level0Srv.UpdateProcStatus',
+    full_name='dfs.sls.level0.Level0Srv.UpdateProcStatus',
     index=4,
     containing_service=None,
     input_type=_UPDATEPROCSTATUSREQ,
