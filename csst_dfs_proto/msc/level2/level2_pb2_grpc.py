@@ -33,7 +33,7 @@ class Level2SrvStub(object):
         '/dfs.msc.level2.Level2Srv/Write',
         request_serializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Req.SerializeToString,
         response_deserializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Resp.FromString,
-        ) 
+        )
     self.UpdateQc2Status = channel.unary_unary(
         '/dfs.msc.level2.Level2Srv/UpdateQc2Status',
         request_serializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusReq.SerializeToString,
@@ -43,6 +43,11 @@ class Level2SrvStub(object):
         '/dfs.msc.level2.Level2Srv/UpdateProcStatus',
         request_serializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusReq.SerializeToString,
         response_deserializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusResp.FromString,
+        )
+    self.DeleteCatalogByLevel2Id = channel.unary_unary(
+        '/dfs.msc.level2.Level2Srv/DeleteCatalogByLevel2Id',
+        request_serializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdReq.SerializeToString,
+        response_deserializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdResp.FromString,
         )
 
 
@@ -92,6 +97,13 @@ class Level2SrvServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def DeleteCatalogByLevel2Id(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_Level2SrvServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -124,6 +136,11 @@ def add_Level2SrvServicer_to_server(servicer, server):
           servicer.UpdateProcStatus,
           request_deserializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusReq.FromString,
           response_serializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusResp.SerializeToString,
+      ),
+      'DeleteCatalogByLevel2Id': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteCatalogByLevel2Id,
+          request_deserializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdReq.FromString,
+          response_serializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdResp.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
