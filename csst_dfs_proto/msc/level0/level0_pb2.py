@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.msc.level0',
   syntax='proto3',
   serialized_options=_b('Z\037cnlab.net/csst/proto/msc/level0'),
-  serialized_pb=_b('\n\x17msc/level0/level0.proto\x12\x0e\x64\x66s.msc.level0\x1a\x12\x63ommon/error.proto\"\xaa\x02\n\x0cLevel0Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06obs_id\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x10\n\x08obs_time\x18\x06 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x07 \x01(\x02\x12\x1a\n\x12\x64\x65tector_status_id\x18\x08 \x01(\x03\x12\x10\n\x08\x66ilename\x18\t \x01(\t\x12\x11\n\tfile_path\x18\n \x01(\t\x12\x12\n\nqc0_status\x18\x0b \x01(\x05\x12\x10\n\x08qc0_time\x18\x0c \x01(\t\x12\x12\n\nprc_status\x18\r \x01(\x05\x12\x10\n\x08prc_time\x18\x0e \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0f \x01(\t\"\xcc\x02\n\x11\x46indLevel0DataReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x02 \x01(\t\x12\x10\n\x08obs_type\x18\x03 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x04 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x05 \x01(\t\x12\x12\n\nqc0_status\x18\x06 \x01(\x05\x12\x12\n\nprc_status\x18\x07 \x01(\x05\x12\x11\n\tfile_name\x18\x08 \x01(\t\x12\r\n\x05limit\x18\t \x01(\x05\x12P\n\x10other_conditions\x18\n \x03(\x0b\x32\x36.dfs.msc.level0.FindLevel0DataReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x86\x01\n\x12\x46indLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"1\n\x10GetLevel0DataReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\"A\n\x11GetLevel0DataResp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"B\n\x12WriteLevel0DataReq\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"r\n\x13WriteLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"C\n\x12UpdateQc0StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"D\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xbd\x03\n\tLevel0Srv\x12O\n\x04\x46ind\x12!.dfs.msc.level0.FindLevel0DataReq\x1a\".dfs.msc.level0.FindLevel0DataResp\"\x00\x12L\n\x03Get\x12 .dfs.msc.level0.GetLevel0DataReq\x1a!.dfs.msc.level0.GetLevel0DataResp\"\x00\x12R\n\x05Write\x12\".dfs.msc.level0.WriteLevel0DataReq\x1a#.dfs.msc.level0.WriteLevel0DataResp\"\x00\x12\\\n\x0fUpdateQc0Status\x12\".dfs.msc.level0.UpdateQc0StatusReq\x1a#.dfs.msc.level0.UpdateQc0StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.msc.level0.UpdateProcStatusReq\x1a$.dfs.msc.level0.UpdateProcStatusResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/msc/level0b\x06proto3')
+  serialized_pb=_b('\n\x17msc/level0/level0.proto\x12\x0e\x64\x66s.msc.level0\x1a\x12\x63ommon/error.proto\"\xba\x02\n\x0cLevel0Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06obs_id\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x04 \x01(\t\x12\x10\n\x08obs_type\x18\x05 \x01(\t\x12\x10\n\x08obs_time\x18\x06 \x01(\t\x12\x10\n\x08\x65xp_time\x18\x07 \x01(\x02\x12\x1a\n\x12\x64\x65tector_status_id\x18\x08 \x01(\x03\x12\x10\n\x08\x66ilename\x18\t \x01(\t\x12\x11\n\tfile_path\x18\n \x01(\t\x12\x12\n\nqc0_status\x18\x0b \x01(\x05\x12\x10\n\x08qc0_time\x18\x0c \x01(\t\x12\x12\n\nprc_status\x18\r \x01(\x05\x12\x10\n\x08prc_time\x18\x0e \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0f \x01(\t\x12\x0e\n\x06header\x18\x10 \x01(\t\"\xcc\x02\n\x11\x46indLevel0DataReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x02 \x01(\t\x12\x10\n\x08obs_type\x18\x03 \x01(\t\x12\x16\n\x0e\x65xp_time_start\x18\x04 \x01(\t\x12\x14\n\x0c\x65xp_time_end\x18\x05 \x01(\t\x12\x12\n\nqc0_status\x18\x06 \x01(\x05\x12\x12\n\nprc_status\x18\x07 \x01(\x05\x12\x11\n\tfile_name\x18\x08 \x01(\t\x12\r\n\x05limit\x18\t \x01(\x05\x12P\n\x10other_conditions\x18\n \x03(\x0b\x32\x36.dfs.msc.level0.FindLevel0DataReq.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x86\x01\n\x12\x46indLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"1\n\x10GetLevel0DataReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\"A\n\x11GetLevel0DataResp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"B\n\x12WriteLevel0DataReq\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"r\n\x13WriteLevel0DataResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.msc.level0.Level0Record\"C\n\x12UpdateQc0StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"D\n\x13UpdateQc0StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"D\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xbd\x03\n\tLevel0Srv\x12O\n\x04\x46ind\x12!.dfs.msc.level0.FindLevel0DataReq\x1a\".dfs.msc.level0.FindLevel0DataResp\"\x00\x12L\n\x03Get\x12 .dfs.msc.level0.GetLevel0DataReq\x1a!.dfs.msc.level0.GetLevel0DataResp\"\x00\x12R\n\x05Write\x12\".dfs.msc.level0.WriteLevel0DataReq\x1a#.dfs.msc.level0.WriteLevel0DataResp\"\x00\x12\\\n\x0fUpdateQc0Status\x12\".dfs.msc.level0.UpdateQc0StatusReq\x1a#.dfs.msc.level0.UpdateQc0StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.msc.level0.UpdateProcStatusReq\x1a$.dfs.msc.level0.UpdateProcStatusResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/msc/level0b\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -140,6 +140,13 @@ _LEVEL0RECORD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='header', full_name='dfs.msc.level0.Level0Record.header', index=15,
+      number=16, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -153,7 +160,7 @@ _LEVEL0RECORD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=64,
-  serialized_end=362,
+  serialized_end=378,
 )
 
 
@@ -190,8 +197,8 @@ _FINDLEVEL0DATAREQ_OTHERCONDITIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=643,
-  serialized_end=697,
+  serialized_start=659,
+  serialized_end=713,
 )
 
 _FINDLEVEL0DATAREQ = _descriptor.Descriptor(
@@ -283,8 +290,8 @@ _FINDLEVEL0DATAREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=365,
-  serialized_end=697,
+  serialized_start=381,
+  serialized_end=713,
 )
 
 
@@ -335,8 +342,8 @@ _FINDLEVEL0DATARESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=700,
-  serialized_end=834,
+  serialized_start=716,
+  serialized_end=850,
 )
 
 
@@ -373,8 +380,8 @@ _GETLEVEL0DATAREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=836,
-  serialized_end=885,
+  serialized_start=852,
+  serialized_end=901,
 )
 
 
@@ -404,8 +411,8 @@ _GETLEVEL0DATARESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=887,
-  serialized_end=952,
+  serialized_start=903,
+  serialized_end=968,
 )
 
 
@@ -435,8 +442,8 @@ _WRITELEVEL0DATAREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=954,
-  serialized_end=1020,
+  serialized_start=970,
+  serialized_end=1036,
 )
 
 
@@ -480,8 +487,8 @@ _WRITELEVEL0DATARESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1022,
-  serialized_end=1136,
+  serialized_start=1038,
+  serialized_end=1152,
 )
 
 
@@ -525,8 +532,8 @@ _UPDATEQC0STATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1138,
-  serialized_end=1205,
+  serialized_start=1154,
+  serialized_end=1221,
 )
 
 
@@ -563,8 +570,8 @@ _UPDATEQC0STATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1207,
-  serialized_end=1275,
+  serialized_start=1223,
+  serialized_end=1291,
 )
 
 
@@ -608,8 +615,8 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1277,
-  serialized_end=1345,
+  serialized_start=1293,
+  serialized_end=1361,
 )
 
 
@@ -646,8 +653,8 @@ _UPDATEPROCSTATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1347,
-  serialized_end=1416,
+  serialized_start=1363,
+  serialized_end=1432,
 )
 
 _FINDLEVEL0DATAREQ_OTHERCONDITIONSENTRY.containing_type = _FINDLEVEL0DATAREQ
@@ -768,8 +775,8 @@ _LEVEL0SRV = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1419,
-  serialized_end=1864,
+  serialized_start=1435,
+  serialized_end=1880,
   methods=[
   _descriptor.MethodDescriptor(
     name='Find',
