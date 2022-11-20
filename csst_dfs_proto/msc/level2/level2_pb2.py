@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dfs.msc.level2',
   syntax='proto3',
   serialized_options=_b('Z\037cnlab.net/csst/proto/msc/level2'),
-  serialized_pb=_b('\n\x17msc/level2/level2.proto\x12\x0e\x64\x66s.msc.level2\x1a\x12\x63ommon/error.proto\"\xf2\x01\n\x0cLevel2Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel1_id\x18\x02 \x01(\x03\x12\x11\n\tdata_type\x18\x03 \x01(\t\x12\x10\n\x08\x66ilename\x18\x04 \x01(\t\x12\x11\n\tfile_path\x18\x05 \x01(\t\x12\x12\n\nqc2_status\x18\x06 \x01(\x05\x12\x10\n\x08qc2_time\x18\x07 \x01(\t\x12\x12\n\nprc_status\x18\x08 \x01(\x05\x12\x10\n\x08prc_time\x18\t \x01(\t\x12\x13\n\x0b\x63reate_time\x18\n \x01(\t\x12\x13\n\x0bpipeline_id\x18\x0b \x01(\t\x12\x15\n\rimport_status\x18\x0c \x01(\x05\"\xb8\x02\n\rFindLevel2Req\x12\x11\n\tlevel1_id\x18\x01 \x01(\x03\x12\x11\n\tdata_type\x18\x02 \x01(\t\x12\x19\n\x11\x63reate_time_start\x18\x03 \x01(\t\x12\x17\n\x0f\x63reate_time_end\x18\x04 \x01(\t\x12\x12\n\nqc2_status\x18\x05 \x01(\x05\x12\x12\n\nprc_status\x18\x06 \x01(\x05\x12\x10\n\x08\x66ilename\x18\x07 \x01(\t\x12\r\n\x05limit\x18\x08 \x01(\x05\x12L\n\x10other_conditions\x18\t \x03(\x0b\x32\x32.dfs.msc.level2.FindLevel2Req.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x82\x01\n\x0e\x46indLevel2Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.msc.level2.Level2Record\"\x1a\n\x0cGetLevel2Req\x12\n\n\x02id\x18\x01 \x01(\x03\"=\n\rGetLevel2Resp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level2.Level2Record\"L\n\x0eWriteLevel2Req\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level2.Level2Record\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"n\n\x0fWriteLevel2Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.msc.level2.Level2Record\"0\n\x12UpdateQc2StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"D\n\x13UpdateQc2StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"1\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"\xd0\x1d\n\x13Level2CatalogRecord\x12\x11\n\tflux_aper\x18\x01 \x03(\x01\x12\x14\n\x0c\x66luxerr_aper\x18\x02 \x03(\x01\x12\x10\n\x08mag_aper\x18\x03 \x03(\x01\x12\x13\n\x0bmagerr_aper\x18\x04 \x03(\x01\x12\x11\n\tflux_auto\x18\x05 \x01(\x01\x12\x14\n\x0c\x66luxerr_auto\x18\x06 \x01(\x01\x12\x10\n\x08mag_auto\x18\x07 \x01(\x01\x12\x13\n\x0bmagerr_auto\x18\x08 \x01(\x01\x12\x13\n\x0bkron_radius\x18\t \x01(\x01\x12\x12\n\nbackground\x18\n \x01(\x01\x12\x0f\n\x07x_image\x18\x0b \x01(\x01\x12\x0f\n\x07y_image\x18\x0c \x01(\x01\x12\x13\n\x0b\x61lpha_j2000\x18\r \x01(\x01\x12\x13\n\x0b\x64\x65lta_j2000\x18\x0e \x01(\x01\x12\x0f\n\x07\x61_image\x18\x0f \x01(\x01\x12\x0f\n\x07\x62_image\x18\x10 \x01(\x01\x12\x13\n\x0btheta_image\x18\x11 \x01(\x01\x12\x0f\n\x07\x61_world\x18\x12 \x01(\x01\x12\x0f\n\x07\x62_world\x18\x13 \x01(\x01\x12\x13\n\x0btheta_world\x18\x14 \x01(\x01\x12\x13\n\x0btheta_j2000\x18\x15 \x01(\x01\x12\x13\n\x0b\x65rrx2_image\x18\x16 \x01(\x01\x12\x13\n\x0b\x65rry2_image\x18\x17 \x01(\x01\x12\x12\n\nerra_image\x18\x18 \x01(\x01\x12\x12\n\nerrb_image\x18\x19 \x01(\x01\x12\x16\n\x0e\x65rrtheta_image\x18\x1a \x01(\x01\x12\x12\n\nerra_world\x18\x1b \x01(\x01\x12\x12\n\nerrb_world\x18\x1c \x01(\x01\x12\x16\n\x0e\x65rrtheta_world\x18\x1d \x01(\x01\x12\x16\n\x0e\x65rrtheta_j2000\x18\x1e \x01(\x01\x12\x12\n\nxwin_image\x18\x1f \x01(\x01\x12\x12\n\nywin_image\x18  \x01(\x01\x12\x16\n\x0e\x61lphawin_j2000\x18! \x01(\x01\x12\x16\n\x0e\x64\x65ltawin_j2000\x18\" \x01(\x01\x12\x16\n\x0e\x65rrx2win_image\x18# \x01(\x01\x12\x16\n\x0e\x65rry2win_image\x18$ \x01(\x01\x12\r\n\x05\x66lags\x18% \x01(\x03\x12\x14\n\x0c\x66lags_weight\x18& \x01(\x03\x12\x14\n\x0cimaflags_iso\x18\' \x01(\x01\x12\x15\n\rnimaflags_iso\x18( \x01(\x01\x12\x12\n\nfwhm_image\x18) \x01(\x01\x12\x12\n\nfwhm_world\x18* \x01(\x01\x12\x12\n\nelongation\x18+ \x01(\x01\x12\x13\n\x0b\x65llipticity\x18, \x01(\x01\x12\x12\n\nclass_star\x18- \x01(\x01\x12\x13\n\x0b\x66lux_radius\x18. \x01(\x01\x12\x15\n\rfwhmpsf_image\x18/ \x01(\x01\x12\x15\n\rfwhmpsf_world\x18\x30 \x01(\x01\x12\x12\n\nxpsf_image\x18\x31 \x01(\x01\x12\x12\n\nypsf_image\x18\x32 \x01(\x01\x12\x16\n\x0e\x61lphapsf_j2000\x18\x33 \x01(\x01\x12\x16\n\x0e\x64\x65ltapsf_j2000\x18\x34 \x01(\x01\x12\x10\n\x08\x66lux_psf\x18\x35 \x01(\x01\x12\x13\n\x0b\x66luxerr_psf\x18\x36 \x01(\x01\x12\x0f\n\x07mag_psf\x18\x37 \x01(\x01\x12\x12\n\nmagerr_psf\x18\x38 \x01(\x01\x12\x11\n\tniter_psf\x18\x39 \x01(\x03\x12\x10\n\x08\x63hi2_psf\x18: \x01(\x01\x12\x16\n\x0e\x65rrx2psf_image\x18; \x01(\x01\x12\x16\n\x0e\x65rry2psf_image\x18< \x01(\x01\x12\x12\n\nchi2_model\x18= \x01(\x01\x12\x13\n\x0b\x66lags_model\x18> \x01(\x05\x12\x13\n\x0bniter_model\x18? \x01(\x03\x12\x12\n\nflux_model\x18@ \x01(\x01\x12\x15\n\rfluxerr_model\x18\x41 \x01(\x01\x12\x11\n\tmag_model\x18\x42 \x01(\x01\x12\x14\n\x0cmagerr_model\x18\x43 \x01(\x01\x12\x13\n\x0b\x66lux_hybrid\x18\x44 \x01(\x01\x12\x16\n\x0e\x66luxerr_hybrid\x18\x45 \x01(\x01\x12\x12\n\nmag_hybrid\x18\x46 \x01(\x01\x12\x15\n\rmagerr_hybrid\x18G \x01(\x01\x12\x16\n\x0e\x66lux_max_model\x18H \x01(\x01\x12\x14\n\x0cmu_max_model\x18I \x01(\x01\x12\x16\n\x0e\x66lux_eff_model\x18J \x01(\x01\x12\x14\n\x0cmu_eff_model\x18K \x01(\x01\x12\x17\n\x0f\x66lux_mean_model\x18L \x01(\x01\x12\x15\n\rmu_mean_model\x18M \x01(\x01\x12\x14\n\x0cxmodel_image\x18N \x01(\x01\x12\x14\n\x0cymodel_image\x18O \x01(\x01\x12\x18\n\x10\x61lphamodel_j2000\x18P \x01(\x01\x12\x18\n\x10\x64\x65ltamodel_j2000\x18Q \x01(\x01\x12\x18\n\x10\x65rry2model_image\x18R \x01(\x01\x12\x17\n\x0f\x65rramodel_image\x18S \x01(\x01\x12\x17\n\x0f\x65rrbmodel_image\x18T \x01(\x01\x12\x1b\n\x13\x65rrthetamodel_image\x18U \x01(\x01\x12\x17\n\x0f\x65rramodel_world\x18V \x01(\x01\x12\x17\n\x0f\x65rrbmodel_world\x18W \x01(\x01\x12\x1b\n\x13\x65rrthetamodel_world\x18X \x01(\x01\x12\x1b\n\x13\x65rrthetamodel_j2000\x18Y \x01(\x01\x12\x14\n\x0c\x61model_image\x18Z \x01(\x01\x12\x14\n\x0c\x62model_image\x18[ \x01(\x01\x12\x18\n\x10thetamodel_image\x18\\ \x01(\x01\x12\x14\n\x0c\x61model_world\x18] \x01(\x01\x12\x14\n\x0c\x62model_world\x18^ \x01(\x01\x12\x18\n\x10thetamodel_world\x18_ \x01(\x01\x12\x18\n\x10thetamodel_j2000\x18` \x01(\x01\x12\x14\n\x0cspread_model\x18\x61 \x01(\x01\x12\x17\n\x0fspreaderr_model\x18\x62 \x01(\x01\x12\x17\n\x0fnoisearea_model\x18\x63 \x01(\x01\x12\x15\n\rflux_spheroid\x18\x64 \x01(\x01\x12\x18\n\x10\x66luxerr_spheroid\x18\x65 \x01(\x01\x12\x14\n\x0cmag_spheroid\x18\x66 \x01(\x01\x12\x17\n\x0fmagerr_spheroid\x18g \x01(\x01\x12\x19\n\x11\x66lux_max_spheroid\x18h \x01(\x01\x12\x17\n\x0fmu_max_spheroid\x18i \x01(\x01\x12\x19\n\x11\x66lux_eff_spheroid\x18j \x01(\x01\x12\x17\n\x0fmu_eff_spheroid\x18k \x01(\x01\x12\x1a\n\x12\x66lux_mean_spheroid\x18l \x01(\x01\x12\x18\n\x10mu_mean_spheroid\x18m \x01(\x01\x12\x1a\n\x12\x66luxratio_spheroid\x18n \x01(\x01\x12\x1d\n\x15\x66luxratioerr_spheroid\x18o \x01(\x01\x12\x1b\n\x13spheroid_reff_image\x18p \x01(\x01\x12\x1e\n\x16spheroid_refferr_image\x18q \x01(\x01\x12\x1b\n\x13spheroid_reff_world\x18r \x01(\x01\x12\x1e\n\x16spheroid_refferr_world\x18s \x01(\x01\x12\x1d\n\x15spheroid_aspect_image\x18t \x01(\x01\x12 \n\x18spheroid_aspecterr_image\x18u \x01(\x01\x12\x1d\n\x15spheroid_aspect_world\x18v \x01(\x01\x12 \n\x18spheroid_aspecterr_world\x18w \x01(\x01\x12\x1c\n\x14spheroid_theta_image\x18x \x01(\x01\x12\x1f\n\x17spheroid_thetaerr_image\x18y \x01(\x01\x12\x1c\n\x14spheroid_theta_world\x18z \x01(\x01\x12\x1f\n\x17spheroid_thetaerr_world\x18{ \x01(\x01\x12\x1c\n\x14spheroid_theta_j2000\x18| \x01(\x01\x12\x18\n\x10spheroid_sersicn\x18} \x01(\x01\x12\x1b\n\x13spheroid_sersicnerr\x18~ \x01(\x01\x12\x11\n\tflux_disk\x18\x7f \x01(\x01\x12\x15\n\x0c\x66luxerr_disk\x18\x80\x01 \x01(\x01\x12\x11\n\x08mag_disk\x18\x81\x01 \x01(\x01\x12\x14\n\x0bmagerr_disk\x18\x82\x01 \x01(\x01\x12\x16\n\rflux_max_disk\x18\x83\x01 \x01(\x01\x12\x14\n\x0bmu_max_disk\x18\x84\x01 \x01(\x01\x12\x16\n\rflux_eff_disk\x18\x85\x01 \x01(\x01\x12\x14\n\x0bmu_eff_disk\x18\x86\x01 \x01(\x01\x12\x17\n\x0e\x66lux_mean_disk\x18\x87\x01 \x01(\x01\x12\x15\n\x0cmu_mean_disk\x18\x88\x01 \x01(\x01\x12\x17\n\x0e\x66luxratio_disk\x18\x89\x01 \x01(\x01\x12\x1a\n\x11\x66luxratioerr_disk\x18\x8a\x01 \x01(\x01\x12\x19\n\x10\x64isk_scale_image\x18\x8b\x01 \x01(\x01\x12\x1c\n\x13\x64isk_scaleerr_image\x18\x8c\x01 \x01(\x01\x12\x19\n\x10\x64isk_scale_world\x18\x8d\x01 \x01(\x01\x12\x1c\n\x13\x64isk_scaleerr_world\x18\x8e\x01 \x01(\x01\x12\x1a\n\x11\x64isk_aspect_image\x18\x8f\x01 \x01(\x01\x12\x1d\n\x14\x64isk_aspecterr_image\x18\x90\x01 \x01(\x01\x12\x1a\n\x11\x64isk_aspect_world\x18\x91\x01 \x01(\x01\x12\x1d\n\x14\x64isk_aspecterr_world\x18\x92\x01 \x01(\x01\x12\x19\n\x10\x64isk_inclination\x18\x93\x01 \x01(\x01\x12\x1c\n\x13\x64isk_inclinationerr\x18\x94\x01 \x01(\x01\x12\x19\n\x10\x64isk_theta_image\x18\x95\x01 \x01(\x01\x12\x1c\n\x13\x64isk_thetaerr_image\x18\x96\x01 \x01(\x01\x12\x19\n\x10\x64isk_theta_world\x18\x97\x01 \x01(\x01\x12\x1c\n\x13\x64isk_thetaerr_world\x18\x98\x01 \x01(\x01\x12\x19\n\x10\x64isk_theta_j2000\x18\x99\x01 \x01(\x01\x12\x12\n\tlevel2_id\x18\x9a\x01 \x01(\x03\x12\x0c\n\x03seq\x18\x9b\x01 \x01(\x03\x12\x10\n\x07NS8HIdx\x18\x9c\x01 \x01(\x05\x12\x11\n\x08NS16HIdx\x18\x9d\x01 \x01(\x05\x12\x11\n\x08NS32HIdx\x18\x9e\x01 \x01(\x05\x12\x11\n\x08NS64HIdx\x18\x9f\x01 \x01(\x05\x12\x14\n\x0b\x63reate_time\x18\xa0\x01 \x01(\t\"\xc1\x01\n\x14\x46indLevel2CatalogReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x02 \x01(\t\x12\n\n\x02ra\x18\x03 \x01(\t\x12\x0b\n\x03\x64\x65\x63\x18\x04 \x01(\t\x12\x0e\n\x06radius\x18\x05 \x01(\x01\x12\x0e\n\x06minMag\x18\x06 \x01(\x01\x12\x0e\n\x06maxMag\x18\x07 \x01(\x01\x12\x16\n\x0eobs_time_start\x18\x08 \x01(\t\x12\x14\n\x0cobs_time_end\x18\t \x01(\t\x12\r\n\x05limit\x18\n \x01(\x05\"\x90\x01\n\x15\x46indLevel2CatalogResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x34\n\x07records\x18\x04 \x03(\x0b\x32#.dfs.msc.level2.Level2CatalogRecord\"/\n\x1a\x44\x65leteCatalogByLevel2IdReq\x12\x11\n\tlevel2_id\x18\x01 \x01(\x03\"L\n\x1b\x44\x65leteCatalogByLevel2IdResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xfb\x04\n\tLevel2Srv\x12G\n\x04\x46ind\x12\x1d.dfs.msc.level2.FindLevel2Req\x1a\x1e.dfs.msc.level2.FindLevel2Resp\"\x00\x12\\\n\x0b\x46indCatalog\x12$.dfs.msc.level2.FindLevel2CatalogReq\x1a%.dfs.msc.level2.FindLevel2CatalogResp\"\x00\x12\x44\n\x03Get\x12\x1c.dfs.msc.level2.GetLevel2Req\x1a\x1d.dfs.msc.level2.GetLevel2Resp\"\x00\x12L\n\x05Write\x12\x1e.dfs.msc.level2.WriteLevel2Req\x1a\x1f.dfs.msc.level2.WriteLevel2Resp\"\x00(\x01\x12\\\n\x0fUpdateQc2Status\x12\".dfs.msc.level2.UpdateQc2StatusReq\x1a#.dfs.msc.level2.UpdateQc2StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.msc.level2.UpdateProcStatusReq\x1a$.dfs.msc.level2.UpdateProcStatusResp\"\x00\x12t\n\x17\x44\x65leteCatalogByLevel2Id\x12*.dfs.msc.level2.DeleteCatalogByLevel2IdReq\x1a+.dfs.msc.level2.DeleteCatalogByLevel2IdResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/msc/level2b\x06proto3')
+  serialized_pb=_b('\n\x17msc/level2/level2.proto\x12\x0e\x64\x66s.msc.level2\x1a\x12\x63ommon/error.proto\"\x85\x02\n\x0cLevel2Record\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tlevel0_id\x18\x02 \x01(\t\x12\x11\n\tlevel1_id\x18\x03 \x01(\x03\x12\x11\n\tdata_type\x18\x04 \x01(\t\x12\x10\n\x08\x66ilename\x18\x05 \x01(\t\x12\x11\n\tfile_path\x18\x06 \x01(\t\x12\x12\n\nqc2_status\x18\x07 \x01(\x05\x12\x10\n\x08qc2_time\x18\x08 \x01(\t\x12\x12\n\nprc_status\x18\t \x01(\x05\x12\x10\n\x08prc_time\x18\n \x01(\t\x12\x13\n\x0b\x63reate_time\x18\x0b \x01(\t\x12\x13\n\x0bpipeline_id\x18\x0c \x01(\t\x12\x15\n\rimport_status\x18\r \x01(\x05\"\xcb\x02\n\rFindLevel2Req\x12\x11\n\tlevel0_id\x18\x01 \x01(\t\x12\x11\n\tlevel1_id\x18\x02 \x01(\x03\x12\x11\n\tdata_type\x18\x03 \x01(\t\x12\x19\n\x11\x63reate_time_start\x18\x04 \x01(\t\x12\x17\n\x0f\x63reate_time_end\x18\x05 \x01(\t\x12\x12\n\nqc2_status\x18\x06 \x01(\x05\x12\x12\n\nprc_status\x18\x07 \x01(\x05\x12\x10\n\x08\x66ilename\x18\x08 \x01(\t\x12\r\n\x05limit\x18\t \x01(\x05\x12L\n\x10other_conditions\x18\n \x03(\x0b\x32\x32.dfs.msc.level2.FindLevel2Req.OtherConditionsEntry\x1a\x36\n\x14OtherConditionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x82\x01\n\x0e\x46indLevel2Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12-\n\x07records\x18\x04 \x03(\x0b\x32\x1c.dfs.msc.level2.Level2Record\"\x1a\n\x0cGetLevel2Req\x12\n\n\x02id\x18\x01 \x01(\x03\"=\n\rGetLevel2Resp\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level2.Level2Record\"L\n\x0eWriteLevel2Req\x12,\n\x06record\x18\x01 \x01(\x0b\x32\x1c.dfs.msc.level2.Level2Record\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"n\n\x0fWriteLevel2Resp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\x12,\n\x06record\x18\x03 \x01(\x0b\x32\x1c.dfs.msc.level2.Level2Record\"0\n\x12UpdateQc2StatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"D\n\x13UpdateQc2StatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"1\n\x13UpdateProcStatusReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\"E\n\x14UpdateProcStatusResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error\"\xd0\x1d\n\x13Level2CatalogRecord\x12\x11\n\tflux_aper\x18\x01 \x03(\x01\x12\x14\n\x0c\x66luxerr_aper\x18\x02 \x03(\x01\x12\x10\n\x08mag_aper\x18\x03 \x03(\x01\x12\x13\n\x0bmagerr_aper\x18\x04 \x03(\x01\x12\x11\n\tflux_auto\x18\x05 \x01(\x01\x12\x14\n\x0c\x66luxerr_auto\x18\x06 \x01(\x01\x12\x10\n\x08mag_auto\x18\x07 \x01(\x01\x12\x13\n\x0bmagerr_auto\x18\x08 \x01(\x01\x12\x13\n\x0bkron_radius\x18\t \x01(\x01\x12\x12\n\nbackground\x18\n \x01(\x01\x12\x0f\n\x07x_image\x18\x0b \x01(\x01\x12\x0f\n\x07y_image\x18\x0c \x01(\x01\x12\x13\n\x0b\x61lpha_j2000\x18\r \x01(\x01\x12\x13\n\x0b\x64\x65lta_j2000\x18\x0e \x01(\x01\x12\x0f\n\x07\x61_image\x18\x0f \x01(\x01\x12\x0f\n\x07\x62_image\x18\x10 \x01(\x01\x12\x13\n\x0btheta_image\x18\x11 \x01(\x01\x12\x0f\n\x07\x61_world\x18\x12 \x01(\x01\x12\x0f\n\x07\x62_world\x18\x13 \x01(\x01\x12\x13\n\x0btheta_world\x18\x14 \x01(\x01\x12\x13\n\x0btheta_j2000\x18\x15 \x01(\x01\x12\x13\n\x0b\x65rrx2_image\x18\x16 \x01(\x01\x12\x13\n\x0b\x65rry2_image\x18\x17 \x01(\x01\x12\x12\n\nerra_image\x18\x18 \x01(\x01\x12\x12\n\nerrb_image\x18\x19 \x01(\x01\x12\x16\n\x0e\x65rrtheta_image\x18\x1a \x01(\x01\x12\x12\n\nerra_world\x18\x1b \x01(\x01\x12\x12\n\nerrb_world\x18\x1c \x01(\x01\x12\x16\n\x0e\x65rrtheta_world\x18\x1d \x01(\x01\x12\x16\n\x0e\x65rrtheta_j2000\x18\x1e \x01(\x01\x12\x12\n\nxwin_image\x18\x1f \x01(\x01\x12\x12\n\nywin_image\x18  \x01(\x01\x12\x16\n\x0e\x61lphawin_j2000\x18! \x01(\x01\x12\x16\n\x0e\x64\x65ltawin_j2000\x18\" \x01(\x01\x12\x16\n\x0e\x65rrx2win_image\x18# \x01(\x01\x12\x16\n\x0e\x65rry2win_image\x18$ \x01(\x01\x12\r\n\x05\x66lags\x18% \x01(\x03\x12\x14\n\x0c\x66lags_weight\x18& \x01(\x03\x12\x14\n\x0cimaflags_iso\x18\' \x01(\x01\x12\x15\n\rnimaflags_iso\x18( \x01(\x01\x12\x12\n\nfwhm_image\x18) \x01(\x01\x12\x12\n\nfwhm_world\x18* \x01(\x01\x12\x12\n\nelongation\x18+ \x01(\x01\x12\x13\n\x0b\x65llipticity\x18, \x01(\x01\x12\x12\n\nclass_star\x18- \x01(\x01\x12\x13\n\x0b\x66lux_radius\x18. \x01(\x01\x12\x15\n\rfwhmpsf_image\x18/ \x01(\x01\x12\x15\n\rfwhmpsf_world\x18\x30 \x01(\x01\x12\x12\n\nxpsf_image\x18\x31 \x01(\x01\x12\x12\n\nypsf_image\x18\x32 \x01(\x01\x12\x16\n\x0e\x61lphapsf_j2000\x18\x33 \x01(\x01\x12\x16\n\x0e\x64\x65ltapsf_j2000\x18\x34 \x01(\x01\x12\x10\n\x08\x66lux_psf\x18\x35 \x01(\x01\x12\x13\n\x0b\x66luxerr_psf\x18\x36 \x01(\x01\x12\x0f\n\x07mag_psf\x18\x37 \x01(\x01\x12\x12\n\nmagerr_psf\x18\x38 \x01(\x01\x12\x11\n\tniter_psf\x18\x39 \x01(\x03\x12\x10\n\x08\x63hi2_psf\x18: \x01(\x01\x12\x16\n\x0e\x65rrx2psf_image\x18; \x01(\x01\x12\x16\n\x0e\x65rry2psf_image\x18< \x01(\x01\x12\x12\n\nchi2_model\x18= \x01(\x01\x12\x13\n\x0b\x66lags_model\x18> \x01(\x05\x12\x13\n\x0bniter_model\x18? \x01(\x03\x12\x12\n\nflux_model\x18@ \x01(\x01\x12\x15\n\rfluxerr_model\x18\x41 \x01(\x01\x12\x11\n\tmag_model\x18\x42 \x01(\x01\x12\x14\n\x0cmagerr_model\x18\x43 \x01(\x01\x12\x13\n\x0b\x66lux_hybrid\x18\x44 \x01(\x01\x12\x16\n\x0e\x66luxerr_hybrid\x18\x45 \x01(\x01\x12\x12\n\nmag_hybrid\x18\x46 \x01(\x01\x12\x15\n\rmagerr_hybrid\x18G \x01(\x01\x12\x16\n\x0e\x66lux_max_model\x18H \x01(\x01\x12\x14\n\x0cmu_max_model\x18I \x01(\x01\x12\x16\n\x0e\x66lux_eff_model\x18J \x01(\x01\x12\x14\n\x0cmu_eff_model\x18K \x01(\x01\x12\x17\n\x0f\x66lux_mean_model\x18L \x01(\x01\x12\x15\n\rmu_mean_model\x18M \x01(\x01\x12\x14\n\x0cxmodel_image\x18N \x01(\x01\x12\x14\n\x0cymodel_image\x18O \x01(\x01\x12\x18\n\x10\x61lphamodel_j2000\x18P \x01(\x01\x12\x18\n\x10\x64\x65ltamodel_j2000\x18Q \x01(\x01\x12\x18\n\x10\x65rry2model_image\x18R \x01(\x01\x12\x17\n\x0f\x65rramodel_image\x18S \x01(\x01\x12\x17\n\x0f\x65rrbmodel_image\x18T \x01(\x01\x12\x1b\n\x13\x65rrthetamodel_image\x18U \x01(\x01\x12\x17\n\x0f\x65rramodel_world\x18V \x01(\x01\x12\x17\n\x0f\x65rrbmodel_world\x18W \x01(\x01\x12\x1b\n\x13\x65rrthetamodel_world\x18X \x01(\x01\x12\x1b\n\x13\x65rrthetamodel_j2000\x18Y \x01(\x01\x12\x14\n\x0c\x61model_image\x18Z \x01(\x01\x12\x14\n\x0c\x62model_image\x18[ \x01(\x01\x12\x18\n\x10thetamodel_image\x18\\ \x01(\x01\x12\x14\n\x0c\x61model_world\x18] \x01(\x01\x12\x14\n\x0c\x62model_world\x18^ \x01(\x01\x12\x18\n\x10thetamodel_world\x18_ \x01(\x01\x12\x18\n\x10thetamodel_j2000\x18` \x01(\x01\x12\x14\n\x0cspread_model\x18\x61 \x01(\x01\x12\x17\n\x0fspreaderr_model\x18\x62 \x01(\x01\x12\x17\n\x0fnoisearea_model\x18\x63 \x01(\x01\x12\x15\n\rflux_spheroid\x18\x64 \x01(\x01\x12\x18\n\x10\x66luxerr_spheroid\x18\x65 \x01(\x01\x12\x14\n\x0cmag_spheroid\x18\x66 \x01(\x01\x12\x17\n\x0fmagerr_spheroid\x18g \x01(\x01\x12\x19\n\x11\x66lux_max_spheroid\x18h \x01(\x01\x12\x17\n\x0fmu_max_spheroid\x18i \x01(\x01\x12\x19\n\x11\x66lux_eff_spheroid\x18j \x01(\x01\x12\x17\n\x0fmu_eff_spheroid\x18k \x01(\x01\x12\x1a\n\x12\x66lux_mean_spheroid\x18l \x01(\x01\x12\x18\n\x10mu_mean_spheroid\x18m \x01(\x01\x12\x1a\n\x12\x66luxratio_spheroid\x18n \x01(\x01\x12\x1d\n\x15\x66luxratioerr_spheroid\x18o \x01(\x01\x12\x1b\n\x13spheroid_reff_image\x18p \x01(\x01\x12\x1e\n\x16spheroid_refferr_image\x18q \x01(\x01\x12\x1b\n\x13spheroid_reff_world\x18r \x01(\x01\x12\x1e\n\x16spheroid_refferr_world\x18s \x01(\x01\x12\x1d\n\x15spheroid_aspect_image\x18t \x01(\x01\x12 \n\x18spheroid_aspecterr_image\x18u \x01(\x01\x12\x1d\n\x15spheroid_aspect_world\x18v \x01(\x01\x12 \n\x18spheroid_aspecterr_world\x18w \x01(\x01\x12\x1c\n\x14spheroid_theta_image\x18x \x01(\x01\x12\x1f\n\x17spheroid_thetaerr_image\x18y \x01(\x01\x12\x1c\n\x14spheroid_theta_world\x18z \x01(\x01\x12\x1f\n\x17spheroid_thetaerr_world\x18{ \x01(\x01\x12\x1c\n\x14spheroid_theta_j2000\x18| \x01(\x01\x12\x18\n\x10spheroid_sersicn\x18} \x01(\x01\x12\x1b\n\x13spheroid_sersicnerr\x18~ \x01(\x01\x12\x11\n\tflux_disk\x18\x7f \x01(\x01\x12\x15\n\x0c\x66luxerr_disk\x18\x80\x01 \x01(\x01\x12\x11\n\x08mag_disk\x18\x81\x01 \x01(\x01\x12\x14\n\x0bmagerr_disk\x18\x82\x01 \x01(\x01\x12\x16\n\rflux_max_disk\x18\x83\x01 \x01(\x01\x12\x14\n\x0bmu_max_disk\x18\x84\x01 \x01(\x01\x12\x16\n\rflux_eff_disk\x18\x85\x01 \x01(\x01\x12\x14\n\x0bmu_eff_disk\x18\x86\x01 \x01(\x01\x12\x17\n\x0e\x66lux_mean_disk\x18\x87\x01 \x01(\x01\x12\x15\n\x0cmu_mean_disk\x18\x88\x01 \x01(\x01\x12\x17\n\x0e\x66luxratio_disk\x18\x89\x01 \x01(\x01\x12\x1a\n\x11\x66luxratioerr_disk\x18\x8a\x01 \x01(\x01\x12\x19\n\x10\x64isk_scale_image\x18\x8b\x01 \x01(\x01\x12\x1c\n\x13\x64isk_scaleerr_image\x18\x8c\x01 \x01(\x01\x12\x19\n\x10\x64isk_scale_world\x18\x8d\x01 \x01(\x01\x12\x1c\n\x13\x64isk_scaleerr_world\x18\x8e\x01 \x01(\x01\x12\x1a\n\x11\x64isk_aspect_image\x18\x8f\x01 \x01(\x01\x12\x1d\n\x14\x64isk_aspecterr_image\x18\x90\x01 \x01(\x01\x12\x1a\n\x11\x64isk_aspect_world\x18\x91\x01 \x01(\x01\x12\x1d\n\x14\x64isk_aspecterr_world\x18\x92\x01 \x01(\x01\x12\x19\n\x10\x64isk_inclination\x18\x93\x01 \x01(\x01\x12\x1c\n\x13\x64isk_inclinationerr\x18\x94\x01 \x01(\x01\x12\x19\n\x10\x64isk_theta_image\x18\x95\x01 \x01(\x01\x12\x1c\n\x13\x64isk_thetaerr_image\x18\x96\x01 \x01(\x01\x12\x19\n\x10\x64isk_theta_world\x18\x97\x01 \x01(\x01\x12\x1c\n\x13\x64isk_thetaerr_world\x18\x98\x01 \x01(\x01\x12\x19\n\x10\x64isk_theta_j2000\x18\x99\x01 \x01(\x01\x12\x12\n\tlevel2_id\x18\x9a\x01 \x01(\x03\x12\x0c\n\x03seq\x18\x9b\x01 \x01(\x03\x12\x10\n\x07NS8HIdx\x18\x9c\x01 \x01(\x05\x12\x11\n\x08NS16HIdx\x18\x9d\x01 \x01(\x05\x12\x11\n\x08NS32HIdx\x18\x9e\x01 \x01(\x05\x12\x11\n\x08NS64HIdx\x18\x9f\x01 \x01(\x05\x12\x14\n\x0b\x63reate_time\x18\xa0\x01 \x01(\t\"\x90\x13\n\x15Level2CatalogRecordV2\x12\x11\n\tlevel2_id\x18\x01 \x01(\x03\x12\n\n\x02ID\x18\x02 \x01(\t\x12\r\n\x05\x43\x43\x44NO\x18\x03 \x01(\x05\x12\r\n\x05objID\x18\x04 \x01(\x05\x12\t\n\x01X\x18\x05 \x01(\x02\x12\x0c\n\x04XErr\x18\x06 \x01(\x01\x12\t\n\x01Y\x18\x07 \x01(\x02\x12\x0c\n\x04YErr\x18\x08 \x01(\x01\x12\n\n\x02RA\x18\t \x01(\x01\x12\r\n\x05RAErr\x18\n \x01(\x01\x12\x0b\n\x03\x44\x45\x43\x18\x0b \x01(\x01\x12\x0e\n\x06\x44\x45\x43\x45rr\x18\x0c \x01(\x01\x12\t\n\x01\x41\x18\r \x01(\x02\x12\x0c\n\x04\x41\x45rr\x18\x0e \x01(\x02\x12\t\n\x01\x42\x18\x0f \x01(\x02\x12\x0c\n\x04\x42\x45rr\x18\x10 \x01(\x02\x12\n\n\x02PA\x18\x11 \x01(\x02\x12\r\n\x05PAErr\x18\x12 \x01(\x02\x12\x0c\n\x04\x46lag\x18\x13 \x01(\x05\x12\x10\n\x08\x46lag_ISO\x18\x14 \x01(\x05\x12\x14\n\x0c\x46lag_ISO_Num\x18\x15 \x01(\x05\x12\x0c\n\x04\x46WHM\x18\x16 \x01(\x02\x12\n\n\x02\x41\x42\x18\x17 \x01(\x02\x12\t\n\x01\x45\x18\x18 \x01(\x02\x12\x11\n\tFlux_Kron\x18\x19 \x01(\x01\x12\x14\n\x0c\x46luxErr_Kron\x18\x1a \x01(\x02\x12\x10\n\x08Mag_Kron\x18\x1b \x01(\x01\x12\x13\n\x0bMagErr_Kron\x18\x1c \x01(\x01\x12\x13\n\x0bRadius_Kron\x18\x1d \x01(\x01\x12\x0b\n\x03Sky\x18\x1e \x01(\x02\x12\x12\n\nFlux_Aper1\x18\x1f \x01(\x02\x12\x15\n\rFluxErr_Aper1\x18  \x01(\x02\x12\x11\n\tMag_Aper1\x18! \x01(\x02\x12\x14\n\x0cMagErr_Aper1\x18\" \x01(\x02\x12\x12\n\nFlux_Aper2\x18# \x01(\x02\x12\x15\n\rFluxErr_Aper2\x18$ \x01(\x02\x12\x11\n\tMag_Aper2\x18% \x01(\x02\x12\x14\n\x0cMagErr_Aper2\x18& \x01(\x02\x12\x12\n\nFlux_Aper3\x18\' \x01(\x02\x12\x15\n\rFluxErr_Aper3\x18( \x01(\x02\x12\x11\n\tMag_Aper3\x18) \x01(\x02\x12\x14\n\x0cMagErr_Aper3\x18* \x01(\x02\x12\x12\n\nFlux_Aper4\x18+ \x01(\x02\x12\x15\n\rFluxErr_Aper4\x18, \x01(\x02\x12\x11\n\tMag_Aper4\x18- \x01(\x02\x12\x14\n\x0cMagErr_Aper4\x18. \x01(\x02\x12\x12\n\nFlux_Aper5\x18/ \x01(\x02\x12\x15\n\rFluxErr_Aper5\x18\x30 \x01(\x02\x12\x11\n\tMag_Aper5\x18\x31 \x01(\x02\x12\x14\n\x0cMagErr_Aper5\x18\x32 \x01(\x02\x12\x12\n\nFlux_Aper6\x18\x33 \x01(\x02\x12\x15\n\rFluxErr_Aper6\x18\x34 \x01(\x02\x12\x11\n\tMag_Aper6\x18\x35 \x01(\x02\x12\x14\n\x0cMagErr_Aper6\x18\x36 \x01(\x02\x12\x12\n\nFlux_Aper7\x18\x37 \x01(\x02\x12\x15\n\rFluxErr_Aper7\x18\x38 \x01(\x02\x12\x11\n\tMag_Aper7\x18\x39 \x01(\x02\x12\x14\n\x0cMagErr_Aper7\x18: \x01(\x02\x12\x12\n\nFlux_Aper8\x18; \x01(\x02\x12\x15\n\rFluxErr_Aper8\x18< \x01(\x02\x12\x11\n\tMag_Aper8\x18= \x01(\x02\x12\x14\n\x0cMagErr_Aper8\x18> \x01(\x02\x12\x12\n\nFlux_Aper9\x18? \x01(\x02\x12\x15\n\rFluxErr_Aper9\x18@ \x01(\x02\x12\x11\n\tMag_Aper9\x18\x41 \x01(\x02\x12\x14\n\x0cMagErr_Aper9\x18\x42 \x01(\x02\x12\x13\n\x0b\x46lux_Aper10\x18\x43 \x01(\x02\x12\x16\n\x0e\x46luxErr_Aper10\x18\x44 \x01(\x02\x12\x12\n\nMag_Aper10\x18\x45 \x01(\x02\x12\x15\n\rMagErr_Aper10\x18\x46 \x01(\x02\x12\x13\n\x0b\x46lux_Aper11\x18G \x01(\x02\x12\x16\n\x0e\x46luxErr_Aper11\x18H \x01(\x02\x12\x12\n\nMag_Aper11\x18I \x01(\x02\x12\x15\n\rMagErr_Aper11\x18J \x01(\x02\x12\x13\n\x0b\x46lux_Aper12\x18K \x01(\x02\x12\x16\n\x0e\x46luxErr_Aper12\x18L \x01(\x02\x12\x12\n\nMag_Aper12\x18M \x01(\x02\x12\x15\n\rMagErr_Aper12\x18N \x01(\x02\x12\x0c\n\x04Type\x18O \x01(\x05\x12\x0b\n\x03R20\x18P \x01(\x02\x12\x0b\n\x03R50\x18Q \x01(\x02\x12\x0b\n\x03R90\x18R \x01(\x02\x12\r\n\x05X_PSF\x18S \x01(\x01\x12\r\n\x05Y_PSF\x18T \x01(\x01\x12\x0e\n\x06RA_PSF\x18U \x01(\x01\x12\x0f\n\x07\x44\x45\x43_PSF\x18V \x01(\x01\x12\x10\n\x08\x43hi2_PSF\x18W \x01(\x02\x12\x10\n\x08\x46lux_PSF\x18X \x01(\x02\x12\x13\n\x0b\x46luxErr_PSF\x18Y \x01(\x02\x12\x0f\n\x07Mag_PSF\x18Z \x01(\x02\x12\x12\n\nMagErr_PSF\x18[ \x01(\x02\x12\x0f\n\x07X_Model\x18\\ \x01(\x01\x12\x0f\n\x07Y_Model\x18] \x01(\x01\x12\x10\n\x08RA_Model\x18^ \x01(\x01\x12\x11\n\tDEC_Model\x18_ \x01(\x01\x12\x12\n\nChi2_Model\x18` \x01(\x02\x12\x12\n\nFlag_Model\x18\x61 \x01(\x05\x12\x12\n\nFlux_Model\x18\x62 \x01(\x02\x12\x15\n\rFluxErr_Model\x18\x63 \x01(\x02\x12\x11\n\tMag_Model\x18\x64 \x01(\x02\x12\x14\n\x0cMagErr_Model\x18\x65 \x01(\x02\x12\x12\n\nFlux_Bulge\x18\x66 \x01(\x02\x12\x15\n\rFluxErr_Bulge\x18g \x01(\x02\x12\x11\n\tMag_Bulge\x18h \x01(\x02\x12\x14\n\x0cMagErr_Bulge\x18i \x01(\x02\x12\x10\n\x08Re_Bulge\x18j \x01(\x02\x12\x13\n\x0bReErr_Bulge\x18k \x01(\x02\x12\x0f\n\x07\x45_Bulge\x18l \x01(\x02\x12\x12\n\nEErr_Bulge\x18m \x01(\x02\x12\x10\n\x08PA_Bulge\x18n \x01(\x02\x12\x13\n\x0bPAErr_Bulge\x18o \x01(\x02\x12\x11\n\tFlux_Disk\x18p \x01(\x02\x12\x14\n\x0c\x46luxErr_Disk\x18q \x01(\x02\x12\x10\n\x08Mag_Disk\x18r \x01(\x02\x12\x13\n\x0bMagErr_Disk\x18s \x01(\x02\x12\x0f\n\x07Re_Disk\x18t \x01(\x02\x12\x12\n\nReErr_Disk\x18u \x01(\x02\x12\x0e\n\x06\x45_Disk\x18v \x01(\x02\x12\x11\n\tEErr_Disk\x18w \x01(\x02\x12\x0f\n\x07PA_Disk\x18x \x01(\x02\x12\x12\n\nPAErr_Disk\x18y \x01(\x02\x12\x12\n\nRatio_Disk\x18z \x01(\x02\x12\x15\n\rRatioErr_Disk\x18{ \x01(\x02\x12\x14\n\x0cSpread_Model\x18| \x01(\x02\x12\x17\n\x0fSpreadErr_Model\x18} \x01(\x02\x12\x0f\n\x07NS8HIdx\x18~ \x01(\x05\x12\x10\n\x08NS16HIdx\x18\x7f \x01(\x05\x12\x11\n\x08NS32HIdx\x18\x80\x01 \x01(\x05\x12\x11\n\x08NS64HIdx\x18\x81\x01 \x01(\x05\"\xc1\x01\n\x14\x46indLevel2CatalogReq\x12\x0e\n\x06obs_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65tector_no\x18\x02 \x01(\t\x12\n\n\x02ra\x18\x03 \x01(\t\x12\x0b\n\x03\x64\x65\x63\x18\x04 \x01(\t\x12\x0e\n\x06radius\x18\x05 \x01(\x01\x12\x0e\n\x06minMag\x18\x06 \x01(\x01\x12\x0e\n\x06maxMag\x18\x07 \x01(\x01\x12\x16\n\x0eobs_time_start\x18\x08 \x01(\t\x12\x14\n\x0cobs_time_end\x18\t \x01(\t\x12\r\n\x05limit\x18\n \x01(\x05\"\x90\x01\n\x15\x46indLevel2CatalogResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\ntotalCount\x18\x02 \x01(\x05\x12\x1c\n\x05\x65rror\x18\x03 \x01(\x0b\x32\r.common.Error\x12\x34\n\x07records\x18\x04 \x03(\x0b\x32#.dfs.msc.level2.Level2CatalogRecord\"/\n\x1a\x44\x65leteCatalogByLevel2IdReq\x12\x11\n\tlevel2_id\x18\x01 \x01(\x03\"L\n\x1b\x44\x65leteCatalogByLevel2IdResp\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.common.Error2\xfb\x04\n\tLevel2Srv\x12G\n\x04\x46ind\x12\x1d.dfs.msc.level2.FindLevel2Req\x1a\x1e.dfs.msc.level2.FindLevel2Resp\"\x00\x12\\\n\x0b\x46indCatalog\x12$.dfs.msc.level2.FindLevel2CatalogReq\x1a%.dfs.msc.level2.FindLevel2CatalogResp\"\x00\x12\x44\n\x03Get\x12\x1c.dfs.msc.level2.GetLevel2Req\x1a\x1d.dfs.msc.level2.GetLevel2Resp\"\x00\x12L\n\x05Write\x12\x1e.dfs.msc.level2.WriteLevel2Req\x1a\x1f.dfs.msc.level2.WriteLevel2Resp\"\x00(\x01\x12\\\n\x0fUpdateQc2Status\x12\".dfs.msc.level2.UpdateQc2StatusReq\x1a#.dfs.msc.level2.UpdateQc2StatusResp\"\x00\x12_\n\x10UpdateProcStatus\x12#.dfs.msc.level2.UpdateProcStatusReq\x1a$.dfs.msc.level2.UpdateProcStatusResp\"\x00\x12t\n\x17\x44\x65leteCatalogByLevel2Id\x12*.dfs.msc.level2.DeleteCatalogByLevel2IdReq\x1a+.dfs.msc.level2.DeleteCatalogByLevel2IdResp\"\x00\x42!Z\x1f\x63nlab.net/csst/proto/msc/level2b\x06proto3')
   ,
   dependencies=[common_dot_error__pb2.DESCRIPTOR,])
 
@@ -43,78 +43,85 @@ _LEVEL2RECORD = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='level1_id', full_name='dfs.msc.level2.Level2Record.level1_id', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='data_type', full_name='dfs.msc.level2.Level2Record.data_type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      name='level0_id', full_name='dfs.msc.level2.Level2Record.level0_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='filename', full_name='dfs.msc.level2.Level2Record.filename', index=3,
+      name='level1_id', full_name='dfs.msc.level2.Level2Record.level1_id', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data_type', full_name='dfs.msc.level2.Level2Record.data_type', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file_path', full_name='dfs.msc.level2.Level2Record.file_path', index=4,
+      name='filename', full_name='dfs.msc.level2.Level2Record.filename', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='qc2_status', full_name='dfs.msc.level2.Level2Record.qc2_status', index=5,
-      number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='qc2_time', full_name='dfs.msc.level2.Level2Record.qc2_time', index=6,
-      number=7, type=9, cpp_type=9, label=1,
+      name='file_path', full_name='dfs.msc.level2.Level2Record.file_path', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_status', full_name='dfs.msc.level2.Level2Record.prc_status', index=7,
-      number=8, type=5, cpp_type=1, label=1,
+      name='qc2_status', full_name='dfs.msc.level2.Level2Record.qc2_status', index=6,
+      number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_time', full_name='dfs.msc.level2.Level2Record.prc_time', index=8,
-      number=9, type=9, cpp_type=9, label=1,
+      name='qc2_time', full_name='dfs.msc.level2.Level2Record.qc2_time', index=7,
+      number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='create_time', full_name='dfs.msc.level2.Level2Record.create_time', index=9,
+      name='prc_status', full_name='dfs.msc.level2.Level2Record.prc_status', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='prc_time', full_name='dfs.msc.level2.Level2Record.prc_time', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='pipeline_id', full_name='dfs.msc.level2.Level2Record.pipeline_id', index=10,
+      name='create_time', full_name='dfs.msc.level2.Level2Record.create_time', index=10,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='import_status', full_name='dfs.msc.level2.Level2Record.import_status', index=11,
-      number=12, type=5, cpp_type=1, label=1,
+      name='pipeline_id', full_name='dfs.msc.level2.Level2Record.pipeline_id', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='import_status', full_name='dfs.msc.level2.Level2Record.import_status', index=12,
+      number=13, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -132,7 +139,7 @@ _LEVEL2RECORD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=64,
-  serialized_end=306,
+  serialized_end=325,
 )
 
 
@@ -169,8 +176,8 @@ _FINDLEVEL2REQ_OTHERCONDITIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=567,
-  serialized_end=621,
+  serialized_start=605,
+  serialized_end=659,
 )
 
 _FINDLEVEL2REQ = _descriptor.Descriptor(
@@ -181,64 +188,71 @@ _FINDLEVEL2REQ = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='level1_id', full_name='dfs.msc.level2.FindLevel2Req.level1_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='data_type', full_name='dfs.msc.level2.FindLevel2Req.data_type', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='level0_id', full_name='dfs.msc.level2.FindLevel2Req.level0_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='create_time_start', full_name='dfs.msc.level2.FindLevel2Req.create_time_start', index=2,
+      name='level1_id', full_name='dfs.msc.level2.FindLevel2Req.level1_id', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data_type', full_name='dfs.msc.level2.FindLevel2Req.data_type', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='create_time_end', full_name='dfs.msc.level2.FindLevel2Req.create_time_end', index=3,
+      name='create_time_start', full_name='dfs.msc.level2.FindLevel2Req.create_time_start', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='qc2_status', full_name='dfs.msc.level2.FindLevel2Req.qc2_status', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='create_time_end', full_name='dfs.msc.level2.FindLevel2Req.create_time_end', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prc_status', full_name='dfs.msc.level2.FindLevel2Req.prc_status', index=5,
+      name='qc2_status', full_name='dfs.msc.level2.FindLevel2Req.qc2_status', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='filename', full_name='dfs.msc.level2.FindLevel2Req.filename', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='limit', full_name='dfs.msc.level2.FindLevel2Req.limit', index=7,
-      number=8, type=5, cpp_type=1, label=1,
+      name='prc_status', full_name='dfs.msc.level2.FindLevel2Req.prc_status', index=6,
+      number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='other_conditions', full_name='dfs.msc.level2.FindLevel2Req.other_conditions', index=8,
-      number=9, type=11, cpp_type=10, label=3,
+      name='filename', full_name='dfs.msc.level2.FindLevel2Req.filename', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='dfs.msc.level2.FindLevel2Req.limit', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='other_conditions', full_name='dfs.msc.level2.FindLevel2Req.other_conditions', index=9,
+      number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -255,8 +269,8 @@ _FINDLEVEL2REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=309,
-  serialized_end=621,
+  serialized_start=328,
+  serialized_end=659,
 )
 
 
@@ -307,8 +321,8 @@ _FINDLEVEL2RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=624,
-  serialized_end=754,
+  serialized_start=662,
+  serialized_end=792,
 )
 
 
@@ -338,8 +352,8 @@ _GETLEVEL2REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=756,
-  serialized_end=782,
+  serialized_start=794,
+  serialized_end=820,
 )
 
 
@@ -369,8 +383,8 @@ _GETLEVEL2RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=784,
-  serialized_end=845,
+  serialized_start=822,
+  serialized_end=883,
 )
 
 
@@ -407,8 +421,8 @@ _WRITELEVEL2REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=847,
-  serialized_end=923,
+  serialized_start=885,
+  serialized_end=961,
 )
 
 
@@ -452,8 +466,8 @@ _WRITELEVEL2RESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=925,
-  serialized_end=1035,
+  serialized_start=963,
+  serialized_end=1073,
 )
 
 
@@ -490,8 +504,8 @@ _UPDATEQC2STATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1037,
-  serialized_end=1085,
+  serialized_start=1075,
+  serialized_end=1123,
 )
 
 
@@ -528,8 +542,8 @@ _UPDATEQC2STATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1087,
-  serialized_end=1155,
+  serialized_start=1125,
+  serialized_end=1193,
 )
 
 
@@ -566,8 +580,8 @@ _UPDATEPROCSTATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1157,
-  serialized_end=1206,
+  serialized_start=1195,
+  serialized_end=1244,
 )
 
 
@@ -604,8 +618,8 @@ _UPDATEPROCSTATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1208,
-  serialized_end=1277,
+  serialized_start=1246,
+  serialized_end=1315,
 )
 
 
@@ -1748,8 +1762,935 @@ _LEVEL2CATALOGRECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1280,
-  serialized_end=5072,
+  serialized_start=1318,
+  serialized_end=5110,
+)
+
+
+_LEVEL2CATALOGRECORDV2 = _descriptor.Descriptor(
+  name='Level2CatalogRecordV2',
+  full_name='dfs.msc.level2.Level2CatalogRecordV2',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='level2_id', full_name='dfs.msc.level2.Level2CatalogRecordV2.level2_id', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ID', full_name='dfs.msc.level2.Level2CatalogRecordV2.ID', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='CCDNO', full_name='dfs.msc.level2.Level2CatalogRecordV2.CCDNO', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='objID', full_name='dfs.msc.level2.Level2CatalogRecordV2.objID', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='X', full_name='dfs.msc.level2.Level2CatalogRecordV2.X', index=4,
+      number=5, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='XErr', full_name='dfs.msc.level2.Level2CatalogRecordV2.XErr', index=5,
+      number=6, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Y', full_name='dfs.msc.level2.Level2CatalogRecordV2.Y', index=6,
+      number=7, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='YErr', full_name='dfs.msc.level2.Level2CatalogRecordV2.YErr', index=7,
+      number=8, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RA', full_name='dfs.msc.level2.Level2CatalogRecordV2.RA', index=8,
+      number=9, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RAErr', full_name='dfs.msc.level2.Level2CatalogRecordV2.RAErr', index=9,
+      number=10, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DEC', full_name='dfs.msc.level2.Level2CatalogRecordV2.DEC', index=10,
+      number=11, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DECErr', full_name='dfs.msc.level2.Level2CatalogRecordV2.DECErr', index=11,
+      number=12, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='A', full_name='dfs.msc.level2.Level2CatalogRecordV2.A', index=12,
+      number=13, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AErr', full_name='dfs.msc.level2.Level2CatalogRecordV2.AErr', index=13,
+      number=14, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='B', full_name='dfs.msc.level2.Level2CatalogRecordV2.B', index=14,
+      number=15, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='BErr', full_name='dfs.msc.level2.Level2CatalogRecordV2.BErr', index=15,
+      number=16, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PA', full_name='dfs.msc.level2.Level2CatalogRecordV2.PA', index=16,
+      number=17, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PAErr', full_name='dfs.msc.level2.Level2CatalogRecordV2.PAErr', index=17,
+      number=18, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flag', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flag', index=18,
+      number=19, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flag_ISO', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flag_ISO', index=19,
+      number=20, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flag_ISO_Num', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flag_ISO_Num', index=20,
+      number=21, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FWHM', full_name='dfs.msc.level2.Level2CatalogRecordV2.FWHM', index=21,
+      number=22, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='AB', full_name='dfs.msc.level2.Level2CatalogRecordV2.AB', index=22,
+      number=23, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='E', full_name='dfs.msc.level2.Level2CatalogRecordV2.E', index=23,
+      number=24, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Kron', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Kron', index=24,
+      number=25, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Kron', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Kron', index=25,
+      number=26, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Kron', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Kron', index=26,
+      number=27, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Kron', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Kron', index=27,
+      number=28, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Radius_Kron', full_name='dfs.msc.level2.Level2CatalogRecordV2.Radius_Kron', index=28,
+      number=29, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Sky', full_name='dfs.msc.level2.Level2CatalogRecordV2.Sky', index=29,
+      number=30, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper1', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper1', index=30,
+      number=31, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper1', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper1', index=31,
+      number=32, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper1', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper1', index=32,
+      number=33, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper1', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper1', index=33,
+      number=34, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper2', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper2', index=34,
+      number=35, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper2', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper2', index=35,
+      number=36, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper2', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper2', index=36,
+      number=37, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper2', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper2', index=37,
+      number=38, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper3', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper3', index=38,
+      number=39, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper3', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper3', index=39,
+      number=40, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper3', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper3', index=40,
+      number=41, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper3', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper3', index=41,
+      number=42, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper4', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper4', index=42,
+      number=43, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper4', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper4', index=43,
+      number=44, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper4', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper4', index=44,
+      number=45, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper4', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper4', index=45,
+      number=46, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper5', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper5', index=46,
+      number=47, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper5', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper5', index=47,
+      number=48, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper5', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper5', index=48,
+      number=49, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper5', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper5', index=49,
+      number=50, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper6', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper6', index=50,
+      number=51, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper6', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper6', index=51,
+      number=52, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper6', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper6', index=52,
+      number=53, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper6', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper6', index=53,
+      number=54, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper7', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper7', index=54,
+      number=55, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper7', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper7', index=55,
+      number=56, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper7', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper7', index=56,
+      number=57, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper7', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper7', index=57,
+      number=58, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper8', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper8', index=58,
+      number=59, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper8', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper8', index=59,
+      number=60, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper8', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper8', index=60,
+      number=61, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper8', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper8', index=61,
+      number=62, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper9', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper9', index=62,
+      number=63, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper9', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper9', index=63,
+      number=64, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper9', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper9', index=64,
+      number=65, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper9', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper9', index=65,
+      number=66, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper10', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper10', index=66,
+      number=67, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper10', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper10', index=67,
+      number=68, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper10', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper10', index=68,
+      number=69, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper10', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper10', index=69,
+      number=70, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper11', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper11', index=70,
+      number=71, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper11', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper11', index=71,
+      number=72, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper11', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper11', index=72,
+      number=73, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper11', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper11', index=73,
+      number=74, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Aper12', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Aper12', index=74,
+      number=75, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Aper12', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Aper12', index=75,
+      number=76, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Aper12', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Aper12', index=76,
+      number=77, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Aper12', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Aper12', index=77,
+      number=78, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='dfs.msc.level2.Level2CatalogRecordV2.Type', index=78,
+      number=79, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='R20', full_name='dfs.msc.level2.Level2CatalogRecordV2.R20', index=79,
+      number=80, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='R50', full_name='dfs.msc.level2.Level2CatalogRecordV2.R50', index=80,
+      number=81, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='R90', full_name='dfs.msc.level2.Level2CatalogRecordV2.R90', index=81,
+      number=82, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='X_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.X_PSF', index=82,
+      number=83, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Y_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.Y_PSF', index=83,
+      number=84, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RA_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.RA_PSF', index=84,
+      number=85, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DEC_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.DEC_PSF', index=85,
+      number=86, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Chi2_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.Chi2_PSF', index=86,
+      number=87, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_PSF', index=87,
+      number=88, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_PSF', index=88,
+      number=89, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_PSF', index=89,
+      number=90, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_PSF', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_PSF', index=90,
+      number=91, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='X_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.X_Model', index=91,
+      number=92, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Y_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.Y_Model', index=92,
+      number=93, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RA_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.RA_Model', index=93,
+      number=94, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='DEC_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.DEC_Model', index=94,
+      number=95, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Chi2_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.Chi2_Model', index=95,
+      number=96, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flag_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flag_Model', index=96,
+      number=97, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Model', index=97,
+      number=98, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Model', index=98,
+      number=99, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Model', index=99,
+      number=100, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Model', index=100,
+      number=101, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Bulge', index=101,
+      number=102, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Bulge', index=102,
+      number=103, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Bulge', index=103,
+      number=104, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Bulge', index=104,
+      number=105, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Re_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.Re_Bulge', index=105,
+      number=106, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ReErr_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.ReErr_Bulge', index=106,
+      number=107, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='E_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.E_Bulge', index=107,
+      number=108, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='EErr_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.EErr_Bulge', index=108,
+      number=109, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PA_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.PA_Bulge', index=109,
+      number=110, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PAErr_Bulge', full_name='dfs.msc.level2.Level2CatalogRecordV2.PAErr_Bulge', index=110,
+      number=111, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Flux_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.Flux_Disk', index=111,
+      number=112, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FluxErr_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.FluxErr_Disk', index=112,
+      number=113, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mag_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.Mag_Disk', index=113,
+      number=114, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='MagErr_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.MagErr_Disk', index=114,
+      number=115, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Re_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.Re_Disk', index=115,
+      number=116, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ReErr_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.ReErr_Disk', index=116,
+      number=117, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='E_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.E_Disk', index=117,
+      number=118, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='EErr_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.EErr_Disk', index=118,
+      number=119, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PA_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.PA_Disk', index=119,
+      number=120, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PAErr_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.PAErr_Disk', index=120,
+      number=121, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Ratio_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.Ratio_Disk', index=121,
+      number=122, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RatioErr_Disk', full_name='dfs.msc.level2.Level2CatalogRecordV2.RatioErr_Disk', index=122,
+      number=123, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Spread_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.Spread_Model', index=123,
+      number=124, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='SpreadErr_Model', full_name='dfs.msc.level2.Level2CatalogRecordV2.SpreadErr_Model', index=124,
+      number=125, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='NS8HIdx', full_name='dfs.msc.level2.Level2CatalogRecordV2.NS8HIdx', index=125,
+      number=126, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='NS16HIdx', full_name='dfs.msc.level2.Level2CatalogRecordV2.NS16HIdx', index=126,
+      number=127, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='NS32HIdx', full_name='dfs.msc.level2.Level2CatalogRecordV2.NS32HIdx', index=127,
+      number=128, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='NS64HIdx', full_name='dfs.msc.level2.Level2CatalogRecordV2.NS64HIdx', index=128,
+      number=129, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5113,
+  serialized_end=7561,
 )
 
 
@@ -1842,8 +2783,8 @@ _FINDLEVEL2CATALOGREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5075,
-  serialized_end=5268,
+  serialized_start=7564,
+  serialized_end=7757,
 )
 
 
@@ -1894,8 +2835,8 @@ _FINDLEVEL2CATALOGRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5271,
-  serialized_end=5415,
+  serialized_start=7760,
+  serialized_end=7904,
 )
 
 
@@ -1925,8 +2866,8 @@ _DELETECATALOGBYLEVEL2IDREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5417,
-  serialized_end=5464,
+  serialized_start=7906,
+  serialized_end=7953,
 )
 
 
@@ -1963,8 +2904,8 @@ _DELETECATALOGBYLEVEL2IDRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5466,
-  serialized_end=5542,
+  serialized_start=7955,
+  serialized_end=8031,
 )
 
 _FINDLEVEL2REQ_OTHERCONDITIONSENTRY.containing_type = _FINDLEVEL2REQ
@@ -1992,6 +2933,7 @@ DESCRIPTOR.message_types_by_name['UpdateQc2StatusResp'] = _UPDATEQC2STATUSRESP
 DESCRIPTOR.message_types_by_name['UpdateProcStatusReq'] = _UPDATEPROCSTATUSREQ
 DESCRIPTOR.message_types_by_name['UpdateProcStatusResp'] = _UPDATEPROCSTATUSRESP
 DESCRIPTOR.message_types_by_name['Level2CatalogRecord'] = _LEVEL2CATALOGRECORD
+DESCRIPTOR.message_types_by_name['Level2CatalogRecordV2'] = _LEVEL2CATALOGRECORDV2
 DESCRIPTOR.message_types_by_name['FindLevel2CatalogReq'] = _FINDLEVEL2CATALOGREQ
 DESCRIPTOR.message_types_by_name['FindLevel2CatalogResp'] = _FINDLEVEL2CATALOGRESP
 DESCRIPTOR.message_types_by_name['DeleteCatalogByLevel2IdReq'] = _DELETECATALOGBYLEVEL2IDREQ
@@ -2090,6 +3032,13 @@ Level2CatalogRecord = _reflection.GeneratedProtocolMessageType('Level2CatalogRec
   })
 _sym_db.RegisterMessage(Level2CatalogRecord)
 
+Level2CatalogRecordV2 = _reflection.GeneratedProtocolMessageType('Level2CatalogRecordV2', (_message.Message,), {
+  'DESCRIPTOR' : _LEVEL2CATALOGRECORDV2,
+  '__module__' : 'msc.level2.level2_pb2'
+  # @@protoc_insertion_point(class_scope:dfs.msc.level2.Level2CatalogRecordV2)
+  })
+_sym_db.RegisterMessage(Level2CatalogRecordV2)
+
 FindLevel2CatalogReq = _reflection.GeneratedProtocolMessageType('FindLevel2CatalogReq', (_message.Message,), {
   'DESCRIPTOR' : _FINDLEVEL2CATALOGREQ,
   '__module__' : 'msc.level2.level2_pb2'
@@ -2128,8 +3077,8 @@ _LEVEL2SRV = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=5545,
-  serialized_end=6180,
+  serialized_start=8034,
+  serialized_end=8669,
   methods=[
   _descriptor.MethodDescriptor(
     name='Find',
