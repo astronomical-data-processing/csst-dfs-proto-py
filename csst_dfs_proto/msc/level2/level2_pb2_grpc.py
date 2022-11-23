@@ -24,6 +24,11 @@ class Level2SrvStub(object):
         request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
         response_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.FromString,
         )
+    self.FindCatalogFile = channel.unary_unary(
+        '/dfs.msc.level2.Level2Srv/FindCatalogFile',
+        request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
+        response_deserializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.FromString,
+        )
     self.Get = channel.unary_unary(
         '/dfs.msc.level2.Level2Srv/Get',
         request_serializer=msc_dot_level2_dot_level2__pb2.GetLevel2Req.SerializeToString,
@@ -63,6 +68,13 @@ class Level2SrvServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def FindCatalog(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def FindCatalogFile(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -116,6 +128,11 @@ def add_Level2SrvServicer_to_server(servicer, server):
           servicer.FindCatalog,
           request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
           response_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.SerializeToString,
+      ),
+      'FindCatalogFile': grpc.unary_unary_rpc_method_handler(
+          servicer.FindCatalogFile,
+          request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
+          response_serializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.SerializeToString,
       ),
       'Get': grpc.unary_unary_rpc_method_handler(
           servicer.Get,
