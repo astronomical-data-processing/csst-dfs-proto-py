@@ -18,6 +18,11 @@ class Level1SrvStub(object):
                 request_serializer=sls_dot_level1_dot_level1__pb2.FindLevel1Req.SerializeToString,
                 response_deserializer=sls_dot_level1_dot_level1__pb2.FindLevel1Resp.FromString,
                 )
+        self.FindByPrcStatus = channel.unary_unary(
+                '/dfs.sls.level1.Level1Srv/FindByPrcStatus',
+                request_serializer=sls_dot_level1_dot_level1__pb2.FindLevel1Req.SerializeToString,
+                response_deserializer=sls_dot_level1_dot_level1__pb2.FindLevel1Resp.FromString,
+                )
         self.FindByBrickIds = channel.unary_unary(
                 '/dfs.sls.level1.Level1Srv/FindByBrickIds',
                 request_serializer=sls_dot_level1_dot_level1__pb2.FindByBrickIdsReq.SerializeToString,
@@ -49,6 +54,12 @@ class Level1SrvServicer(object):
     """Missing associated documentation comment in .proto file"""
 
     def Find(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def FindByPrcStatus(self, request, context):
         """Missing associated documentation comment in .proto file"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -89,6 +100,11 @@ def add_Level1SrvServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Find': grpc.unary_unary_rpc_method_handler(
                     servicer.Find,
+                    request_deserializer=sls_dot_level1_dot_level1__pb2.FindLevel1Req.FromString,
+                    response_serializer=sls_dot_level1_dot_level1__pb2.FindLevel1Resp.SerializeToString,
+            ),
+            'FindByPrcStatus': grpc.unary_unary_rpc_method_handler(
+                    servicer.FindByPrcStatus,
                     request_deserializer=sls_dot_level1_dot_level1__pb2.FindLevel1Req.FromString,
                     response_serializer=sls_dot_level1_dot_level1__pb2.FindLevel1Resp.SerializeToString,
             ),
@@ -138,6 +154,22 @@ class Level1Srv(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/dfs.sls.level1.Level1Srv/Find',
+            sls_dot_level1_dot_level1__pb2.FindLevel1Req.SerializeToString,
+            sls_dot_level1_dot_level1__pb2.FindLevel1Resp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FindByPrcStatus(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.sls.level1.Level1Srv/FindByPrcStatus',
             sls_dot_level1_dot_level1__pb2.FindLevel1Req.SerializeToString,
             sls_dot_level1_dot_level1__pb2.FindLevel1Resp.FromString,
             options, channel_credentials,
