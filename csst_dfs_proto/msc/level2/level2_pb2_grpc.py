@@ -5,161 +5,284 @@ from . import level2_pb2 as msc_dot_level2_dot_level2__pb2
 
 
 class Level2SrvStub(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def __init__(self, channel):
-    """Constructor.
+    def __init__(self, channel):
+        """Constructor.
 
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.Find = channel.unary_unary(
-        '/dfs.msc.level2.Level2Srv/Find',
-        request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2Req.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2Resp.FromString,
-        )
-    self.FindCatalog = channel.unary_unary(
-        '/dfs.msc.level2.Level2Srv/FindCatalog',
-        request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.FromString,
-        )
-    self.FindCatalogFile = channel.unary_unary(
-        '/dfs.msc.level2.Level2Srv/FindCatalogFile',
-        request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.FromString,
-        )
-    self.Get = channel.unary_unary(
-        '/dfs.msc.level2.Level2Srv/Get',
-        request_serializer=msc_dot_level2_dot_level2__pb2.GetLevel2Req.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.GetLevel2Resp.FromString,
-        )
-    self.Write = channel.stream_unary(
-        '/dfs.msc.level2.Level2Srv/Write',
-        request_serializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Req.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Resp.FromString,
-        )
-    self.UpdateQc2Status = channel.unary_unary(
-        '/dfs.msc.level2.Level2Srv/UpdateQc2Status',
-        request_serializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusReq.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusResp.FromString,
-        )
-    self.UpdateProcStatus = channel.unary_unary(
-        '/dfs.msc.level2.Level2Srv/UpdateProcStatus',
-        request_serializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusReq.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusResp.FromString,
-        )
-    self.DeleteCatalogByLevel2Id = channel.unary_unary(
-        '/dfs.msc.level2.Level2Srv/DeleteCatalogByLevel2Id',
-        request_serializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdReq.SerializeToString,
-        response_deserializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdResp.FromString,
-        )
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.Find = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/Find',
+                request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2Req.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2Resp.FromString,
+                )
+        self.FindCatalog = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/FindCatalog',
+                request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.FromString,
+                )
+        self.FindCatalogFile = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/FindCatalogFile',
+                request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.FromString,
+                )
+        self.Get = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/Get',
+                request_serializer=msc_dot_level2_dot_level2__pb2.GetLevel2Req.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.GetLevel2Resp.FromString,
+                )
+        self.Write = channel.stream_unary(
+                '/dfs.msc.level2.Level2Srv/Write',
+                request_serializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Req.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Resp.FromString,
+                )
+        self.UpdateQc2Status = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/UpdateQc2Status',
+                request_serializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusReq.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusResp.FromString,
+                )
+        self.UpdateProcStatus = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/UpdateProcStatus',
+                request_serializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusReq.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusResp.FromString,
+                )
+        self.DeleteCatalogByLevel2Id = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/DeleteCatalogByLevel2Id',
+                request_serializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdReq.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdResp.FromString,
+                )
 
 
 class Level2SrvServicer(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def Find(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def Find(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def FindCatalog(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def FindCatalog(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def FindCatalogFile(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def FindCatalogFile(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def Get(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def Get(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def Write(self, request_iterator, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def Write(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def UpdateQc2Status(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def UpdateQc2Status(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def UpdateProcStatus(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def UpdateProcStatus(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def DeleteCatalogByLevel2Id(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def DeleteCatalogByLevel2Id(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
 
 def add_Level2SrvServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'Find': grpc.unary_unary_rpc_method_handler(
-          servicer.Find,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2Req.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2Resp.SerializeToString,
-      ),
-      'FindCatalog': grpc.unary_unary_rpc_method_handler(
-          servicer.FindCatalog,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.SerializeToString,
-      ),
-      'FindCatalogFile': grpc.unary_unary_rpc_method_handler(
-          servicer.FindCatalogFile,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.SerializeToString,
-      ),
-      'Get': grpc.unary_unary_rpc_method_handler(
-          servicer.Get,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.GetLevel2Req.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.GetLevel2Resp.SerializeToString,
-      ),
-      'Write': grpc.stream_unary_rpc_method_handler(
-          servicer.Write,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Req.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Resp.SerializeToString,
-      ),
-      'UpdateQc2Status': grpc.unary_unary_rpc_method_handler(
-          servicer.UpdateQc2Status,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusReq.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusResp.SerializeToString,
-      ),
-      'UpdateProcStatus': grpc.unary_unary_rpc_method_handler(
-          servicer.UpdateProcStatus,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusReq.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusResp.SerializeToString,
-      ),
-      'DeleteCatalogByLevel2Id': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteCatalogByLevel2Id,
-          request_deserializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdReq.FromString,
-          response_serializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdResp.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'dfs.msc.level2.Level2Srv', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
+    rpc_method_handlers = {
+            'Find': grpc.unary_unary_rpc_method_handler(
+                    servicer.Find,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2Req.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2Resp.SerializeToString,
+            ),
+            'FindCatalog': grpc.unary_unary_rpc_method_handler(
+                    servicer.FindCatalog,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.SerializeToString,
+            ),
+            'FindCatalogFile': grpc.unary_unary_rpc_method_handler(
+                    servicer.FindCatalogFile,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.SerializeToString,
+            ),
+            'Get': grpc.unary_unary_rpc_method_handler(
+                    servicer.Get,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.GetLevel2Req.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.GetLevel2Resp.SerializeToString,
+            ),
+            'Write': grpc.stream_unary_rpc_method_handler(
+                    servicer.Write,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Req.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.WriteLevel2Resp.SerializeToString,
+            ),
+            'UpdateQc2Status': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateQc2Status,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusReq.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.UpdateQc2StatusResp.SerializeToString,
+            ),
+            'UpdateProcStatus': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateProcStatus,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusReq.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.UpdateProcStatusResp.SerializeToString,
+            ),
+            'DeleteCatalogByLevel2Id': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteCatalogByLevel2Id,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdReq.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdResp.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'dfs.msc.level2.Level2Srv', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class Level2Srv(object):
+    """Missing associated documentation comment in .proto file"""
+
+    @staticmethod
+    def Find(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/Find',
+            msc_dot_level2_dot_level2__pb2.FindLevel2Req.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.FindLevel2Resp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FindCatalog(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/FindCatalog',
+            msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FindCatalogFile(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/FindCatalogFile',
+            msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Get(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/Get',
+            msc_dot_level2_dot_level2__pb2.GetLevel2Req.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.GetLevel2Resp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Write(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_unary(request_iterator, target, '/dfs.msc.level2.Level2Srv/Write',
+            msc_dot_level2_dot_level2__pb2.WriteLevel2Req.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.WriteLevel2Resp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def UpdateQc2Status(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/UpdateQc2Status',
+            msc_dot_level2_dot_level2__pb2.UpdateQc2StatusReq.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.UpdateQc2StatusResp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def UpdateProcStatus(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/UpdateProcStatus',
+            msc_dot_level2_dot_level2__pb2.UpdateProcStatusReq.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.UpdateProcStatusResp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteCatalogByLevel2Id(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/DeleteCatalogByLevel2Id',
+            msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdReq.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.DeleteCatalogByLevel2IdResp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
