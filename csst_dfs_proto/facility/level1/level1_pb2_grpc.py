@@ -23,6 +23,11 @@ class Level1SrvStub(object):
                 request_serializer=facility_dot_level1_dot_level1__pb2.FindByBrickIdsReq.SerializeToString,
                 response_deserializer=facility_dot_level1_dot_level1__pb2.FindByBrickIdsResp.FromString,
                 )
+        self.FindByQc1Status = channel.unary_unary(
+                '/dfs.facility.level1.Level1Srv/FindByQc1Status',
+                request_serializer=facility_dot_level1_dot_level1__pb2.FindLevel1Req.SerializeToString,
+                response_deserializer=facility_dot_level1_dot_level1__pb2.FindLevel1Resp.FromString,
+                )
         self.Get = channel.unary_unary(
                 '/dfs.facility.level1.Level1Srv/Get',
                 request_serializer=facility_dot_level1_dot_level1__pb2.GetLevel1Req.SerializeToString,
@@ -55,6 +60,12 @@ class Level1SrvServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def FindByBrickIds(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def FindByQc1Status(self, request, context):
         """Missing associated documentation comment in .proto file"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -96,6 +107,11 @@ def add_Level1SrvServicer_to_server(servicer, server):
                     servicer.FindByBrickIds,
                     request_deserializer=facility_dot_level1_dot_level1__pb2.FindByBrickIdsReq.FromString,
                     response_serializer=facility_dot_level1_dot_level1__pb2.FindByBrickIdsResp.SerializeToString,
+            ),
+            'FindByQc1Status': grpc.unary_unary_rpc_method_handler(
+                    servicer.FindByQc1Status,
+                    request_deserializer=facility_dot_level1_dot_level1__pb2.FindLevel1Req.FromString,
+                    response_serializer=facility_dot_level1_dot_level1__pb2.FindLevel1Resp.SerializeToString,
             ),
             'Get': grpc.unary_unary_rpc_method_handler(
                     servicer.Get,
@@ -156,6 +172,22 @@ class Level1Srv(object):
         return grpc.experimental.unary_unary(request, target, '/dfs.facility.level1.Level1Srv/FindByBrickIds',
             facility_dot_level1_dot_level1__pb2.FindByBrickIdsReq.SerializeToString,
             facility_dot_level1_dot_level1__pb2.FindByBrickIdsResp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FindByQc1Status(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.facility.level1.Level1Srv/FindByQc1Status',
+            facility_dot_level1_dot_level1__pb2.FindLevel1Req.SerializeToString,
+            facility_dot_level1_dot_level1__pb2.FindLevel1Resp.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
