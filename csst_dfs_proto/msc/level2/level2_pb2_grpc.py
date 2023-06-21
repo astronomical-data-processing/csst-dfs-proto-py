@@ -19,7 +19,7 @@ class Level2SrvStub(object):
                 request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2Req.SerializeToString,
                 response_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2Resp.FromString,
                 )
-        self.FindCatalog = channel.unary_unary(
+        self.FindCatalog = channel.unary_stream(
                 '/dfs.msc.level2.Level2Srv/FindCatalog',
                 request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
                 response_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.FromString,
@@ -28,6 +28,11 @@ class Level2SrvStub(object):
                 '/dfs.msc.level2.Level2Srv/FindCatalogFile',
                 request_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
                 response_deserializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.FromString,
+                )
+        self.FindExistedBricks = channel.unary_unary(
+                '/dfs.msc.level2.Level2Srv/FindExistedBricks',
+                request_serializer=msc_dot_level2_dot_level2__pb2.FindExistedBricksReq.SerializeToString,
+                response_deserializer=msc_dot_level2_dot_level2__pb2.FindExistedBricksResp.FromString,
                 )
         self.Get = channel.unary_unary(
                 '/dfs.msc.level2.Level2Srv/Get',
@@ -77,6 +82,12 @@ class Level2SrvServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def FindExistedBricks(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def Get(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -115,7 +126,7 @@ def add_Level2SrvServicer_to_server(servicer, server):
                     request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2Req.FromString,
                     response_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2Resp.SerializeToString,
             ),
-            'FindCatalog': grpc.unary_unary_rpc_method_handler(
+            'FindCatalog': grpc.unary_stream_rpc_method_handler(
                     servicer.FindCatalog,
                     request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
                     response_serializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.SerializeToString,
@@ -124,6 +135,11 @@ def add_Level2SrvServicer_to_server(servicer, server):
                     servicer.FindCatalogFile,
                     request_deserializer=msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.FromString,
                     response_serializer=msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.SerializeToString,
+            ),
+            'FindExistedBricks': grpc.unary_unary_rpc_method_handler(
+                    servicer.FindExistedBricks,
+                    request_deserializer=msc_dot_level2_dot_level2__pb2.FindExistedBricksReq.FromString,
+                    response_serializer=msc_dot_level2_dot_level2__pb2.FindExistedBricksResp.SerializeToString,
             ),
             'Get': grpc.unary_unary_rpc_method_handler(
                     servicer.Get,
@@ -188,7 +204,7 @@ class Level2Srv(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/FindCatalog',
+        return grpc.experimental.unary_stream(request, target, '/dfs.msc.level2.Level2Srv/FindCatalog',
             msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
             msc_dot_level2_dot_level2__pb2.FindLevel2CatalogResp.FromString,
             options, channel_credentials,
@@ -208,6 +224,23 @@ class Level2Srv(object):
         return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/FindCatalogFile',
             msc_dot_level2_dot_level2__pb2.FindLevel2CatalogReq.SerializeToString,
             msc_dot_level2_dot_level2__pb2.FindCatalogFileResp.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FindExistedBricks(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/dfs.msc.level2.Level2Srv/FindExistedBricks',
+            msc_dot_level2_dot_level2__pb2.FindExistedBricksReq.SerializeToString,
+            msc_dot_level2_dot_level2__pb2.FindExistedBricksResp.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
